@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>자산 관리</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            padding: 40px;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .header {
+            font-size: 32px;
+            font-weight: bold;
+            color: #0066cc;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .box {
+            background: white;
+            padding: 30px;
+            max-width: 500px;
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        p {
+            font-size: 18px;
+            text-align: center;
+            color: #555;
+        }
+        form {
+            margin-top: 20px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+        .button-group {
+            display: flex;
+            justify-content: space-between;
+        }
+        button {
+            width: 48%;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 6px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .home-btn {
+            display: block;
+            margin: 20px auto 0;
+            text-align: center;
+            background-color: #2196F3;
+        }
+        .home-btn:hover {
+            background-color: #1976D2;
+        }
+        .footer {
+            text-align: right;
+            font-size: 14px;
+            color: #888;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">INVESTOPIA</div>
+
+<div class="box">
+    <h1>■ 가상 자산 관리</h1>
+    <p><strong>현재 자산:</strong> {{ "{:,.0f}".format(asset) }} 원</p>
+
+    <form method="post">
+        <label>금액 입력:</label>
+        <input type="number" name="amount" required step="1000" min="0">
+        <div class="button-group">
+            <button type="submit" name="action" value="add">자산 추가</button>
+            <button type="submit" name="action" value="set">자산 변경</button>
+        </div>
+    </form>
+
+    <form action="{{ url_for('index') }}">
+        <button class="home-btn">■ 홈으로 돌아가기</button>
+    </form>
+
+    <div class="footer">인덕대학교</div>
+</div>
+
+</body>
+</html>

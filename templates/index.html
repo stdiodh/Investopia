@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>내 포트폴리오</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            background: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .header {
+            font-size: 32px;
+            font-weight: bold;
+            color: #0066cc;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 1100px;
+            width: 100%;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgb(0 0 0 / 0.1);
+            padding: 24px 32px;
+            position: relative;
+        }
+        .top-section {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+        .left-info {
+            flex: 1 1 320px;
+        }
+        .left-info h1 {
+            color: #333;
+            margin-bottom: 16px;
+        }
+        .left-info h2 {
+            margin: 6px 0;
+            font-weight: 600;
+        }
+        .right-chart {
+            flex: 0 0 460px;
+            min-width: 300px;
+            margin-left: 20px;
+        }
+        .right-chart h2 {
+            margin-bottom: 12px;
+            font-weight: 600;
+            color: #333;
+        }
+        canvas#portfolioPieChart {
+            width: 300px !important;
+            height: 300px !important;
+            object-fit: contain;
+            display: block;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ccc;
+            text-align: center;
+            font-size: 14px;
+        }
+        th {
+            background: #3498db;
+            color: white;
+        }
+        tbody tr:hover {
+            background: #f1f1f1;
+        }
+        .button-container {
+            margin-bottom: 10px;
+        }
+        .btn {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-right: 10px;
+            cursor: pointer;
+            display: inline-block;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        .btn:hover {
+            background-color: #004d99;
+        }
+        .footer {
+            text-align: right;
+            font-size: 14px;
+            color: #888;
+            margin-top: 30px;
+        }
+        @media (max-width: 750px) {
+            .top-section {
+                flex-direction: column;
+            }
+            .right-chart, .left-info {
+                flex: 1 1 100%;
+                margin-left: 0 !important;
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">INVESTOPIA</div>
+
+<div class="container">
+
+    <div class="top-section">
+        <div class="left-info">
+            <h1>■ 내 포트폴리오</h1>
+            <h2>■ 현금 자산: {{ asset | round(2) }} 원</h2>
+            <h2>■ 종목 평가금액: {{ total | round(2) }} 원</h2>
+            <h2>■ 총 자산: {{ (asset + total) | round(2) }} 원</h2>
+        </div>
+        <div class="right-chart">
+            <h2>포트폴리오 평가금액 비중</h2>
+            <canvas id="portfolioPieChart"></canvas>
+        </div>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>종목 코드</th>
+                <th>종목 이름</th>
+                <th>보유 수량</th>
+                <th>매수 평균가</th>
+                <th>변동률</th>
+                <th>총 평가 금액</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for stock in portfolio %}
+            <tr>
+                <td>{{ stock.symbol }}</td>
+                <td>{{ stock.name }}</td>
+                <td>{{ stock.quantity }}</td>
+                <td>{{ stock.buy_price }}</td>
+                <td>
+                    {% if stock.change_rate >= 0 %}
+                        <span style="color:green;">+{{ stock.change_rate }}%</span>
+                    {% else %}
+                        <span style="color:red;">{{ stock.change_rate }}%</span>
+                    {% endif %}
+                </td>
+                <td>{{ stock.current_value }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <div class="button-container">
+        <a href="{{ url_for('asset_page') }}" class="btn">□ 자산 관리</a>
+        <a href="{{ url_for('stocks') }}" class="btn">□ 종목 보기</a>
+    </div>
+
+    <div class="footer">인덕대학교</div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    const portfolioData = {{ portfolio|tojson }};
+    const labels = portfolioData.map(item => item.name);
+    const values = portfolioData.map(item => item.current_value);
+
+    const ctx = document.getElementById('portfolioPieChart').getContext('2d');
+
+    new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: labels,
+            datasets: [{
+                label: '평가금액',
+                data: values,
+                backgroundColor: [
+                    '#FF6384', '#36A2EB', '#FFCE56', '#9CCC65', '#FF7043',
+                    '#26A69A', '#AB47BC', '#5C6BC0', '#EC407A', '#FFA726'
+                ],
+                borderWidth: 1,
+                borderColor: '#fff',
+                hoverOffset: 30,
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: 'bottom',
+                    labels: { 
+                        boxWidth: 18, 
+                        padding: 15,
+                        font: { size: 14 }
+                    }
+                },
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            const value = context.raw.toLocaleString('ko-KR');
+                            return context.label + ': ' + value + ' 원';
+                        }
+                    }
+                }
+            }
+        }
+    });
+</script>
+
+</body>
+</html>
