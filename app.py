@@ -1,15 +1,17 @@
 from flask import Flask, render_template, request, redirect, url_for, jsonify
+import os
 import pymysql
 
 app = Flask(__name__)
-app.secret_key = "stocksecret"
+app.secret_key = os.environ["FLASK_SECRET_KEY"]
 
 def get_connection():
     return pymysql.connect(
-        host='192.173.0.41',
-        user='root',
-        password='qwer1230',
-        db='stock_db',
+        host=os.environ["DB_HOST"],
+        port=int(os.getenv("DB_PORT", "3306")),
+        user=os.environ["DB_USER"],
+        password=os.environ["DB_PASSWORD"],
+        db=os.environ["DB_NAME"],
         charset='utf8',
         cursorclass=pymysql.cursors.DictCursor
     )
@@ -247,4 +249,4 @@ def api_sell():
     return jsonify({'result': 'success', 'message': f'{symbol} {quantity}주 매도 완료!'})
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5000, host="0.0.0.0")
+    app.run(debug=os.getenv("FLASK_DEBUG", "false").lower() == "true")
