@@ -5,16 +5,17 @@ from datetime import datetime
 import os
 import time
 
-# 현재 파일 기준 디렉토리
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-SYMBOLS_FILE = os.path.join(BASE_DIR, 'symbols.txt')
+# 프로젝트 설정 파일 경로
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+SYMBOLS_FILE = os.path.join(PROJECT_ROOT, 'config', 'symbols.txt')
 
 # DB 연결 정보
 DB_CONFIG = {
-    'host': '192.173.0.41',
-    'user': 'root',
-    'password': 'qwer1230',   # 변경 가능
-    'db': 'stock_db',
+    'host': os.environ["DB_HOST"],
+    'port': int(os.getenv("DB_PORT", "3306")),
+    'user': os.environ["DB_USER"],
+    'password': os.environ["DB_PASSWORD"],
+    'db': os.environ["DB_NAME"],
     'charset': 'utf8'
 }
 

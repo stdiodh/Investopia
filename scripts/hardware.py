@@ -1,4 +1,5 @@
 import RPi.GPIO as GPIO
+import os
 import time
 import pymysql
 import requests
@@ -134,11 +135,6 @@ class LCD:
 		self.displaycontrol &= ~self.LCD_BLINKON
 		self.write4bits(self.LCD_DISPLAYCONTROL | self.displaycontrol)
 
-	def noBlink(self):
-		# Turn on and off the blinking cursor
-		self.displaycontrol &= ~self.LCD_BLINKON
-		self.write4bits(self.LCD_DISPLAYCONTROL | self.displaycontrol)
-
 	def DisplayLeft(self):
 		# These commands scroll the display without changing the RAM
 		self.write4bits(self.LCD_CURSORSHIFT | self.LCD_DISPLAYMOVE | self.LCD_MOVELEFT)
@@ -226,15 +222,16 @@ GPIO.setup([VRX, VRY], GPIO.IN)
 GPIO.setup([SW, BUTTON_BUY, BUTTON_SELL, BUTTON_BUZZER_OFF], GPIO.IN, pull_up_down=GPIO.PUD_UP)
 GPIO.setup([BUZZER, LED_UP, LED_DOWN], GPIO.OUT)
 
-SERVER_URL = "http://192.173.0.41:5000"
+SERVER_URL = os.getenv("INVESTOPIA_SERVER_URL", "http://127.0.0.1:5000")
 
 # DB 연결
 def get_connection():
     return pymysql.connect(
-        host='192.173.0.41',
-        user='root',
-        password='qwer1230',
-        db='stock_db',
+        host=os.environ["DB_HOST"],
+        port=int(os.getenv("DB_PORT", "3306")),
+        user=os.environ["DB_USER"],
+        password=os.environ["DB_PASSWORD"],
+        db=os.environ["DB_NAME"],
         charset='utf8',
         cursorclass=pymysql.cursors.DictCursor
     )
@@ -335,4 +332,3 @@ finally:
     lcd.clear()
     lcd.destroy()
     GPIO.cleanup()
-
