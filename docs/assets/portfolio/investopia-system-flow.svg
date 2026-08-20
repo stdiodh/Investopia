@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Investopia 데이터 수집과 주문 처리 흐름</title>
+  <desc id="desc">네이버 금융 HTML을 Requests와 BeautifulSoup으로 30초마다 수집해 MariaDB stock 테이블에 저장하고, Flask가 웹과 Raspberry Pi 요청을 동일한 거래 로직으로 처리한다. Raspberry Pi는 조이스틱과 버튼으로 입력하고 LCD와 LED로 결과를 표시한다.</desc>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2563EB"/>
+    </marker>
+    <marker id="arrow-slate" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="900" fill="#F8FAFC"/>
+  <line x1="80" y1="44" x2="1520" y2="44" stroke="#2563EB" stroke-width="4"/>
+  <text x="80" y="104" font-family="Inter, Pretendard, 'Noto Sans KR', system-ui, sans-serif" font-size="18" font-weight="700" letter-spacing="2" fill="#2563EB">INVESTOPIA · DATA &amp; ORDER FLOW</text>
+  <text x="80" y="160" font-family="Inter, Pretendard, 'Noto Sans KR', system-ui, sans-serif" font-size="44" font-weight="750" letter-spacing="-1.4" fill="#0F172A">수집한 시세와 두 입력 화면이 하나의 거래 로직을 사용합니다</text>
+  <text x="80" y="200" font-family="Inter, Pretendard, 'Noto Sans KR', system-ui, sans-serif" font-size="19" fill="#475569">외부 시세 수집, 모의 주문, 하드웨어 피드백을 코드에서 확인되는 경계만으로 정리했습니다.</text>
+
+  <text x="80" y="270" font-family="Inter, Pretendard, 'Noto Sans KR', system-ui, sans-serif" font-size="14" font-weight="800" letter-spacing="1.4" fill="#475569">01 · PRICE COLLECTION</text>
+  <rect x="80" y="300" width="280" height="128" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2"/>
+  <text x="112" y="350" font-family="Inter, Pretendard, 'Noto Sans KR', system-ui, sans-serif" font-size="24" font-weight="700" fill="#0F172A">네이버 금융 HTML</text>
+  <text x="112" y="386" font-family="'JetBrains Mono', 'SFMono-Regular', Consolas, monospace" font-size="14" fill="#475569">finance.naver.com/item</text>
+  <line x1="360" y1="364" x2="454" y2="364" stroke="#2563EB" stroke-width="4" marker-end="url(#arrow)"/>
+  <rect x="468" y="300" width="310" height="128" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2"/>
+  <text x="500" y="350" font-family="Inter, Pretendard, 'Noto Sans KR', system-ui, sans-serif" font-size="24" font-weight="700" fill="#0F172A">Requests · BeautifulSoup</text>
+  <text x="500" y="386" font-family="Inter, Pretendard, 'Noto Sans KR', system-ui, sans-serif" font-size="16" fill="#475569">종목명·현재가 파싱 · 30초 폴링</text>
+  <line x1="778" y1="364" x2="886" y2="364" stroke="#2563EB" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <text x="900" y="270" font-family="Inter, Pretendard, 'Noto Sans KR', system-ui, sans-serif" font-size="14" font-weight="800" letter-spacing="1.4" fill="#475569">02 · SHARED DATA</text>
+  <rect x="900" y="300" width="300" height="270" rx="8" fill="#FFFFFF" stroke="#2563EB" stroke-width="3"/>
+  <ellipse cx="1050" cy="344" rx="104" ry="30" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+  <path d="M946 344V508C946 526 993 540 1050 540C1107 540 1154 526 1154 508V344" fill="none" stroke="#2563EB" stroke-width="2"/>
+  <text x="1050" y="351" text-anchor="middle" font-family="Inter, Pretendard, 'Noto Sans KR', system-ui, sans-serif" font-size="24" font-weight="750" fill="#0F172A">MariaDB</text>
+  <text x="988" y="420" font-family="'JetBrains Mono', 'SFMono-Regular', Consolas, monospace" font-size="17" fill="#475569">stock</text>
+  <text x="988" y="458" font-family="'JetBrains Mono', 'SFMono-Regular', Consolas, monospace" font-size="17" fill="#475569">user_asset</text>
+  <text x="988" y="496" font-family="'JetBrains Mono', 'SFMono-Regular', Consolas, monospace" font-size="17" fill="#475569">portfolio</text>
+
+  <line x1="1200" y1="435" x2="1308" y2="435" stroke="#475569" stroke-width="4" marker-start="url(#arrow-slate)" marker-end="url(#arrow-slate)"/>
+  <rect x="1322" y="300" width="198" height="270" rx="8" fill="#0F172A"/>
+  <text x="1421" y="360" text-anchor="middle" font-family="Inter, Pretendard, 'Noto Sans KR', system-ui, sans-serif" font-size="27" font-weight="750" fill="#FFFFFF">Flask</text>
+  <text x="1421" y="398" text-anchor="middle" font-family="Inter, Pretendard, 'Noto Sans KR', system-ui, sans-serif" font-size="17" fill="#CBD5E1">server-rendered web</text>
+  <line x1="1356" y1="428" x2="1486" y2="428" stroke="#475569"/>
+  <text x="1421" y="466" text-anchor="middle" font-family="'JetBrains Mono', 'SFMono-Regular', Consolas, monospace" font-size="16" fill="#93C5FD">POST /api/buy</text>
+  <text x="1421" y="497" text-anchor="middle" font-family="'JetBrains Mono', 'SFMono-Regular', Consolas, monospace" font-size="16" fill="#93C5FD">POST /api/sell</text>
+  <text x="1421" y="535" text-anchor="middle" font-family="Inter, Pretendard, 'Noto Sans KR', system-ui, sans-serif" font-size="15" fill="#CBD5E1">현금·보유 수량 검증</text>
+
+  <text x="80" y="630" font-family="Inter, Pretendard, 'Noto Sans KR', system-ui, sans-serif" font-size="14" font-weight="800" letter-spacing="1.4" fill="#475569">03 · TWO CLIENTS, ONE TRADE PATH</text>
+  <rect x="80" y="660" width="510" height="154" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2"/>
+  <text x="112" y="708" font-family="Inter, Pretendard, 'Noto Sans KR', system-ui, sans-serif" font-size="25" font-weight="750" fill="#0F172A">Web</text>
+  <text x="112" y="746" font-family="Inter, Pretendard, 'Noto Sans KR', system-ui, sans-serif" font-size="17" fill="#475569">포트폴리오·자산·종목 화면 · Chart.js</text>
+  <text x="112" y="780" font-family="Inter, Pretendard, 'Noto Sans KR', system-ui, sans-serif" font-size="17" fill="#475569">매수·매도 폼 → 공통 거래 함수</text>
+
+  <rect x="660" y="660" width="610" height="154" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2"/>
+  <text x="692" y="708" font-family="Inter, Pretendard, 'Noto Sans KR', system-ui, sans-serif" font-size="25" font-weight="750" fill="#0F172A">Raspberry Pi</text>
+  <text x="692" y="746" font-family="Inter, Pretendard, 'Noto Sans KR', system-ui, sans-serif" font-size="17" fill="#475569">조이스틱으로 종목 선택 · 버튼으로 1주 매수·매도</text>
+  <text x="692" y="780" font-family="Inter, Pretendard, 'Noto Sans KR', system-ui, sans-serif" font-size="17" fill="#475569">LCD: 종목·가격·자산 · LED: 등락 방향</text>
+
+  <path d="M590 737 H610 Q630 737 630 717 V628 Q630 608 650 608 H1400 Q1420 608 1420 570" fill="none" stroke="#2563EB" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M1270 737 H1300 Q1320 737 1320 717 V628 Q1320 608 1340 608 H1400" fill="none" stroke="#2563EB" stroke-width="4"/>
+  <text x="956" y="602" text-anchor="middle" font-family="Inter, Pretendard, 'Noto Sans KR', system-ui, sans-serif" font-size="15" font-weight="700" fill="#2563EB">웹 폼과 REST 요청이 _buy / _sell 거래 로직으로 수렴</text>
+
+  <text x="80" y="862" font-family="'JetBrains Mono', 'SFMono-Regular', Consolas, monospace" font-size="13" fill="#64748B">sources · static/update_prices.py · app.py · static/hardware.py</text>
+</svg>

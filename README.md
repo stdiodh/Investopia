@@ -33,9 +33,7 @@
 
 > 네이버 금융에서 수집한 주가를 바탕으로 웹과 Raspberry Pi에서 가상 매수·매도를 연습하는 프로토타입입니다.
 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/d4b25040-99d2-4f51-9192-c69a92a996d3" width="600"/>
-</p>
+![Investopia 데이터 수집과 주문 처리 흐름](./docs/assets/portfolio/investopia-system-flow.svg)
 
 ## 💡 프로젝트 구성
 
@@ -125,39 +123,21 @@ python scripts/hardware.py
 
 ## ⚙ 아키텍처와 기술 스택
 
-```mermaid
-flowchart LR
-    Naver["네이버 금융 HTML"] --> Collector["Requests · BeautifulSoup"]
-    Collector --> DB[("MariaDB")]
-    DB --> Flask["Flask · PyMySQL"]
-    Flask --> Web["HTML · CSS · JavaScript · Chart.js"]
-    Flask --> Pi["Raspberry Pi · RPi.GPIO"]
-    Pi --> Flask
-```
-
-수집기가 주가를 MariaDB에 갱신하고, Flask가 같은 데이터를 웹 화면과 Raspberry Pi에 제공합니다. 두 클라이언트의 주문은 동일한 거래 API와 포트폴리오 로직을 거칩니다.
+상단 흐름도처럼 수집기는 주가를 MariaDB에 갱신하고, Flask는 같은 데이터를 웹 화면과 Raspberry Pi에 제공합니다. 웹 폼과 Raspberry Pi의 REST 요청은 동일한 매수·매도 함수와 포트폴리오 검증을 거칩니다.
 
 ## 🧪 시연 영상 및 예시
 
-### 1. 웹 UI에서 종목 매수
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/c809936a-cac8-461f-a754-cf25659a9bb2" width="500"/>
-</p>
+`scripts/update_prices.py` 수집 결과가 웹과 LCD에 반영되고, 두 입력 경로의 주문이 같은 포트폴리오 데이터에 반영되는 흐름을 확인했습니다.
 
-### 2. 주가 갱신 결과
+<details>
+<summary>저해상도 원본 GIF 4개 보기</summary>
 
-- `scripts/update_prices.py` 수집 결과가 웹과 LCD에 반영되는 흐름을 확인
+- [웹 UI 종목 매수](https://github.com/user-attachments/assets/c809936a-cac8-461f-a754-cf25659a9bb2) — 342×608
+- [LCD 종목·자산 정보 출력](https://github.com/user-attachments/assets/c0e714f6-5055-483a-ab2b-6965fad2dead) — 322×572
+- [버튼 매수](https://github.com/user-attachments/assets/afae5981-c73e-4c8b-a6fe-c3daad30461f) — 240×426
+- [버튼 매도](https://github.com/user-attachments/assets/cf3702aa-ab32-4b67-8c0b-758a0507263b) — 274×488
 
-### 3. LCD 종목·자산 정보 출력
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/c0e714f6-5055-483a-ab2b-6965fad2dead" width="500"/>
-</p>
-
-### 4. 버튼을 통한 매수 / 매도
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/afae5981-c73e-4c8b-a6fe-c3daad30461f" width="350"/>
-  <img src="https://github.com/user-attachments/assets/cf3702aa-ab32-4b67-8c0b-758a0507263b" width="350"/>
-</p>
+</details>
 
 ## ⚠️ 구현의 한계
 
