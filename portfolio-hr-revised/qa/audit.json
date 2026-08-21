@@ -1,0 +1,963 @@
+{
+  "generatedAt": "2026-08-21T04:14:59.629Z",
+  "pageUrl": "http://127.0.0.1:5174/",
+  "viewport": {
+    "height": 900,
+    "width": 1600
+  },
+  "summary": {
+    "clippedElementCount": 0,
+    "hiddenPrintLinkCount": 0,
+    "hiddenScreenLinkCount": 0,
+    "outsideSlideElementCount": 0,
+    "slideCount": 9,
+    "slidesAt1600x900": 9,
+    "upscaledImageCount": 0
+  },
+  "slides": [
+    {
+      "bounds": {
+        "height": 900,
+        "width": 1600,
+        "x": 0,
+        "y": 32
+      },
+      "id": "cover",
+      "images": [],
+      "links": [],
+      "minBodyFontPx": 12,
+      "smallestText": [
+        {
+          "className": "eyebrow",
+          "fontSizePx": 12,
+          "tag": "P",
+          "text": "SERVER DEVELOPER PORTFOLIO · 허동현"
+        },
+        {
+          "className": "",
+          "fontSizePx": 12,
+          "tag": "SPAN",
+          "text": "01 A&I.com"
+        },
+        {
+          "className": "",
+          "fontSizePx": 12,
+          "tag": "SPAN",
+          "text": "02 고찌봄"
+        },
+        {
+          "className": "",
+          "fontSizePx": 12,
+          "tag": "SPAN",
+          "text": "03 디딤로그"
+        },
+        {
+          "className": "",
+          "fontSizePx": 12,
+          "tag": "SPAN",
+          "text": "04 Investopia"
+        }
+      ],
+      "number": 1,
+      "overflow": {
+        "clippedContent": [],
+        "outsideSlide": []
+      }
+    },
+    {
+      "bounds": {
+        "height": 900,
+        "width": 1600,
+        "x": 0,
+        "y": 964
+      },
+      "id": "project-map",
+      "images": [],
+      "links": [],
+      "minBodyFontPx": 12,
+      "smallestText": [
+        {
+          "className": "",
+          "fontSizePx": 12,
+          "tag": "SPAN",
+          "text": "02"
+        },
+        {
+          "className": "",
+          "fontSizePx": 12,
+          "tag": "SPAN",
+          "text": "PROJECT MAP · 무엇을 보면 되는지"
+        },
+        {
+          "className": "map-guide",
+          "fontSizePx": 12,
+          "tag": "P",
+          "text": "문제 → 내 판단 → 확인 결과 → 직접 볼 수 있는 근거"
+        },
+        {
+          "className": "map-index",
+          "fontSizePx": 12,
+          "tag": "SPAN",
+          "text": "01"
+        },
+        {
+          "className": "",
+          "fontSizePx": 12,
+          "tag": "P",
+          "text": "BE Lead · 2025.01–현재"
+        }
+      ],
+      "number": 2,
+      "overflow": {
+        "clippedContent": [],
+        "outsideSlide": []
+      }
+    },
+    {
+      "bounds": {
+        "height": 900,
+        "width": 1600,
+        "x": 0,
+        "y": 1896
+      },
+      "id": "aandi-architecture",
+      "images": [
+        {
+          "alt": "A&I.com 시스템 아키텍처",
+          "complete": true,
+          "natural": [
+            1672,
+            941
+          ],
+          "rendered": [
+            930,
+            430
+          ],
+          "scale": {
+            "x": 0.56,
+            "y": 0.46
+          },
+          "sourcePixelsPerRenderedPixel": 1.8,
+          "upscaled": false
+        },
+        {
+          "alt": "현재 운영 중인 A&I.com 실제 화면",
+          "complete": true,
+          "natural": [
+            3824,
+            2484
+          ],
+          "rendered": [
+            670,
+            122
+          ],
+          "scale": {
+            "x": 0.18,
+            "y": 0.05
+          },
+          "sourcePixelsPerRenderedPixel": 5.71,
+          "upscaled": false
+        }
+      ],
+      "links": [
+        {
+          "display": "flex",
+          "href": "https://aandiclub.com/",
+          "rel": "noreferrer",
+          "target": "_blank",
+          "text": "운영 화면 ↗",
+          "visible": true,
+          "size": [
+            62.97,
+            29
+          ]
+        },
+        {
+          "display": "flex",
+          "href": "https://github.com/Team-AnI/A-AND-I-GATEWAY-SERVER",
+          "rel": "noreferrer",
+          "target": "_blank",
+          "text": "Gateway 저장소 ↗",
+          "visible": true,
+          "size": [
+            102.98,
+            29
+          ]
+        }
+      ],
+      "minBodyFontPx": 12,
+      "smallestText": [
+        {
+          "className": "",
+          "fontSizePx": 12,
+          "tag": "SPAN",
+          "text": "03"
+        },
+        {
+          "className": "",
+          "fontSizePx": 12,
+          "tag": "SPAN",
+          "text": "A&I.COM · BACKEND LEAD · 2025.01–현재"
+        },
+        {
+          "className": "status status-green",
+          "fontSizePx": 12,
+          "tag": "SPAN",
+          "text": "운영 서비스"
+        },
+        {
+          "className": "",
+          "fontSizePx": 12,
+          "tag": "SPAN",
+          "text": "문제"
+        },
+        {
+          "className": "",
+          "fontSizePx": 12,
+          "tag": "SPAN",
+          "text": "내 판단"
+        }
+      ],
+      "number": 3,
+      "overflow": {
+        "clippedContent": [],
+        "outsideSlide": []
+      }
+    },
+    {
+      "bounds": {
+        "height": 900,
+        "width": 1600,
+        "x": 0,
+        "y": 2828
+      },
+      "id": "aandi-query",
+      "images": [],
+      "links": [
+        {
+          "display": "flex",
+          "href": "https://github.com/Team-AnI/A-AND-I-WEB-SERVER",
+          "rel": "noreferrer",
+          "target": "_blank",
+          "text": "근거 저장소 ↗",
+          "visible": true,
+          "size": [
+            73.34,
+            29
+          ]
+        }
+      ],
+      "minBodyFontPx": 12,
+      "smallestText": [
+        {
+          "className": "",
+          "fontSizePx": 12,
+          "tag": "SPAN",
+          "text": "04"
+        },
+        {
+          "className": "",
+          "fontSizePx": 12,
+          "tag": "SPAN",
+          "text": "A&I.COM · ONE CASE · 조회 구조 개선"
+        },
+        {
+          "className": "text-link",
+          "fontSizePx": 12,
+          "tag": "A",
+          "text": "근거 저장소 ↗"
+        },
+        {
+          "className": "",
+          "fontSizePx": 12,
+          "tag": "SPAN",
+          "text": "↗"
+        },
+        {
+          "className": "",
+          "fontSizePx": 12,
+          "tag": "SPAN",
+          "text": "S · 상황"
+        }
+      ],
+      "number": 4,
+      "overflow": {
+        "clippedContent": [],
+        "outsideSlide": []
+      }
+    },
+    {
+      "bounds": {
+        "height": 900,
+        "width": 1600,
+        "x": 0,
+        "y": 3760
+      },
+      "id": "gojjibom",
+      "images": [
+        {
+          "alt": "고찌봄 알림에서 복약 화면으로 이어지는 실제 흐름",
+          "complete": true,
+          "natural": [
+            1600,
+            900
+          ],
+          "rendered": [
+            814,
+            457.88
+          ],
+          "scale": {
+            "x": 0.51,
+            "y": 0.51
+          },
+          "sourcePixelsPerRenderedPixel": 1.97,
+          "upscaled": false
+        }
+      ],
+      "links": [
+        {
+          "display": "flex",
+          "href": "https://gojjibom.web.app/",
+          "rel": "noreferrer",
+          "target": "_blank",
+          "text": "공개 데모 ↗",
+          "visible": true,
+          "size": [
+            62.97,
+            29
+          ]
+        },
+        {
+          "display": "flex",
+          "href": "https://github.com/TIKI-TAKA-hackathon/Tiki-Taka-BE",
+          "rel": "noreferrer",
+          "target": "_blank",
+          "text": "백엔드 저장소 ↗",
+          "visible": true,
+          "size": [
+            83.72,
+            29
+          ]
+        }
+      ],
+      "minBodyFontPx": 12,
+      "smallestText": [
+        {
+          "className": "",
+          "fontSizePx": 12,
+          "tag": "SPAN",
+          "text": "05"
+        },
+        {
+          "className": "",
+          "fontSizePx": 12,
+          "tag": "SPAN",
+          "text": "고찌봄 · PM & DEV LEAD · 2026.06–07"
+        },
+        {
+          "className": "status status-blue",
+          "fontSizePx": 12,
+          "tag": "SPAN",
+          "text": "공개 fixture 데모 · 샘플 데이터"
+        },
+        {
+          "className": "",
+          "fontSizePx": 12,
+          "tag": "SPAN",
+          "text": "문제"
+        },
+        {
+          "className": "",
+          "fontSizePx": 12,
+          "tag": "SPAN",
+          "text": "01"
+        }
+      ],
+      "number": 5,
+      "overflow": {
+        "clippedContent": [],
+        "outsideSlide": []
+      }
+    },
+    {
+      "bounds": {
+        "height": 900,
+        "width": 1600,
+        "x": 0,
+        "y": 4692
+      },
+      "id": "didimlog",
+      "images": [
+        {
+          "alt": "디딤로그 BOJ 계정 인증 실제 화면",
+          "complete": true,
+          "natural": [
+            1200,
+            750
+          ],
+          "rendered": [
+            853,
+            330
+          ],
+          "scale": {
+            "x": 0.71,
+            "y": 0.44
+          },
+          "sourcePixelsPerRenderedPixel": 1.41,
+          "upscaled": false
+        }
+      ],
+      "links": [
+        {
+          "display": "flex",
+          "href": "https://didim-log-fe.web.app/",
+          "rel": "noreferrer",
+          "target": "_blank",
+          "text": "공개 프론트 데모 ↗",
+          "visible": true,
+          "size": [
+            101.3,
+            29
+          ]
+        },
+        {
+          "display": "flex",
+          "href": "https://github.com/didim-log/didim-log-BE",
+          "rel": "noreferrer",
+          "target": "_blank",
+          "text": "백엔드 저장소 ↗",
+          "visible": true,
+          "size": [
+            83.72,
+            29
+          ]
+        }
+      ],
+      "minBodyFontPx": 12,
+      "smallestText": [
+        {
+          "className": "",
+          "fontSizePx": 12,
+          "tag": "SPAN",
+          "text": "06"
+        },
+        {
+          "className": "",
+          "fontSizePx": 12,
+          "tag": "SPAN",
+          "text": "디딤로그 · MAINTAINER · 2026.02–04"
+        },
+        {
+          "className": "status status-blue",
+          "fontSizePx": 12,
+          "tag": "SPAN",
+          "text": "공개 프론트 데모 · 입력 미저장"
+        },
+        {
+          "className": "",
+          "fontSizePx": 12,
+          "tag": "SPAN",
+          "text": "문제"
+        },
+        {
+          "className": "",
+          "fontSizePx": 12,
+          "tag": "SPAN",
+          "text": "내 판단"
+        }
+      ],
+      "number": 6,
+      "overflow": {
+        "clippedContent": [],
+        "outsideSlide": []
+      }
+    },
+    {
+      "bounds": {
+        "height": 900,
+        "width": 1600,
+        "x": 0,
+        "y": 5624
+      },
+      "id": "investopia",
+      "images": [
+        {
+          "alt": "Investopia Raspberry Pi 회로와 LCD 실제 모습",
+          "complete": true,
+          "natural": [
+            1920,
+            1080
+          ],
+          "rendered": [
+            860,
+            483.75
+          ],
+          "scale": {
+            "x": 0.45,
+            "y": 0.45
+          },
+          "sourcePixelsPerRenderedPixel": 2.23,
+          "upscaled": false
+        }
+      ],
+      "links": [
+        {
+          "display": "flex",
+          "href": "https://github.com/stdiodh/Investopia",
+          "rel": "noreferrer",
+          "target": "_blank",
+          "text": "저장소 ↗",
+          "visible": true,
+          "size": [
+            45.38,
+            29
+          ]
+        }
+      ],
+      "minBodyFontPx": 12,
+      "smallestText": [
+        {
+          "className": "",
+          "fontSizePx": 12,
+          "tag": "SPAN",
+          "text": "07"
+        },
+        {
+          "className": "",
+          "fontSizePx": 12,
+          "tag": "SPAN",
+          "text": "INVESTOPIA · PL & BACKEND LEAD · 2025.04–06"
+        },
+        {
+          "className": "status status-gray",
+          "fontSizePx": 12,
+          "tag": "SPAN",
+          "text": "로컬 · 하드웨어 프로토타입"
+        },
+        {
+          "className": "",
+          "fontSizePx": 12,
+          "tag": "SPAN",
+          "text": "문제"
+        },
+        {
+          "className": "",
+          "fontSizePx": 12,
+          "tag": "SPAN",
+          "text": "내 판단"
+        }
+      ],
+      "number": 7,
+      "overflow": {
+        "clippedContent": [],
+        "outsideSlide": []
+      }
+    },
+    {
+      "bounds": {
+        "height": 900,
+        "width": 1600,
+        "x": 0,
+        "y": 6556
+      },
+      "id": "soloplay",
+      "images": [],
+      "links": [
+        {
+          "display": "flex",
+          "href": "https://github.com/SangWook16074/Solo-Play-Web-Server",
+          "rel": "noreferrer",
+          "target": "_blank",
+          "text": "백엔드 저장소 ↗",
+          "visible": true,
+          "size": [
+            83.72,
+            29
+          ]
+        }
+      ],
+      "minBodyFontPx": 12,
+      "smallestText": [
+        {
+          "className": "",
+          "fontSizePx": 12,
+          "tag": "SPAN",
+          "text": "08"
+        },
+        {
+          "className": "",
+          "fontSizePx": 12,
+          "tag": "SPAN",
+          "text": "SOLOPLAY · BACKEND LEAD · 2024.10–2025.02"
+        },
+        {
+          "className": "status status-gray",
+          "fontSizePx": 12,
+          "tag": "SPAN",
+          "text": "백엔드 프로젝트 · 저장소 공개"
+        },
+        {
+          "className": "",
+          "fontSizePx": 12,
+          "tag": "SPAN",
+          "text": "문제"
+        },
+        {
+          "className": "",
+          "fontSizePx": 12,
+          "tag": "SPAN",
+          "text": "내 판단"
+        }
+      ],
+      "number": 8,
+      "overflow": {
+        "clippedContent": [],
+        "outsideSlide": []
+      }
+    },
+    {
+      "bounds": {
+        "height": 900,
+        "width": 1600,
+        "x": 0,
+        "y": 7488
+      },
+      "id": "evidence",
+      "images": [],
+      "links": [
+        {
+          "display": "flex",
+          "href": "https://aandiclub.com/",
+          "rel": "noreferrer",
+          "target": "_blank",
+          "text": "서비스 ↗",
+          "visible": true,
+          "size": [
+            45.38,
+            29
+          ]
+        },
+        {
+          "display": "flex",
+          "href": "https://github.com/Team-AnI/A-AND-I-GATEWAY-SERVER",
+          "rel": "noreferrer",
+          "target": "_blank",
+          "text": "Gateway ↗",
+          "visible": true,
+          "size": [
+            64.64,
+            29
+          ]
+        },
+        {
+          "display": "flex",
+          "href": "https://gojjibom.web.app/",
+          "rel": "noreferrer",
+          "target": "_blank",
+          "text": "데모 ↗",
+          "visible": true,
+          "size": [
+            35,
+            29
+          ]
+        },
+        {
+          "display": "flex",
+          "href": "https://github.com/TIKI-TAKA-hackathon/Tiki-Taka-BE",
+          "rel": "noreferrer",
+          "target": "_blank",
+          "text": "Backend ↗",
+          "visible": true,
+          "size": [
+            64.64,
+            29
+          ]
+        },
+        {
+          "display": "flex",
+          "href": "https://didim-log-fe.web.app/",
+          "rel": "noreferrer",
+          "target": "_blank",
+          "text": "데모 ↗",
+          "visible": true,
+          "size": [
+            35,
+            29
+          ]
+        },
+        {
+          "display": "flex",
+          "href": "https://github.com/didim-log/didim-log-BE",
+          "rel": "noreferrer",
+          "target": "_blank",
+          "text": "Backend ↗",
+          "visible": true,
+          "size": [
+            64.64,
+            29
+          ]
+        },
+        {
+          "display": "flex",
+          "href": "https://github.com/stdiodh/Investopia",
+          "rel": "noreferrer",
+          "target": "_blank",
+          "text": "저장소 ↗",
+          "visible": true,
+          "size": [
+            45.38,
+            29
+          ]
+        },
+        {
+          "display": "flex",
+          "href": "https://github.com/SangWook16074/Solo-Play-Web-Server",
+          "rel": "noreferrer",
+          "target": "_blank",
+          "text": "저장소 ↗",
+          "visible": true,
+          "size": [
+            45.38,
+            29
+          ]
+        },
+        {
+          "display": "flex",
+          "href": "https://github.com/stdiodh",
+          "rel": "noreferrer",
+          "target": "_blank",
+          "text": "GitHub ↗",
+          "visible": true,
+          "size": [
+            57.44,
+            29
+          ]
+        }
+      ],
+      "minBodyFontPx": 12,
+      "smallestText": [
+        {
+          "className": "",
+          "fontSizePx": 12,
+          "tag": "SPAN",
+          "text": "09"
+        },
+        {
+          "className": "",
+          "fontSizePx": 12,
+          "tag": "SPAN",
+          "text": "EVIDENCE & CONTACT"
+        },
+        {
+          "className": "portfolio-note",
+          "fontSizePx": 12,
+          "tag": "P",
+          "text": "이 포트폴리오는 이력서에 담기 어려운 판단, 실제 화면, 근거 링크를 보충합니다."
+        },
+        {
+          "className": "map-index",
+          "fontSizePx": 12,
+          "tag": "SPAN",
+          "text": "01"
+        },
+        {
+          "className": "status status-green",
+          "fontSizePx": 12,
+          "tag": "SPAN",
+          "text": "운영 서비스"
+        }
+      ],
+      "number": 9,
+      "overflow": {
+        "clippedContent": [],
+        "outsideSlide": []
+      }
+    }
+  ],
+  "print": {
+    "links": [
+      {
+        "display": "flex",
+        "href": "https://aandiclub.com/",
+        "slideId": "aandi-architecture",
+        "text": "운영 화면 ↗",
+        "visible": true
+      },
+      {
+        "display": "flex",
+        "href": "https://github.com/Team-AnI/A-AND-I-GATEWAY-SERVER",
+        "slideId": "aandi-architecture",
+        "text": "Gateway 저장소 ↗",
+        "visible": true
+      },
+      {
+        "display": "flex",
+        "href": "https://github.com/Team-AnI/A-AND-I-WEB-SERVER",
+        "slideId": "aandi-query",
+        "text": "근거 저장소 ↗",
+        "visible": true
+      },
+      {
+        "display": "flex",
+        "href": "https://gojjibom.web.app/",
+        "slideId": "gojjibom",
+        "text": "공개 데모 ↗",
+        "visible": true
+      },
+      {
+        "display": "flex",
+        "href": "https://github.com/TIKI-TAKA-hackathon/Tiki-Taka-BE",
+        "slideId": "gojjibom",
+        "text": "백엔드 저장소 ↗",
+        "visible": true
+      },
+      {
+        "display": "flex",
+        "href": "https://didim-log-fe.web.app/",
+        "slideId": "didimlog",
+        "text": "공개 프론트 데모 ↗",
+        "visible": true
+      },
+      {
+        "display": "flex",
+        "href": "https://github.com/didim-log/didim-log-BE",
+        "slideId": "didimlog",
+        "text": "백엔드 저장소 ↗",
+        "visible": true
+      },
+      {
+        "display": "flex",
+        "href": "https://github.com/stdiodh/Investopia",
+        "slideId": "investopia",
+        "text": "저장소 ↗",
+        "visible": true
+      },
+      {
+        "display": "flex",
+        "href": "https://github.com/SangWook16074/Solo-Play-Web-Server",
+        "slideId": "soloplay",
+        "text": "백엔드 저장소 ↗",
+        "visible": true
+      },
+      {
+        "display": "flex",
+        "href": "https://aandiclub.com/",
+        "slideId": "evidence",
+        "text": "서비스 ↗",
+        "visible": true
+      },
+      {
+        "display": "flex",
+        "href": "https://github.com/Team-AnI/A-AND-I-GATEWAY-SERVER",
+        "slideId": "evidence",
+        "text": "Gateway ↗",
+        "visible": true
+      },
+      {
+        "display": "flex",
+        "href": "https://gojjibom.web.app/",
+        "slideId": "evidence",
+        "text": "데모 ↗",
+        "visible": true
+      },
+      {
+        "display": "flex",
+        "href": "https://github.com/TIKI-TAKA-hackathon/Tiki-Taka-BE",
+        "slideId": "evidence",
+        "text": "Backend ↗",
+        "visible": true
+      },
+      {
+        "display": "flex",
+        "href": "https://didim-log-fe.web.app/",
+        "slideId": "evidence",
+        "text": "데모 ↗",
+        "visible": true
+      },
+      {
+        "display": "flex",
+        "href": "https://github.com/didim-log/didim-log-BE",
+        "slideId": "evidence",
+        "text": "Backend ↗",
+        "visible": true
+      },
+      {
+        "display": "flex",
+        "href": "https://github.com/stdiodh/Investopia",
+        "slideId": "evidence",
+        "text": "저장소 ↗",
+        "visible": true
+      },
+      {
+        "display": "flex",
+        "href": "https://github.com/SangWook16074/Solo-Play-Web-Server",
+        "slideId": "evidence",
+        "text": "저장소 ↗",
+        "visible": true
+      },
+      {
+        "display": "flex",
+        "href": "https://github.com/stdiodh",
+        "slideId": "evidence",
+        "text": "GitHub ↗",
+        "visible": true
+      }
+    ],
+    "slides": [
+      {
+        "height": 900,
+        "id": "cover",
+        "visible": true,
+        "width": 1600
+      },
+      {
+        "height": 900,
+        "id": "project-map",
+        "visible": true,
+        "width": 1600
+      },
+      {
+        "height": 900,
+        "id": "aandi-architecture",
+        "visible": true,
+        "width": 1600
+      },
+      {
+        "height": 900,
+        "id": "aandi-query",
+        "visible": true,
+        "width": 1600
+      },
+      {
+        "height": 900,
+        "id": "gojjibom",
+        "visible": true,
+        "width": 1600
+      },
+      {
+        "height": 900,
+        "id": "didimlog",
+        "visible": true,
+        "width": 1600
+      },
+      {
+        "height": 900,
+        "id": "investopia",
+        "visible": true,
+        "width": 1600
+      },
+      {
+        "height": 900,
+        "id": "soloplay",
+        "visible": true,
+        "width": 1600
+      },
+      {
+        "height": 900,
+        "id": "evidence",
+        "visible": true,
+        "width": 1600
+      }
+    ]
+  }
+}

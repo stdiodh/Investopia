@@ -1,0 +1,186 @@
+{
+  "links": [
+    {
+      "display": "flex",
+      "href": "https://aandiclub.com/",
+      "slideId": "aandi-architecture",
+      "text": "운영 화면 ↗",
+      "visible": true
+    },
+    {
+      "display": "flex",
+      "href": "https://github.com/Team-AnI/A-AND-I-GATEWAY-SERVER",
+      "slideId": "aandi-architecture",
+      "text": "Gateway 저장소 ↗",
+      "visible": true
+    },
+    {
+      "display": "flex",
+      "href": "https://github.com/Team-AnI/A-AND-I-WEB-SERVER",
+      "slideId": "aandi-query",
+      "text": "근거 저장소 ↗",
+      "visible": true
+    },
+    {
+      "display": "flex",
+      "href": "https://gojjibom.web.app/",
+      "slideId": "gojjibom",
+      "text": "공개 데모 ↗",
+      "visible": true
+    },
+    {
+      "display": "flex",
+      "href": "https://github.com/TIKI-TAKA-hackathon/Tiki-Taka-BE",
+      "slideId": "gojjibom",
+      "text": "백엔드 저장소 ↗",
+      "visible": true
+    },
+    {
+      "display": "flex",
+      "href": "https://didim-log-fe.web.app/",
+      "slideId": "didimlog",
+      "text": "공개 프론트 데모 ↗",
+      "visible": true
+    },
+    {
+      "display": "flex",
+      "href": "https://github.com/didim-log/didim-log-BE",
+      "slideId": "didimlog",
+      "text": "백엔드 저장소 ↗",
+      "visible": true
+    },
+    {
+      "display": "flex",
+      "href": "https://github.com/stdiodh/Investopia",
+      "slideId": "investopia",
+      "text": "저장소 ↗",
+      "visible": true
+    },
+    {
+      "display": "flex",
+      "href": "https://github.com/SangWook16074/Solo-Play-Web-Server",
+      "slideId": "soloplay",
+      "text": "백엔드 저장소 ↗",
+      "visible": true
+    },
+    {
+      "display": "flex",
+      "href": "https://aandiclub.com/",
+      "slideId": "evidence",
+      "text": "서비스 ↗",
+      "visible": true
+    },
+    {
+      "display": "flex",
+      "href": "https://github.com/Team-AnI/A-AND-I-GATEWAY-SERVER",
+      "slideId": "evidence",
+      "text": "Gateway ↗",
+      "visible": true
+    },
+    {
+      "display": "flex",
+      "href": "https://gojjibom.web.app/",
+      "slideId": "evidence",
+      "text": "데모 ↗",
+      "visible": true
+    },
+    {
+      "display": "flex",
+      "href": "https://github.com/TIKI-TAKA-hackathon/Tiki-Taka-BE",
+      "slideId": "evidence",
+      "text": "Backend ↗",
+      "visible": true
+    },
+    {
+      "display": "flex",
+      "href": "https://didim-log-fe.web.app/",
+      "slideId": "evidence",
+      "text": "데모 ↗",
+      "visible": true
+    },
+    {
+      "display": "flex",
+      "href": "https://github.com/didim-log/didim-log-BE",
+      "slideId": "evidence",
+      "text": "Backend ↗",
+      "visible": true
+    },
+    {
+      "display": "flex",
+      "href": "https://github.com/stdiodh/Investopia",
+      "slideId": "evidence",
+      "text": "저장소 ↗",
+      "visible": true
+    },
+    {
+      "display": "flex",
+      "href": "https://github.com/SangWook16074/Solo-Play-Web-Server",
+      "slideId": "evidence",
+      "text": "저장소 ↗",
+      "visible": true
+    },
+    {
+      "display": "flex",
+      "href": "https://github.com/stdiodh",
+      "slideId": "evidence",
+      "text": "GitHub ↗",
+      "visible": true
+    }
+  ],
+  "slides": [
+    {
+      "height": 900,
+      "id": "cover",
+      "visible": true,
+      "width": 1600
+    },
+    {
+      "height": 900,
+      "id": "project-map",
+      "visible": true,
+      "width": 1600
+    },
+    {
+      "height": 900,
+      "id": "aandi-architecture",
+      "visible": true,
+      "width": 1600
+    },
+    {
+      "height": 900,
+      "id": "aandi-query",
+      "visible": true,
+      "width": 1600
+    },
+    {
+      "height": 900,
+      "id": "gojjibom",
+      "visible": true,
+      "width": 1600
+    },
+    {
+      "height": 900,
+      "id": "didimlog",
+      "visible": true,
+      "width": 1600
+    },
+    {
+      "height": 900,
+      "id": "investopia",
+      "visible": true,
+      "width": 1600
+    },
+    {
+      "height": 900,
+      "id": "soloplay",
+      "visible": true,
+      "width": 1600
+    },
+    {
+      "height": 900,
+      "id": "evidence",
+      "visible": true,
+      "width": 1600
+    }
+  ]
+}

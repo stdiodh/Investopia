@@ -1,0 +1,456 @@
+{
+  "checks": [
+    {
+      "details": {
+        "actual": 9,
+        "expected": 9,
+        "slideIds": [
+          "cover",
+          "project-map",
+          "aandi-architecture",
+          "aandi-query",
+          "gojjibom",
+          "didimlog",
+          "investopia",
+          "soloplay",
+          "evidence"
+        ]
+      },
+      "id": "slide-count",
+      "passed": true
+    },
+    {
+      "details": {
+        "failures": [],
+        "expected": "각 슬라이드의 01 / 9 … 09 / 9"
+      },
+      "id": "footer-total",
+      "passed": true
+    },
+    {
+      "details": {
+        "matches": []
+      },
+      "id": "forbidden-resume-duplicates",
+      "passed": true
+    },
+    {
+      "details": {
+        "coverId": "cover",
+        "expected": "5개 프로젝트"
+      },
+      "id": "cover-project-count",
+      "passed": true
+    },
+    {
+      "details": {
+        "found": [
+          {
+            "id": "aandi-architecture",
+            "text": "5개 백엔드 서비스"
+          }
+        ],
+        "rule": "5개 서비스는 A&I 슬라이드에서만 허용"
+      },
+      "id": "service-count-scope",
+      "passed": true
+    },
+    {
+      "details": {
+        "matches": [],
+        "rule": "전후 수치와 짧은 측정 조건만 사용하고 계산식·계산 설명은 쓰지 않음"
+      },
+      "id": "no-calculation-explanation",
+      "passed": true
+    },
+    {
+      "details": {
+        "projects": [
+          {
+            "explicitLabels": [
+              {
+                "id": "project-map",
+                "label": "운영 서비스"
+              },
+              {
+                "id": "project-map",
+                "label": "공개 fixture 데모"
+              },
+              {
+                "id": "project-map",
+                "label": "공개 프론트 데모"
+              },
+              {
+                "id": "project-map",
+                "label": "로컬 · 하드웨어 프로토타입"
+              },
+              {
+                "id": "project-map",
+                "label": "백엔드 프로젝트 · 저장소 공개"
+              },
+              {
+                "id": "aandi-architecture",
+                "label": "운영 서비스"
+              },
+              {
+                "id": "evidence",
+                "label": "운영 서비스"
+              },
+              {
+                "id": "evidence",
+                "label": "공개 fixture 데모"
+              },
+              {
+                "id": "evidence",
+                "label": "공개 프론트 데모"
+              },
+              {
+                "id": "evidence",
+                "label": "로컬 프로토타입"
+              },
+              {
+                "id": "evidence",
+                "label": "백엔드 프로젝트"
+              }
+            ],
+            "found": true,
+            "name": "A&I.com",
+            "source": "status-label",
+            "slideId": "project-map"
+          },
+          {
+            "explicitLabels": [
+              {
+                "id": "project-map",
+                "label": "운영 서비스"
+              },
+              {
+                "id": "project-map",
+                "label": "공개 fixture 데모"
+              },
+              {
+                "id": "project-map",
+                "label": "공개 프론트 데모"
+              },
+              {
+                "id": "project-map",
+                "label": "로컬 · 하드웨어 프로토타입"
+              },
+              {
+                "id": "project-map",
+                "label": "백엔드 프로젝트 · 저장소 공개"
+              },
+              {
+                "id": "gojjibom",
+                "label": "공개 fixture 데모 · 샘플 데이터"
+              },
+              {
+                "id": "evidence",
+                "label": "운영 서비스"
+              },
+              {
+                "id": "evidence",
+                "label": "공개 fixture 데모"
+              },
+              {
+                "id": "evidence",
+                "label": "공개 프론트 데모"
+              },
+              {
+                "id": "evidence",
+                "label": "로컬 프로토타입"
+              },
+              {
+                "id": "evidence",
+                "label": "백엔드 프로젝트"
+              }
+            ],
+            "found": true,
+            "name": "고찌봄",
+            "source": "status-label",
+            "slideId": "gojjibom"
+          },
+          {
+            "explicitLabels": [
+              {
+                "id": "project-map",
+                "label": "운영 서비스"
+              },
+              {
+                "id": "project-map",
+                "label": "공개 fixture 데모"
+              },
+              {
+                "id": "project-map",
+                "label": "공개 프론트 데모"
+              },
+              {
+                "id": "project-map",
+                "label": "로컬 · 하드웨어 프로토타입"
+              },
+              {
+                "id": "project-map",
+                "label": "백엔드 프로젝트 · 저장소 공개"
+              },
+              {
+                "id": "didimlog",
+                "label": "공개 프론트 데모 · 입력 미저장"
+              },
+              {
+                "id": "evidence",
+                "label": "운영 서비스"
+              },
+              {
+                "id": "evidence",
+                "label": "공개 fixture 데모"
+              },
+              {
+                "id": "evidence",
+                "label": "공개 프론트 데모"
+              },
+              {
+                "id": "evidence",
+                "label": "로컬 프로토타입"
+              },
+              {
+                "id": "evidence",
+                "label": "백엔드 프로젝트"
+              }
+            ],
+            "found": true,
+            "name": "디딤로그",
+            "source": "status-label",
+            "slideId": "project-map"
+          },
+          {
+            "explicitLabels": [
+              {
+                "id": "project-map",
+                "label": "운영 서비스"
+              },
+              {
+                "id": "project-map",
+                "label": "공개 fixture 데모"
+              },
+              {
+                "id": "project-map",
+                "label": "공개 프론트 데모"
+              },
+              {
+                "id": "project-map",
+                "label": "로컬 · 하드웨어 프로토타입"
+              },
+              {
+                "id": "project-map",
+                "label": "백엔드 프로젝트 · 저장소 공개"
+              },
+              {
+                "id": "investopia",
+                "label": "로컬 · 하드웨어 프로토타입"
+              },
+              {
+                "id": "evidence",
+                "label": "운영 서비스"
+              },
+              {
+                "id": "evidence",
+                "label": "공개 fixture 데모"
+              },
+              {
+                "id": "evidence",
+                "label": "공개 프론트 데모"
+              },
+              {
+                "id": "evidence",
+                "label": "로컬 프로토타입"
+              },
+              {
+                "id": "evidence",
+                "label": "백엔드 프로젝트"
+              }
+            ],
+            "found": true,
+            "name": "Investopia",
+            "source": "status-label",
+            "slideId": "project-map"
+          },
+          {
+            "explicitLabels": [
+              {
+                "id": "project-map",
+                "label": "운영 서비스"
+              },
+              {
+                "id": "project-map",
+                "label": "공개 fixture 데모"
+              },
+              {
+                "id": "project-map",
+                "label": "공개 프론트 데모"
+              },
+              {
+                "id": "project-map",
+                "label": "로컬 · 하드웨어 프로토타입"
+              },
+              {
+                "id": "project-map",
+                "label": "백엔드 프로젝트 · 저장소 공개"
+              },
+              {
+                "id": "soloplay",
+                "label": "백엔드 프로젝트 · 저장소 공개"
+              },
+              {
+                "id": "evidence",
+                "label": "운영 서비스"
+              },
+              {
+                "id": "evidence",
+                "label": "공개 fixture 데모"
+              },
+              {
+                "id": "evidence",
+                "label": "공개 프론트 데모"
+              },
+              {
+                "id": "evidence",
+                "label": "로컬 프로토타입"
+              },
+              {
+                "id": "evidence",
+                "label": "백엔드 프로젝트"
+              }
+            ],
+            "found": true,
+            "name": "SoloPlay",
+            "source": "status-label",
+            "slideId": "project-map"
+          }
+        ]
+      },
+      "id": "deployment-statuses",
+      "passed": true
+    },
+    {
+      "details": {
+        "repeats": [],
+        "rule": "같은 핵심 KPI를 여러 슬라이드에서 반복하지 않음"
+      },
+      "id": "unique-core-kpis",
+      "passed": true
+    }
+  ],
+  "generatedAt": "2026-08-21T04:14:59.878Z",
+  "pageUrl": "http://127.0.0.1:5174/",
+  "passed": true,
+  "slides": [
+    {
+      "footer": "허동현 · Backend Portfolio 202601 / 9",
+      "id": "cover",
+      "kpis": [],
+      "number": 1,
+      "statusLabels": []
+    },
+    {
+      "footer": "허동현 · Backend Portfolio 202602 / 9",
+      "id": "project-map",
+      "kpis": [],
+      "number": 2,
+      "statusLabels": [
+        "운영 서비스",
+        "공개 fixture 데모",
+        "공개 프론트 데모",
+        "로컬 · 하드웨어 프로토타입",
+        "백엔드 프로젝트 · 저장소 공개"
+      ]
+    },
+    {
+      "footer": "허동현 · Backend Portfolio 202603 / 9",
+      "id": "aandi-architecture",
+      "kpis": [
+        "5개"
+      ],
+      "number": 3,
+      "statusLabels": [
+        "운영 서비스"
+      ]
+    },
+    {
+      "footer": "허동현 · Backend Portfolio 202604 / 9",
+      "id": "aandi-query",
+      "kpis": [
+        "60회",
+        "2회",
+        "9.3 → 7.6ms"
+      ],
+      "number": 4,
+      "statusLabels": []
+    },
+    {
+      "footer": "허동현 · Backend Portfolio 202605 / 9",
+      "id": "gojjibom",
+      "kpis": [
+        "4일 MVP 완성",
+        "4일"
+      ],
+      "number": 5,
+      "statusLabels": [
+        "공개 fixture 데모 · 샘플 데이터"
+      ]
+    },
+    {
+      "footer": "허동현 · Backend Portfolio 202606 / 9",
+      "id": "didimlog",
+      "kpis": [
+        "55.632초",
+        "12.226초",
+        "77.96%",
+        "3회"
+      ],
+      "number": 6,
+      "statusLabels": [
+        "공개 프론트 데모 · 입력 미저장"
+      ]
+    },
+    {
+      "footer": "허동현 · Backend Portfolio 202607 / 9",
+      "id": "investopia",
+      "kpis": [
+        "웹 · Pi 공통 거래 흐름"
+      ],
+      "number": 7,
+      "statusLabels": [
+        "로컬 · 하드웨어 프로토타입"
+      ]
+    },
+    {
+      "footer": "허동현 · Backend Portfolio 202608 / 9",
+      "id": "soloplay",
+      "kpis": [
+        "장소 저장 성공 여부를 Gemini 결과와 분리"
+      ],
+      "number": 8,
+      "statusLabels": [
+        "백엔드 프로젝트 · 저장소 공개"
+      ]
+    },
+    {
+      "footer": "허동현 · Backend Portfolio 202609 / 9",
+      "id": "evidence",
+      "kpis": [],
+      "number": 9,
+      "statusLabels": [
+        "운영 서비스",
+        "공개 fixture 데모",
+        "공개 프론트 데모",
+        "로컬 프로토타입",
+        "백엔드 프로젝트"
+      ]
+    }
+  ],
+  "summary": {
+    "failed": 0,
+    "passed": 8,
+    "total": 8
+  }
+}
