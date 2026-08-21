@@ -44,12 +44,7 @@
     },
     {
       "details": {
-        "found": [
-          {
-            "id": "aandi-architecture",
-            "text": "5개 백엔드 서비스"
-          }
-        ],
+        "found": [],
         "rule": "5개 서비스는 A&I 슬라이드에서만 허용"
       },
       "id": "service-count-scope",
@@ -333,6 +328,92 @@
     },
     {
       "details": {
+        "images": [
+          {
+            "alt": "A&I.com 시스템 아키텍처",
+            "src": "http://127.0.0.1:5174/src/assets/aandi-architecture.png"
+          },
+          {
+            "alt": "A&I.com 과제 목록 시연 영상 프레임",
+            "src": "http://127.0.0.1:5174/src/assets/hr/evidence-v2/aandi-assignment-list-content.png"
+          }
+        ],
+        "rule": "3페이지 화면의 출처가 2026년 6월 시연 영상 프레임임을 표시"
+      },
+      "id": "aandi-operating-proof",
+      "passed": true
+    },
+    {
+      "details": {
+        "images": [
+          {
+            "alt": "A&I 기존 구조에서 60회로 예상한 child repository 조회를 회귀 테스트에서 2회로 검증한 JSON 기록",
+            "src": "http://127.0.0.1:5174/src/assets/hr/evidence-v2/aandi-repository-call-record-clean.png"
+          },
+          {
+            "alt": "A&I 과제 목록 P95 응답 시간 9.297ms에서 7.565ms로 측정한 저장소 기록",
+            "src": "http://127.0.0.1:5174/src/assets/hr/evidence-v2/aandi-p95-record.png"
+          }
+        ],
+        "links": [
+          {
+            "href": "https://github.com/Team-AnI/A-AND-I-WEB-SERVER",
+            "text": "근거 저장소 ↗"
+          },
+          {
+            "href": "https://github.com/Team-AnI/A-AND-I-WEB-SERVER/blob/main/performance/results/assignment-read-query-evidence.json",
+            "text": "원문 ↗"
+          },
+          {
+            "href": "https://github.com/Team-AnI/A-AND-I-WEB-SERVER/blob/main/docs/performance/results/2026-07-09-assignment-list-before-after.md",
+            "text": "원문 ↗"
+          }
+        ],
+        "rule": "4페이지에 구조·성능 원문 이미지와 직접 링크를 모두 표시"
+      },
+      "id": "aandi-measurement-evidence",
+      "passed": true
+    },
+    {
+      "details": {
+        "links": [
+          {
+            "href": "https://gojjibom.web.app/",
+            "text": "공개 데모 ↗"
+          },
+          {
+            "href": "https://github.com/TIKI-TAKA-hackathon/Tiki-Taka-BE",
+            "text": "백엔드 저장소 ↗"
+          },
+          {
+            "href": "https://news.unn.net/news/articleView.html?idxno=594458",
+            "text": "한국대학신문 기사 ↗"
+          },
+          {
+            "href": "https://www.jdnc.or.kr/notice/news.htm?act=view&seq=1019",
+            "text": "결과 확인 ↗"
+          }
+        ],
+        "rule": "5페이지에 보도·주관기관 근거를 연결하고 검증되지 않은 표현을 쓰지 않음"
+      },
+      "id": "gojjibom-external-proof",
+      "passed": true
+    },
+    {
+      "details": {
+        "images": [
+          {
+            "alt": "SoloPlay 맞춤 장소와 해시태그 추천 화면 시안",
+            "src": "http://127.0.0.1:5174/src/assets/hr/evidence-v2/home-recommendations.png"
+          }
+        ],
+        "rule": "8페이지에 UI 시안임을 밝히고 코드·테스트로 보강 흐름을 검증"
+      },
+      "id": "soloplay-visual-and-test-proof",
+      "passed": true
+    },
+    {
+      "details": {
         "repeats": [],
         "rule": "같은 핵심 KPI를 여러 슬라이드에서 반복하지 않음"
       },
@@ -340,21 +421,25 @@
       "passed": true
     }
   ],
-  "generatedAt": "2026-08-21T04:14:59.878Z",
+  "generatedAt": "2026-08-21T07:47:00.434Z",
   "pageUrl": "http://127.0.0.1:5174/",
   "passed": true,
   "slides": [
     {
       "footer": "허동현 · Backend Portfolio 202601 / 9",
       "id": "cover",
+      "images": [],
       "kpis": [],
+      "links": [],
       "number": 1,
       "statusLabels": []
     },
     {
       "footer": "허동현 · Backend Portfolio 202602 / 9",
       "id": "project-map",
+      "images": [],
       "kpis": [],
+      "links": [],
       "number": 2,
       "statusLabels": [
         "운영 서비스",
@@ -367,8 +452,26 @@
     {
       "footer": "허동현 · Backend Portfolio 202603 / 9",
       "id": "aandi-architecture",
-      "kpis": [
-        "5개"
+      "images": [
+        {
+          "alt": "A&I.com 시스템 아키텍처",
+          "src": "http://127.0.0.1:5174/src/assets/aandi-architecture.png"
+        },
+        {
+          "alt": "A&I.com 과제 목록 시연 영상 프레임",
+          "src": "http://127.0.0.1:5174/src/assets/hr/evidence-v2/aandi-assignment-list-content.png"
+        }
+      ],
+      "kpis": [],
+      "links": [
+        {
+          "href": "https://aandiclub.com/",
+          "text": "운영 화면 ↗"
+        },
+        {
+          "href": "https://github.com/Team-AnI/A-AND-I-GATEWAY-SERVER",
+          "text": "Gateway 저장소 ↗"
+        }
       ],
       "number": 3,
       "statusLabels": [
@@ -378,10 +481,33 @@
     {
       "footer": "허동현 · Backend Portfolio 202604 / 9",
       "id": "aandi-query",
+      "images": [
+        {
+          "alt": "A&I 기존 구조에서 60회로 예상한 child repository 조회를 회귀 테스트에서 2회로 검증한 JSON 기록",
+          "src": "http://127.0.0.1:5174/src/assets/hr/evidence-v2/aandi-repository-call-record-clean.png"
+        },
+        {
+          "alt": "A&I 과제 목록 P95 응답 시간 9.297ms에서 7.565ms로 측정한 저장소 기록",
+          "src": "http://127.0.0.1:5174/src/assets/hr/evidence-v2/aandi-p95-record.png"
+        }
+      ],
       "kpis": [
         "60회",
-        "2회",
-        "9.3 → 7.6ms"
+        "2회"
+      ],
+      "links": [
+        {
+          "href": "https://github.com/Team-AnI/A-AND-I-WEB-SERVER",
+          "text": "근거 저장소 ↗"
+        },
+        {
+          "href": "https://github.com/Team-AnI/A-AND-I-WEB-SERVER/blob/main/performance/results/assignment-read-query-evidence.json",
+          "text": "원문 ↗"
+        },
+        {
+          "href": "https://github.com/Team-AnI/A-AND-I-WEB-SERVER/blob/main/docs/performance/results/2026-07-09-assignment-list-before-after.md",
+          "text": "원문 ↗"
+        }
       ],
       "number": 4,
       "statusLabels": []
@@ -389,9 +515,33 @@
     {
       "footer": "허동현 · Backend Portfolio 202605 / 9",
       "id": "gojjibom",
+      "images": [
+        {
+          "alt": "고찌봄 알림에서 복약 화면으로 이어지는 실제 흐름",
+          "src": "http://127.0.0.1:5174/src/assets/hr/gojjibom-one-touch.png"
+        }
+      ],
       "kpis": [
         "4일 MVP 완성",
         "4일"
+      ],
+      "links": [
+        {
+          "href": "https://gojjibom.web.app/",
+          "text": "공개 데모 ↗"
+        },
+        {
+          "href": "https://github.com/TIKI-TAKA-hackathon/Tiki-Taka-BE",
+          "text": "백엔드 저장소 ↗"
+        },
+        {
+          "href": "https://news.unn.net/news/articleView.html?idxno=594458",
+          "text": "한국대학신문 기사 ↗"
+        },
+        {
+          "href": "https://www.jdnc.or.kr/notice/news.htm?act=view&seq=1019",
+          "text": "결과 확인 ↗"
+        }
       ],
       "number": 5,
       "statusLabels": [
@@ -401,11 +551,27 @@
     {
       "footer": "허동현 · Backend Portfolio 202606 / 9",
       "id": "didimlog",
+      "images": [
+        {
+          "alt": "디딤로그 BOJ 계정 인증 실제 화면",
+          "src": "http://127.0.0.1:5174/src/assets/hr/didimlog-boj.png"
+        }
+      ],
       "kpis": [
         "55.632초",
         "12.226초",
         "77.96%",
         "3회"
+      ],
+      "links": [
+        {
+          "href": "https://didim-log-fe.web.app/",
+          "text": "공개 프론트 데모 ↗"
+        },
+        {
+          "href": "https://github.com/didim-log/didim-log-BE",
+          "text": "백엔드 저장소 ↗"
+        }
       ],
       "number": 6,
       "statusLabels": [
@@ -415,8 +581,20 @@
     {
       "footer": "허동현 · Backend Portfolio 202607 / 9",
       "id": "investopia",
+      "images": [
+        {
+          "alt": "Investopia Raspberry Pi 회로와 LCD 실제 모습",
+          "src": "http://127.0.0.1:5174/src/assets/hr/investopia-hardware.png"
+        }
+      ],
       "kpis": [
         "웹 · Pi 공통 거래 흐름"
+      ],
+      "links": [
+        {
+          "href": "https://github.com/stdiodh/Investopia",
+          "text": "저장소 ↗"
+        }
       ],
       "number": 7,
       "statusLabels": [
@@ -426,8 +604,24 @@
     {
       "footer": "허동현 · Backend Portfolio 202608 / 9",
       "id": "soloplay",
+      "images": [
+        {
+          "alt": "SoloPlay 맞춤 장소와 해시태그 추천 화면 시안",
+          "src": "http://127.0.0.1:5174/src/assets/hr/evidence-v2/home-recommendations.png"
+        }
+      ],
       "kpis": [
-        "장소 저장 성공 여부를 Gemini 결과와 분리"
+        "관련 테스트 19개 · 실패 0"
+      ],
+      "links": [
+        {
+          "href": "https://github.com/SangWook16074/Solo-Play-Web-Server",
+          "text": "백엔드 저장소 ↗"
+        },
+        {
+          "href": "https://www.figma.com/design/rWBAUinnBcfdhEXF2blgWC/%EC%86%94%ED%94%8C-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8?node-id=66-2",
+          "text": "화면 시안 ↗"
+        }
       ],
       "number": 8,
       "statusLabels": [
@@ -437,7 +631,54 @@
     {
       "footer": "허동현 · Backend Portfolio 202609 / 9",
       "id": "evidence",
+      "images": [],
       "kpis": [],
+      "links": [
+        {
+          "href": "https://aandiclub.com/",
+          "text": "서비스 ↗"
+        },
+        {
+          "href": "https://github.com/Team-AnI/A-AND-I-WEB-SERVER/blob/main/docs/performance/results/2026-07-09-assignment-list-before-after.md",
+          "text": "성능 기록 ↗"
+        },
+        {
+          "href": "https://gojjibom.web.app/",
+          "text": "데모 ↗"
+        },
+        {
+          "href": "https://news.unn.net/news/articleView.html?idxno=594458",
+          "text": "기사 ↗"
+        },
+        {
+          "href": "https://www.jdnc.or.kr/notice/news.htm?act=view&seq=1019",
+          "text": "결과 ↗"
+        },
+        {
+          "href": "https://didim-log-fe.web.app/",
+          "text": "데모 ↗"
+        },
+        {
+          "href": "https://github.com/didim-log/didim-log-BE",
+          "text": "Backend ↗"
+        },
+        {
+          "href": "https://github.com/stdiodh/Investopia",
+          "text": "저장소 ↗"
+        },
+        {
+          "href": "https://github.com/SangWook16074/Solo-Play-Web-Server",
+          "text": "저장소 ↗"
+        },
+        {
+          "href": "https://www.figma.com/design/rWBAUinnBcfdhEXF2blgWC/%EC%86%94%ED%94%8C-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8?node-id=66-2",
+          "text": "화면 시안 ↗"
+        },
+        {
+          "href": "https://github.com/stdiodh",
+          "text": "GitHub ↗"
+        }
+      ],
       "number": 9,
       "statusLabels": [
         "운영 서비스",
@@ -450,7 +691,7 @@
   ],
   "summary": {
     "failed": 0,
-    "passed": 8,
-    "total": 8
+    "passed": 12,
+    "total": 12
   }
 }

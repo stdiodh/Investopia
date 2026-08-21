@@ -23,6 +23,20 @@
     },
     {
       "display": "flex",
+      "href": "https://github.com/Team-AnI/A-AND-I-WEB-SERVER/blob/main/performance/results/assignment-read-query-evidence.json",
+      "slideId": "aandi-query",
+      "text": "원문 ↗",
+      "visible": true
+    },
+    {
+      "display": "flex",
+      "href": "https://github.com/Team-AnI/A-AND-I-WEB-SERVER/blob/main/docs/performance/results/2026-07-09-assignment-list-before-after.md",
+      "slideId": "aandi-query",
+      "text": "원문 ↗",
+      "visible": true
+    },
+    {
+      "display": "flex",
       "href": "https://gojjibom.web.app/",
       "slideId": "gojjibom",
       "text": "공개 데모 ↗",
@@ -33,6 +47,20 @@
       "href": "https://github.com/TIKI-TAKA-hackathon/Tiki-Taka-BE",
       "slideId": "gojjibom",
       "text": "백엔드 저장소 ↗",
+      "visible": true
+    },
+    {
+      "display": "flex",
+      "href": "https://news.unn.net/news/articleView.html?idxno=594458",
+      "slideId": "gojjibom",
+      "text": "한국대학신문 기사 ↗",
+      "visible": true
+    },
+    {
+      "display": "flex",
+      "href": "https://www.jdnc.or.kr/notice/news.htm?act=view&seq=1019",
+      "slideId": "gojjibom",
+      "text": "결과 확인 ↗",
       "visible": true
     },
     {
@@ -65,6 +93,13 @@
     },
     {
       "display": "flex",
+      "href": "https://www.figma.com/design/rWBAUinnBcfdhEXF2blgWC/%EC%86%94%ED%94%8C-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8?node-id=66-2",
+      "slideId": "soloplay",
+      "text": "화면 시안 ↗",
+      "visible": true
+    },
+    {
+      "display": "flex",
       "href": "https://aandiclub.com/",
       "slideId": "evidence",
       "text": "서비스 ↗",
@@ -72,9 +107,9 @@
     },
     {
       "display": "flex",
-      "href": "https://github.com/Team-AnI/A-AND-I-GATEWAY-SERVER",
+      "href": "https://github.com/Team-AnI/A-AND-I-WEB-SERVER/blob/main/docs/performance/results/2026-07-09-assignment-list-before-after.md",
       "slideId": "evidence",
-      "text": "Gateway ↗",
+      "text": "성능 기록 ↗",
       "visible": true
     },
     {
@@ -86,9 +121,16 @@
     },
     {
       "display": "flex",
-      "href": "https://github.com/TIKI-TAKA-hackathon/Tiki-Taka-BE",
+      "href": "https://news.unn.net/news/articleView.html?idxno=594458",
       "slideId": "evidence",
-      "text": "Backend ↗",
+      "text": "기사 ↗",
+      "visible": true
+    },
+    {
+      "display": "flex",
+      "href": "https://www.jdnc.or.kr/notice/news.htm?act=view&seq=1019",
+      "slideId": "evidence",
+      "text": "결과 ↗",
       "visible": true
     },
     {
@@ -117,6 +159,13 @@
       "href": "https://github.com/SangWook16074/Solo-Play-Web-Server",
       "slideId": "evidence",
       "text": "저장소 ↗",
+      "visible": true
+    },
+    {
+      "display": "flex",
+      "href": "https://www.figma.com/design/rWBAUinnBcfdhEXF2blgWC/%EC%86%94%ED%94%8C-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8?node-id=66-2",
+      "slideId": "evidence",
+      "text": "화면 시안 ↗",
       "visible": true
     },
     {

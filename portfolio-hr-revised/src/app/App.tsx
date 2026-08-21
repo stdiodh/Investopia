@@ -1,8 +1,11 @@
 import type { ReactNode } from "react";
 
 import aandiArchitecture from "../assets/aandi-architecture.png";
-import aandiLive from "../assets/hr/aandi-judge.png";
+import aandiLive from "../assets/hr/evidence-v2/aandi-assignment-list-content.png";
+import aandiP95Record from "../assets/hr/evidence-v2/aandi-p95-record.png";
+import aandiRepositoryRecord from "../assets/hr/evidence-v2/aandi-repository-call-record-clean.png";
 import didimlogBoj from "../assets/hr/didimlog-boj.png";
+import soloPlayHome from "../assets/hr/evidence-v2/home-recommendations.png";
 import gojjibomFlow from "../assets/hr/gojjibom-one-touch.png";
 import investopiaHardware from "../assets/hr/investopia-hardware.png";
 
@@ -16,13 +19,18 @@ const MEDIA = {
 const LINKS = {
   aandi: "https://aandiclub.com/",
   aandiGateway: "https://github.com/Team-AnI/A-AND-I-GATEWAY-SERVER",
+  aandiPerformance: "https://github.com/Team-AnI/A-AND-I-WEB-SERVER/blob/main/docs/performance/results/2026-07-09-assignment-list-before-after.md",
+  aandiRepositoryEvidence: "https://github.com/Team-AnI/A-AND-I-WEB-SERVER/blob/main/performance/results/assignment-read-query-evidence.json",
   aandiWeb: "https://github.com/Team-AnI/A-AND-I-WEB-SERVER",
   didimlog: "https://github.com/didim-log/didim-log-BE",
   didimlogDemo: "https://didim-log-fe.web.app/",
   github: "https://github.com/stdiodh",
   gojjibom: "https://gojjibom.web.app/",
   gojjibomBackend: "https://github.com/TIKI-TAKA-hackathon/Tiki-Taka-BE",
+  gojjibomNews: "https://news.unn.net/news/articleView.html?idxno=594458",
+  gojjibomResult: "https://www.jdnc.or.kr/notice/news.htm?act=view&seq=1019",
   investopia: "https://github.com/stdiodh/Investopia",
+  soloplayDesign: "https://www.figma.com/design/rWBAUinnBcfdhEXF2blgWC/%EC%86%94%ED%94%8C-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8?node-id=66-2",
   soloplay: "https://github.com/SangWook16074/Solo-Play-Web-Server",
 } as const;
 
@@ -214,7 +222,7 @@ function AandiArchitectureSlide() {
           </div>
           <ActionList
             items={[
-              "5개 서버 저장소와 Gateway 경로를 나눴습니다.",
+              "서버별 저장소와 Gateway 경로를 나눴습니다.",
               "SNS/SQS로 서비스 사이 이벤트 전달을 분리했습니다.",
               "GitHub Actions, ECR, EC2로 서비스별 배포 흐름을 만들었습니다.",
             ]}
@@ -227,18 +235,18 @@ function AandiArchitectureSlide() {
         <div className="architecture-evidence">
           <figure className="primary-figure architecture-figure">
             <img src={aandiArchitecture} alt="A&I.com 시스템 아키텍처" />
-            <figcaption>직접 작성한 운영 아키텍처 · A&amp;I 안의 5개 백엔드 서비스</figcaption>
+            <figcaption>직접 작성한 운영 아키텍처 · 서비스 분리와 배포 흐름</figcaption>
           </figure>
           <div className="architecture-proof">
-            <div className="result-number">
-              <strong>5개</strong>
-              <span>독립 서버 저장소</span>
+            <figure className="architecture-live">
+              <img src={MEDIA.aandiLive} alt="A&I.com 과제 목록 시연 영상 프레임" />
+              <figcaption>과제 목록 시연 영상 프레임 · 2026.06</figcaption>
+            </figure>
+            <div className="architecture-fact">
+              <span>OPERATING PROOF</span>
+              <strong>5개 독립 서버 저장소</strong>
+              <p>서비스별 변경 · 배포 범위 분리</p>
             </div>
-            <div className="support-number">
-              <strong>서비스별</strong>
-              <span>변경 · 배포 범위 분리</span>
-            </div>
-            <img src={MEDIA.aandiLive} alt="현재 운영 중인 A&I.com 실제 화면" />
           </div>
         </div>
       </div>
@@ -270,33 +278,25 @@ function AandiQuerySlide() {
         <div className="star-card">
           <StarRow label="S · 상황">과제 목록을 만들 때 과제마다 필요한 데이터를 다시 조회했습니다.</StarRow>
           <StarRow label="T · 목표">API 응답 형식은 그대로 두고 반복 조회만 줄여야 했습니다.</StarRow>
-          <StarRow label="A · 판단">필요한 범위를 먼저 읽은 뒤 과제별로 묶는 편이 단순하다고 봤습니다.</StarRow>
-          <StarRow label="A · 실행">사용자·과제·판정 데이터를 batch query로 가져오게 재구성했습니다.</StarRow>
+          <StarRow label="A · 실행">필요한 데이터를 batch로 먼저 읽고 과제별로 묶도록 조회 순서를 재구성했습니다.</StarRow>
         </div>
-        <div className="query-result">
-          <p className="note-label">RESULT</p>
-          <div className="before-after">
-            <div>
-              <span>반복 조회</span>
-              <strong>60회</strong>
-            </div>
-            <FlowArrow />
-            <div className="after">
-              <span>배치 조회</span>
-              <strong>2회</strong>
-            </div>
-          </div>
-          <div className="p95-result">
-            <span>P95 응답 시간</span>
-            <strong>9.3 → 7.6ms</strong>
-          </div>
-          <p className="measure-note">동일 시나리오 측정 · 저장소 성능 기록 기준</p>
+        <div className="query-evidence">
+          <p className="query-result-label">R · 확인 결과</p>
+          <figure className="query-record query-call-record">
+            <img src={aandiRepositoryRecord} alt="A&I 기존 구조에서 60회로 예상한 child repository 조회를 회귀 테스트에서 2회로 검증한 JSON 기록" />
+            <figcaption>
+              <span><strong>구조 검증</strong> 기존 구조 예상 60회 → 회귀 테스트 검증 2회 · MongoDB command 수가 아닌 service-level 기준</span>
+              <Link href={LINKS.aandiRepositoryEvidence}>원문</Link>
+            </figcaption>
+          </figure>
+          <figure className="query-record query-p95-record">
+            <img src={aandiP95Record} alt="A&I 과제 목록 P95 응답 시간 9.297ms에서 7.565ms로 측정한 저장소 기록" />
+            <figcaption>
+              <span><strong>성능 측정</strong> 과제 30개 · 100 RPS · 2분 · 총 3세트 · 로컬 고정부하</span>
+              <Link href={LINKS.aandiPerformance}>원문</Link>
+            </figcaption>
+          </figure>
         </div>
-      </div>
-      <div className="case-summary">
-        <span>확인한 결과</span>
-        <strong>같은 응답을 더 적은 조회로 구성</strong>
-        <p>필요한 데이터를 먼저 모아 읽고, 과제별로 묶어 응답했습니다.</p>
       </div>
     </Slide>
   );
@@ -319,16 +319,30 @@ function GojjibomSlide() {
             <div><span>02</span><strong>범위</strong><p>알림과 확인 화면만 우선 구현</p></div>
             <div><span>03</span><strong>연결</strong><p>알림을 누르면 해당 화면을 바로 열기</p></div>
           </div>
-          <p className="project-result"><span>결과</span><strong>4일 MVP 완성</strong><em>대회 1위 · 팀 MVP</em></p>
+          <p className="project-result"><span>결과</span><strong>4일 MVP 완성</strong><em>최고점 · 혁신상</em></p>
           <div className="link-row">
             <Link href={LINKS.gojjibom}>공개 데모</Link>
             <Link href={LINKS.gojjibomBackend}>백엔드 저장소</Link>
           </div>
         </div>
-        <figure className="primary-figure media-figure">
-          <img src={MEDIA.gojjibom} alt="고찌봄 알림에서 복약 화면으로 이어지는 실제 흐름" />
-          <figcaption>알림에서 복약 화면으로 바로 이동하는 흐름 · 공개 데모는 샘플 데이터 사용</figcaption>
-        </figure>
+        <div className="gojjibom-evidence">
+          <figure className="primary-figure media-figure">
+            <img src={MEDIA.gojjibom} alt="고찌봄 알림에서 복약 화면으로 이어지는 실제 흐름" />
+            <figcaption>알림에서 복약 화면으로 바로 이동하는 흐름 · 공개 데모는 샘플 데이터 사용</figcaption>
+          </figure>
+          <div className="external-proof" aria-label="고찌봄 외부 검증 자료">
+            <div>
+              <span>언론 보도 · 2026.07.08</span>
+              <strong>고찌봄을 해커톤 주요 개발 성과로 소개</strong>
+              <Link href={LINKS.gojjibomNews}>한국대학신문 기사</Link>
+            </div>
+            <div>
+              <span>주관기관 결과</span>
+              <strong>티키타카 팀 고찌봄 · 최고점 · 혁신상</strong>
+              <Link href={LINKS.gojjibomResult}>결과 확인</Link>
+            </div>
+          </div>
+        </div>
       </div>
     </Slide>
   );
@@ -451,36 +465,55 @@ function SoloPlaySlide() {
             <span>내 판단</span>
             <strong>필수 데이터 저장과 선택적인 AI 보강의 성공 조건을 분리했습니다.</strong>
           </div>
-          <div className="link-row"><Link href={LINKS.soloplay}>백엔드 저장소</Link></div>
-        </div>
-        <div className="solo-flow" aria-label="SoloPlay 장소 저장과 AI 보강 흐름">
-          <div className="solo-node"><span>01</span><strong>Kakao Local API</strong><p>장소 수집</p></div>
-          <FlowArrow />
-          <div className="solo-node"><span>02</span><strong>장소 ID 확인</strong><p>중복 저장 방지</p></div>
-          <FlowArrow />
-          <div className="solo-node primary-node"><span>03</span><strong>MongoDB 먼저 저장</strong><p>원본 장소 보존</p></div>
-          <div className="solo-enrich">
-            <span>별도 Coroutine</span>
-            <strong>Gemini 소개 · 해시태그 보강</strong>
-            <div><p><b>성공</b> 표시용 제목과 태그 갱신</p><p><b>실패</b> 원본 장소 그대로 유지</p></div>
+          <div className="link-row">
+            <Link href={LINKS.soloplay}>백엔드 저장소</Link>
+            <Link href={LINKS.soloplayDesign}>화면 시안</Link>
           </div>
         </div>
-      </div>
-      <div className="solo-result">
-        <span>결과</span>
-        <strong>장소 저장 성공 여부를 Gemini 결과와 분리</strong>
-        <p>화면 대신 저장소에서 확인되는 데이터 흐름만 그렸습니다.</p>
+        <div className="solo-evidence">
+          <figure className="solo-screen">
+            <img src={soloPlayHome} alt="SoloPlay 맞춤 장소와 해시태그 추천 화면 시안" />
+            <figcaption>서비스 UI 시안 · 사용자가 확인하는 장소 추천과 태그</figcaption>
+          </figure>
+          <div className="solo-proof" aria-label="SoloPlay 코드와 테스트로 확인한 데이터 흐름">
+            <p className="note-label">CODE-BACKED FLOW</p>
+            <h3>장소는 먼저 저장하고, AI는 나중에 보강했습니다.</h3>
+            <div className="solo-state-flow">
+              <div>
+                <span>01</span>
+                <strong>Kakao 원본 저장</strong>
+                <p>장소명 · 주소 · 카테고리</p>
+              </div>
+              <FlowArrow />
+              <div>
+                <span>02</span>
+                <strong>Gemini 보강</strong>
+                <p>소개 · 해시태그 갱신</p>
+              </div>
+            </div>
+            <div className="solo-fallback">
+              <span>실패 시</span>
+              <strong>기존 저장본 유지</strong>
+              <p>Gemini 호출 · 응답 파싱 실패 기준</p>
+            </div>
+            <div className="solo-test-result">
+              <span>TEST</span>
+              <strong>관련 테스트 19개 · 실패 0</strong>
+              <p>PlaceService 13 · Enrichment 6</p>
+            </div>
+          </div>
+        </div>
       </div>
     </Slide>
   );
 }
 
 const evidenceLinks = [
-  { name: "A&I.com", status: <Status tone="green">운영 서비스</Status>, links: [["서비스", LINKS.aandi], ["Gateway", LINKS.aandiGateway]] },
-  { name: "고찌봄", status: <Status>공개 fixture 데모</Status>, links: [["데모", LINKS.gojjibom], ["Backend", LINKS.gojjibomBackend]] },
+  { name: "A&I.com", status: <Status tone="green">운영 서비스</Status>, links: [["서비스", LINKS.aandi], ["성능 기록", LINKS.aandiPerformance]] },
+  { name: "고찌봄", status: <Status>공개 fixture 데모</Status>, links: [["데모", LINKS.gojjibom], ["기사", LINKS.gojjibomNews], ["결과", LINKS.gojjibomResult]] },
   { name: "디딤로그", status: <Status>공개 프론트 데모</Status>, links: [["데모", LINKS.didimlogDemo], ["Backend", LINKS.didimlog]] },
   { name: "Investopia", status: <Status tone="gray">로컬 프로토타입</Status>, links: [["저장소", LINKS.investopia]] },
-  { name: "SoloPlay", status: <Status tone="gray">백엔드 프로젝트</Status>, links: [["저장소", LINKS.soloplay]] },
+  { name: "SoloPlay", status: <Status tone="gray">백엔드 프로젝트</Status>, links: [["저장소", LINKS.soloplay], ["화면 시안", LINKS.soloplayDesign]] },
 ] as const;
 
 function EvidenceSlide() {

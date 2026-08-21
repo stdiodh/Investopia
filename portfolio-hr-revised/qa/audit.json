@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-21T04:14:59.629Z",
+  "generatedAt": "2026-08-21T07:47:00.194Z",
   "pageUrl": "http://127.0.0.1:5174/",
   "viewport": {
     "height": 900,
@@ -131,31 +131,31 @@
           ],
           "rendered": [
             930,
-            430
+            376
           ],
           "scale": {
             "x": 0.56,
-            "y": 0.46
+            "y": 0.4
           },
           "sourcePixelsPerRenderedPixel": 1.8,
           "upscaled": false
         },
         {
-          "alt": "현재 운영 중인 A&I.com 실제 화면",
+          "alt": "A&I.com 과제 목록 시연 영상 프레임",
           "complete": true,
           "natural": [
-            3824,
-            2484
+            2304,
+            1296
           ],
           "rendered": [
-            670,
-            122
+            672,
+            164
           ],
           "scale": {
-            "x": 0.18,
-            "y": 0.05
+            "x": 0.29,
+            "y": 0.13
           },
-          "sourcePixelsPerRenderedPixel": 5.71,
+          "sourcePixelsPerRenderedPixel": 3.43,
           "upscaled": false
         }
       ],
@@ -232,7 +232,44 @@
         "y": 2828
       },
       "id": "aandi-query",
-      "images": [],
+      "images": [
+        {
+          "alt": "A&I 기존 구조에서 60회로 예상한 child repository 조회를 회귀 테스트에서 2회로 검증한 JSON 기록",
+          "complete": true,
+          "natural": [
+            2400,
+            1700
+          ],
+          "rendered": [
+            824,
+            233
+          ],
+          "scale": {
+            "x": 0.34,
+            "y": 0.14
+          },
+          "sourcePixelsPerRenderedPixel": 2.91,
+          "upscaled": false
+        },
+        {
+          "alt": "A&I 과제 목록 P95 응답 시간 9.297ms에서 7.565ms로 측정한 저장소 기록",
+          "complete": true,
+          "natural": [
+            2400,
+            1400
+          ],
+          "rendered": [
+            824,
+            226
+          ],
+          "scale": {
+            "x": 0.34,
+            "y": 0.16
+          },
+          "sourcePixelsPerRenderedPixel": 2.91,
+          "upscaled": false
+        }
+      ],
       "links": [
         {
           "display": "flex",
@@ -244,6 +281,30 @@
           "size": [
             73.34,
             29
+          ]
+        },
+        {
+          "display": "flex",
+          "href": "https://github.com/Team-AnI/A-AND-I-WEB-SERVER/blob/main/performance/results/assignment-read-query-evidence.json",
+          "rel": "noreferrer",
+          "target": "_blank",
+          "text": "원문 ↗",
+          "visible": true,
+          "size": [
+            35,
+            24
+          ]
+        },
+        {
+          "display": "flex",
+          "href": "https://github.com/Team-AnI/A-AND-I-WEB-SERVER/blob/main/docs/performance/results/2026-07-09-assignment-list-before-after.md",
+          "rel": "noreferrer",
+          "target": "_blank",
+          "text": "원문 ↗",
+          "visible": true,
+          "size": [
+            35,
+            24
           ]
         }
       ],
@@ -337,6 +398,30 @@
           "size": [
             83.72,
             29
+          ]
+        },
+        {
+          "display": "flex",
+          "href": "https://news.unn.net/news/articleView.html?idxno=594458",
+          "rel": "noreferrer",
+          "target": "_blank",
+          "text": "한국대학신문 기사 ↗",
+          "visible": true,
+          "size": [
+            104.48,
+            25
+          ]
+        },
+        {
+          "display": "flex",
+          "href": "https://www.jdnc.or.kr/notice/news.htm?act=view&seq=1019",
+          "rel": "noreferrer",
+          "target": "_blank",
+          "text": "결과 확인 ↗",
+          "visible": true,
+          "size": [
+            62.97,
+            25
           ]
         }
       ],
@@ -561,7 +646,26 @@
         "y": 6556
       },
       "id": "soloplay",
-      "images": [],
+      "images": [
+        {
+          "alt": "SoloPlay 맞춤 장소와 해시태그 추천 화면 시안",
+          "complete": true,
+          "natural": [
+            390,
+            1198
+          ],
+          "rendered": [
+            260,
+            610
+          ],
+          "scale": {
+            "x": 0.67,
+            "y": 0.51
+          },
+          "sourcePixelsPerRenderedPixel": 1.5,
+          "upscaled": false
+        }
+      ],
       "links": [
         {
           "display": "flex",
@@ -572,6 +676,18 @@
           "visible": true,
           "size": [
             83.72,
+            29
+          ]
+        },
+        {
+          "display": "flex",
+          "href": "https://www.figma.com/design/rWBAUinnBcfdhEXF2blgWC/%EC%86%94%ED%94%8C-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8?node-id=66-2",
+          "rel": "noreferrer",
+          "target": "_blank",
+          "text": "화면 시안 ↗",
+          "visible": true,
+          "size": [
+            62.97,
             29
           ]
         }
@@ -639,13 +755,13 @@
         },
         {
           "display": "flex",
-          "href": "https://github.com/Team-AnI/A-AND-I-GATEWAY-SERVER",
+          "href": "https://github.com/Team-AnI/A-AND-I-WEB-SERVER/blob/main/docs/performance/results/2026-07-09-assignment-list-before-after.md",
           "rel": "noreferrer",
           "target": "_blank",
-          "text": "Gateway ↗",
+          "text": "성능 기록 ↗",
           "visible": true,
           "size": [
-            64.64,
+            62.97,
             29
           ]
         },
@@ -663,13 +779,25 @@
         },
         {
           "display": "flex",
-          "href": "https://github.com/TIKI-TAKA-hackathon/Tiki-Taka-BE",
+          "href": "https://news.unn.net/news/articleView.html?idxno=594458",
           "rel": "noreferrer",
           "target": "_blank",
-          "text": "Backend ↗",
+          "text": "기사 ↗",
           "visible": true,
           "size": [
-            64.64,
+            35,
+            29
+          ]
+        },
+        {
+          "display": "flex",
+          "href": "https://www.jdnc.or.kr/notice/news.htm?act=view&seq=1019",
+          "rel": "noreferrer",
+          "target": "_blank",
+          "text": "결과 ↗",
+          "visible": true,
+          "size": [
+            35,
             29
           ]
         },
@@ -718,6 +846,18 @@
           "visible": true,
           "size": [
             45.38,
+            29
+          ]
+        },
+        {
+          "display": "flex",
+          "href": "https://www.figma.com/design/rWBAUinnBcfdhEXF2blgWC/%EC%86%94%ED%94%8C-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8?node-id=66-2",
+          "rel": "noreferrer",
+          "target": "_blank",
+          "text": "화면 시안 ↗",
+          "visible": true,
+          "size": [
+            62.97,
             29
           ]
         },
@@ -799,6 +939,20 @@
       },
       {
         "display": "flex",
+        "href": "https://github.com/Team-AnI/A-AND-I-WEB-SERVER/blob/main/performance/results/assignment-read-query-evidence.json",
+        "slideId": "aandi-query",
+        "text": "원문 ↗",
+        "visible": true
+      },
+      {
+        "display": "flex",
+        "href": "https://github.com/Team-AnI/A-AND-I-WEB-SERVER/blob/main/docs/performance/results/2026-07-09-assignment-list-before-after.md",
+        "slideId": "aandi-query",
+        "text": "원문 ↗",
+        "visible": true
+      },
+      {
+        "display": "flex",
         "href": "https://gojjibom.web.app/",
         "slideId": "gojjibom",
         "text": "공개 데모 ↗",
@@ -809,6 +963,20 @@
         "href": "https://github.com/TIKI-TAKA-hackathon/Tiki-Taka-BE",
         "slideId": "gojjibom",
         "text": "백엔드 저장소 ↗",
+        "visible": true
+      },
+      {
+        "display": "flex",
+        "href": "https://news.unn.net/news/articleView.html?idxno=594458",
+        "slideId": "gojjibom",
+        "text": "한국대학신문 기사 ↗",
+        "visible": true
+      },
+      {
+        "display": "flex",
+        "href": "https://www.jdnc.or.kr/notice/news.htm?act=view&seq=1019",
+        "slideId": "gojjibom",
+        "text": "결과 확인 ↗",
         "visible": true
       },
       {
@@ -841,6 +1009,13 @@
       },
       {
         "display": "flex",
+        "href": "https://www.figma.com/design/rWBAUinnBcfdhEXF2blgWC/%EC%86%94%ED%94%8C-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8?node-id=66-2",
+        "slideId": "soloplay",
+        "text": "화면 시안 ↗",
+        "visible": true
+      },
+      {
+        "display": "flex",
         "href": "https://aandiclub.com/",
         "slideId": "evidence",
         "text": "서비스 ↗",
@@ -848,9 +1023,9 @@
       },
       {
         "display": "flex",
-        "href": "https://github.com/Team-AnI/A-AND-I-GATEWAY-SERVER",
+        "href": "https://github.com/Team-AnI/A-AND-I-WEB-SERVER/blob/main/docs/performance/results/2026-07-09-assignment-list-before-after.md",
         "slideId": "evidence",
-        "text": "Gateway ↗",
+        "text": "성능 기록 ↗",
         "visible": true
       },
       {
@@ -862,9 +1037,16 @@
       },
       {
         "display": "flex",
-        "href": "https://github.com/TIKI-TAKA-hackathon/Tiki-Taka-BE",
+        "href": "https://news.unn.net/news/articleView.html?idxno=594458",
         "slideId": "evidence",
-        "text": "Backend ↗",
+        "text": "기사 ↗",
+        "visible": true
+      },
+      {
+        "display": "flex",
+        "href": "https://www.jdnc.or.kr/notice/news.htm?act=view&seq=1019",
+        "slideId": "evidence",
+        "text": "결과 ↗",
         "visible": true
       },
       {
@@ -893,6 +1075,13 @@
         "href": "https://github.com/SangWook16074/Solo-Play-Web-Server",
         "slideId": "evidence",
         "text": "저장소 ↗",
+        "visible": true
+      },
+      {
+        "display": "flex",
+        "href": "https://www.figma.com/design/rWBAUinnBcfdhEXF2blgWC/%EC%86%94%ED%94%8C-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8?node-id=66-2",
+        "slideId": "evidence",
+        "text": "화면 시안 ↗",
         "visible": true
       },
       {

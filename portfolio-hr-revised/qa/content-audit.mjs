@@ -89,11 +89,19 @@ const domResult = await send("Runtime.evaluate", {
       return {
         footer: normalize(slide.querySelector(".slide-footer")?.textContent),
         id: slide.id,
+        images: [...slide.querySelectorAll("img")].map((image) => ({
+          alt: image.alt,
+          src: image.src,
+        })),
         kpis: [...new Set([
           ...[...slide.querySelectorAll(kpiSelector)].map((element) => normalize(element.textContent)),
           ...arrowKpis,
           ...scalarKpis,
         ].filter(Boolean))],
+        links: [...slide.querySelectorAll("a")].map((link) => ({
+          href: link.href,
+          text: normalize(link.textContent),
+        })),
         number: index + 1,
         statusLabels: [...new Set(
           [...slide.querySelectorAll(statusSelector)]
@@ -213,6 +221,75 @@ addCheck(
   { projects: deploymentResults },
 );
 
+const aandiArchitecture = slides.find((slide) => slide.id === "aandi-architecture");
+addCheck(
+  "aandi-operating-proof",
+  Boolean(
+    aandiArchitecture?.images.some((image) => /과제 목록 시연 영상 프레임/.test(image.alt)) &&
+    /과제 목록 시연 영상 프레임/.test(aandiArchitecture?.text ?? "") &&
+    /2026\.06/.test(aandiArchitecture?.text ?? ""),
+  ),
+  {
+    images: aandiArchitecture?.images ?? [],
+    rule: "3페이지 화면의 출처가 2026년 6월 시연 영상 프레임임을 표시",
+  },
+);
+
+const aandiQuery = slides.find((slide) => slide.id === "aandi-query");
+const aandiRequiredLinks = [
+  "https://github.com/Team-AnI/A-AND-I-WEB-SERVER/blob/main/docs/performance/results/2026-07-09-assignment-list-before-after.md",
+  "https://github.com/Team-AnI/A-AND-I-WEB-SERVER/blob/main/performance/results/assignment-read-query-evidence.json",
+];
+addCheck(
+  "aandi-measurement-evidence",
+  Boolean(
+    aandiRequiredLinks.every((href) => aandiQuery?.links.some((link) => link.href === href)) &&
+    aandiQuery?.images.some((image) => /60회로 예상.*회귀 테스트에서 2회로 검증/.test(image.alt)) &&
+    aandiQuery?.images.some((image) => /9\.297ms에서 7\.565ms/.test(image.alt)) &&
+    /R · 확인 결과/.test(aandiQuery?.text ?? "") &&
+    /기존 구조 예상 60회 → 회귀 테스트 검증 2회/.test(aandiQuery?.text ?? "") &&
+    /MongoDB command 수가 아닌 service-level 기준/.test(aandiQuery?.text ?? ""),
+  ),
+  {
+    images: aandiQuery?.images ?? [],
+    links: aandiQuery?.links ?? [],
+    rule: "4페이지에 구조·성능 원문 이미지와 직접 링크를 모두 표시",
+  },
+);
+
+const gojjibom = slides.find((slide) => slide.id === "gojjibom");
+const gojjibomRequiredLinks = [
+  "https://news.unn.net/news/articleView.html?idxno=594458",
+  "https://www.jdnc.or.kr/notice/news.htm?act=view&seq=1019",
+];
+addCheck(
+  "gojjibom-external-proof",
+  Boolean(
+    gojjibomRequiredLinks.every((href) => gojjibom?.links.some((link) => link.href === href)) &&
+    /최고점 · 혁신상/.test(gojjibom?.text ?? "") &&
+    !/(?:대회\s*1위|팀\s*MVP)/i.test(gojjibom?.text ?? ""),
+  ),
+  {
+    links: gojjibom?.links ?? [],
+    rule: "5페이지에 보도·주관기관 근거를 연결하고 검증되지 않은 표현을 쓰지 않음",
+  },
+);
+
+const soloplay = slides.find((slide) => slide.id === "soloplay");
+addCheck(
+  "soloplay-visual-and-test-proof",
+  Boolean(
+    soloplay?.images.some((image) => /화면 시안/.test(image.alt)) &&
+    /서비스 UI 시안/.test(soloplay?.text ?? "") &&
+    /관련 테스트 19개 · 실패 0/.test(soloplay?.text ?? "") &&
+    /기존 저장본 유지/.test(soloplay?.text ?? ""),
+  ),
+  {
+    images: soloplay?.images ?? [],
+    rule: "8페이지에 UI 시안임을 밝히고 코드·테스트로 보강 흐름을 검증",
+  },
+);
+
 const canonicalKpi = (value) =>
   value
     .toLowerCase()
@@ -245,10 +322,12 @@ const report = {
   generatedAt: new Date().toISOString(),
   pageUrl,
   passed: failedChecks.length === 0,
-  slides: slides.map(({ footer, id, kpis, number, statusLabels }) => ({
+  slides: slides.map(({ footer, id, images, kpis, links, number, statusLabels }) => ({
     footer,
     id,
+    images,
     kpis,
+    links,
     number,
     statusLabels,
   })),
