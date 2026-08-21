@@ -72,100 +72,20 @@
           {
             "explicitLabels": [
               {
-                "id": "project-map",
-                "label": "운영 서비스"
-              },
-              {
-                "id": "project-map",
-                "label": "공개 fixture 데모"
-              },
-              {
-                "id": "project-map",
-                "label": "공개 프론트 데모"
-              },
-              {
-                "id": "project-map",
-                "label": "로컬 · 하드웨어 프로토타입"
-              },
-              {
-                "id": "project-map",
-                "label": "백엔드 프로젝트 · 저장소 공개"
-              },
-              {
                 "id": "aandi-architecture",
                 "label": "운영 서비스"
-              },
-              {
-                "id": "evidence",
-                "label": "운영 서비스"
-              },
-              {
-                "id": "evidence",
-                "label": "공개 fixture 데모"
-              },
-              {
-                "id": "evidence",
-                "label": "공개 프론트 데모"
-              },
-              {
-                "id": "evidence",
-                "label": "로컬 프로토타입"
-              },
-              {
-                "id": "evidence",
-                "label": "백엔드 프로젝트"
               }
             ],
             "found": true,
             "name": "A&I.com",
             "source": "status-label",
-            "slideId": "project-map"
+            "slideId": "aandi-architecture"
           },
           {
             "explicitLabels": [
               {
-                "id": "project-map",
-                "label": "운영 서비스"
-              },
-              {
-                "id": "project-map",
-                "label": "공개 fixture 데모"
-              },
-              {
-                "id": "project-map",
-                "label": "공개 프론트 데모"
-              },
-              {
-                "id": "project-map",
-                "label": "로컬 · 하드웨어 프로토타입"
-              },
-              {
-                "id": "project-map",
-                "label": "백엔드 프로젝트 · 저장소 공개"
-              },
-              {
                 "id": "gojjibom",
-                "label": "공개 fixture 데모 · 샘플 데이터"
-              },
-              {
-                "id": "evidence",
-                "label": "운영 서비스"
-              },
-              {
-                "id": "evidence",
-                "label": "공개 fixture 데모"
-              },
-              {
-                "id": "evidence",
-                "label": "공개 프론트 데모"
-              },
-              {
-                "id": "evidence",
-                "label": "로컬 프로토타입"
-              },
-              {
-                "id": "evidence",
-                "label": "백엔드 프로젝트"
+                "label": "공개 데모 · 샘플 데이터"
               }
             ],
             "found": true,
@@ -176,158 +96,38 @@
           {
             "explicitLabels": [
               {
-                "id": "project-map",
-                "label": "운영 서비스"
-              },
-              {
-                "id": "project-map",
-                "label": "공개 fixture 데모"
-              },
-              {
-                "id": "project-map",
-                "label": "공개 프론트 데모"
-              },
-              {
-                "id": "project-map",
-                "label": "로컬 · 하드웨어 프로토타입"
-              },
-              {
-                "id": "project-map",
-                "label": "백엔드 프로젝트 · 저장소 공개"
-              },
-              {
                 "id": "didimlog",
                 "label": "공개 프론트 데모 · 입력 미저장"
-              },
-              {
-                "id": "evidence",
-                "label": "운영 서비스"
-              },
-              {
-                "id": "evidence",
-                "label": "공개 fixture 데모"
-              },
-              {
-                "id": "evidence",
-                "label": "공개 프론트 데모"
-              },
-              {
-                "id": "evidence",
-                "label": "로컬 프로토타입"
-              },
-              {
-                "id": "evidence",
-                "label": "백엔드 프로젝트"
               }
             ],
             "found": true,
             "name": "디딤로그",
             "source": "status-label",
-            "slideId": "project-map"
+            "slideId": "didimlog"
           },
           {
             "explicitLabels": [
               {
-                "id": "project-map",
-                "label": "운영 서비스"
-              },
-              {
-                "id": "project-map",
-                "label": "공개 fixture 데모"
-              },
-              {
-                "id": "project-map",
-                "label": "공개 프론트 데모"
-              },
-              {
-                "id": "project-map",
-                "label": "로컬 · 하드웨어 프로토타입"
-              },
-              {
-                "id": "project-map",
-                "label": "백엔드 프로젝트 · 저장소 공개"
-              },
-              {
                 "id": "investopia",
                 "label": "로컬 · 하드웨어 프로토타입"
-              },
-              {
-                "id": "evidence",
-                "label": "운영 서비스"
-              },
-              {
-                "id": "evidence",
-                "label": "공개 fixture 데모"
-              },
-              {
-                "id": "evidence",
-                "label": "공개 프론트 데모"
-              },
-              {
-                "id": "evidence",
-                "label": "로컬 프로토타입"
-              },
-              {
-                "id": "evidence",
-                "label": "백엔드 프로젝트"
               }
             ],
             "found": true,
             "name": "Investopia",
             "source": "status-label",
-            "slideId": "project-map"
+            "slideId": "investopia"
           },
           {
             "explicitLabels": [
               {
-                "id": "project-map",
-                "label": "운영 서비스"
-              },
-              {
-                "id": "project-map",
-                "label": "공개 fixture 데모"
-              },
-              {
-                "id": "project-map",
-                "label": "공개 프론트 데모"
-              },
-              {
-                "id": "project-map",
-                "label": "로컬 · 하드웨어 프로토타입"
-              },
-              {
-                "id": "project-map",
-                "label": "백엔드 프로젝트 · 저장소 공개"
-              },
-              {
                 "id": "soloplay",
                 "label": "백엔드 프로젝트 · 저장소 공개"
-              },
-              {
-                "id": "evidence",
-                "label": "운영 서비스"
-              },
-              {
-                "id": "evidence",
-                "label": "공개 fixture 데모"
-              },
-              {
-                "id": "evidence",
-                "label": "공개 프론트 데모"
-              },
-              {
-                "id": "evidence",
-                "label": "로컬 프로토타입"
-              },
-              {
-                "id": "evidence",
-                "label": "백엔드 프로젝트"
               }
             ],
             "found": true,
             "name": "SoloPlay",
             "source": "status-label",
-            "slideId": "project-map"
+            "slideId": "soloplay"
           }
         ]
       },
@@ -339,16 +139,16 @@
         "images": [
           {
             "alt": "A&I.com 시스템 아키텍처",
-            "src": "http://127.0.0.1:5174/src/assets/aandi-architecture.png"
+            "src": "http://127.0.0.1:5173/src/assets/aandi-architecture.png"
           },
           {
             "alt": "A&I.com 과제 목록 시연 영상 프레임",
-            "src": "http://127.0.0.1:5174/src/assets/hr/evidence-v2/aandi-assignment-list-content.png"
+            "src": "http://127.0.0.1:5173/src/assets/hr/evidence-v2/aandi-assignment-list-content.png"
           }
         ],
-        "rule": "3페이지 화면의 출처가 2026년 6월 시연 영상 프레임임을 표시"
+        "rule": "3페이지 화면은 서비스 UI 프레임으로만 설명하고 운영 성능 근거로 과장하지 않음"
       },
-      "id": "aandi-operating-proof",
+      "id": "aandi-ui-evidence",
       "passed": true
     },
     {
@@ -356,11 +156,11 @@
         "images": [
           {
             "alt": "A&I 기존 구조에서 60회로 예상한 child repository 조회를 회귀 테스트에서 2회로 검증한 JSON 기록",
-            "src": "http://127.0.0.1:5174/src/assets/hr/evidence-v2/aandi-repository-call-record-clean.png"
+            "src": "http://127.0.0.1:5173/src/assets/hr/evidence-v2/aandi-repository-call-record-clean.png"
           },
           {
             "alt": "A&I 과제 목록 P95 응답 시간 9.297ms에서 7.565ms로 측정한 저장소 기록",
-            "src": "http://127.0.0.1:5174/src/assets/hr/evidence-v2/aandi-p95-record.png"
+            "src": "http://127.0.0.1:5173/src/assets/hr/evidence-v2/aandi-p95-record.png"
           }
         ],
         "links": [
@@ -384,6 +184,15 @@
     },
     {
       "details": {
+        "detail": "고찌봄 · PM · Dev Lead · 2026.06–07",
+        "map": "PM · Dev Lead · 2026.06–07",
+        "rule": "프로젝트 맵과 상세 페이지의 역할·기간 표기를 이력서와 일치"
+      },
+      "id": "gojjibom-role-sync",
+      "passed": true
+    },
+    {
+      "details": {
         "links": [
           {
             "href": "https://gojjibom.web.app/",
@@ -402,9 +211,30 @@
             "text": "결과 확인 ↗"
           }
         ],
-        "rule": "5페이지에 보도·주관기관 근거를 연결하고 검증되지 않은 표현을 쓰지 않음"
+        "rule": "5페이지의 수상 결과는 주관기관 카드에서 한 번만 표시하고 외부 근거를 연결"
       },
       "id": "gojjibom-external-proof",
+      "passed": true
+    },
+    {
+      "details": {
+        "links": [
+          {
+            "href": "https://didim-log-fe.web.app/",
+            "text": "공개 프론트 데모 ↗"
+          },
+          {
+            "href": "https://github.com/didim-log/didim-log-BE",
+            "text": "백엔드 저장소 ↗"
+          },
+          {
+            "href": "https://github.com/didim-log/didim-log-BE/blob/main/DOCS/refactoring/be-refactor/PHASE_6N_CRAWLER_DETAILS_BOUNDED_PARALLEL.md",
+            "text": "측정 기록 ↗"
+          }
+        ],
+        "rule": "디딤로그 최신 기간과 로컬 고정 샘플 측정 조건·원문 링크를 함께 표시"
+      },
+      "id": "didimlog-period-and-benchmark",
       "passed": true
     },
     {
@@ -412,12 +242,99 @@
         "images": [
           {
             "alt": "SoloPlay 맞춤 장소와 해시태그 추천 화면 시안",
-            "src": "http://127.0.0.1:5174/src/assets/hr/evidence-v2/home-recommendations.png"
+            "src": "http://127.0.0.1:5173/src/assets/hr/evidence-v2/home-recommendations.png"
           }
         ],
-        "rule": "8페이지에 UI 시안임을 밝히고 코드·테스트로 보강 흐름을 검증"
+        "links": [
+          {
+            "href": "https://github.com/SangWook16074/Solo-Play-Web-Server",
+            "text": "백엔드 저장소 ↗"
+          },
+          {
+            "href": "https://www.figma.com/design/rWBAUinnBcfdhEXF2blgWC/%EC%86%94%ED%94%8C-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8?node-id=66-2",
+            "text": "화면 시안 ↗"
+          },
+          {
+            "href": "https://github.com/SangWook16074/Solo-Play-Web-Server/blob/develop/src/test/kotlin/com/example/solo_play_web_server/place/service/PlaceServiceSpec.kt",
+            "text": "PlaceService 13 ↗"
+          },
+          {
+            "href": "https://github.com/SangWook16074/Solo-Play-Web-Server/blob/develop/src/test/kotlin/com/example/solo_play_web_server/place/service/PlaceEnrichmentServiceSpec.kt",
+            "text": "Enrichment 6 ↗"
+          }
+        ],
+        "rule": "8페이지에 UI 시안임을 밝히고 19개 시나리오의 공개 테스트 소스를 연결"
       },
       "id": "soloplay-visual-and-test-proof",
+      "passed": true
+    },
+    {
+      "details": {
+        "links": [
+          {
+            "href": "https://aandiclub.com/",
+            "text": "서비스 ↗"
+          },
+          {
+            "href": "https://github.com/Team-AnI/A-AND-I-WEB-SERVER",
+            "text": "Web 저장소 ↗"
+          },
+          {
+            "href": "https://github.com/Team-AnI/A-AND-I-WEB-SERVER/blob/main/docs/performance/results/2026-07-09-assignment-list-before-after.md",
+            "text": "성능 기록 ↗"
+          },
+          {
+            "href": "https://gojjibom.web.app/",
+            "text": "데모 ↗"
+          },
+          {
+            "href": "https://github.com/TIKI-TAKA-hackathon/Tiki-Taka-BE",
+            "text": "백엔드 저장소 ↗"
+          },
+          {
+            "href": "https://news.unn.net/news/articleView.html?idxno=594458",
+            "text": "기사 ↗"
+          },
+          {
+            "href": "https://www.jdnc.or.kr/notice/news.htm?act=view&seq=1019",
+            "text": "결과 ↗"
+          },
+          {
+            "href": "https://didim-log-fe.web.app/",
+            "text": "데모 ↗"
+          },
+          {
+            "href": "https://github.com/didim-log/didim-log-BE",
+            "text": "백엔드 저장소 ↗"
+          },
+          {
+            "href": "https://github.com/didim-log/didim-log-BE/blob/main/DOCS/refactoring/be-refactor/PHASE_6N_CRAWLER_DETAILS_BOUNDED_PARALLEL.md",
+            "text": "측정 기록 ↗"
+          },
+          {
+            "href": "https://github.com/stdiodh/Investopia",
+            "text": "저장소 ↗"
+          },
+          {
+            "href": "https://github.com/SangWook16074/Solo-Play-Web-Server",
+            "text": "저장소 ↗"
+          },
+          {
+            "href": "https://www.figma.com/design/rWBAUinnBcfdhEXF2blgWC/%EC%86%94%ED%94%8C-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8?node-id=66-2",
+            "text": "화면 시안 ↗"
+          },
+          {
+            "href": "https://github.com/stdiodh",
+            "text": "GitHub ↗"
+          },
+          {
+            "href": "mailto:playlistdh@gmail.com",
+            "text": "playlistdh@gmail.com ↗"
+          }
+        ],
+        "rule": "9페이지에 프로젝트별 실제 상태와 서비스·저장소·검증 링크를 일관되게 제공"
+      },
+      "id": "evidence-directory-links",
       "passed": true
     },
     {
@@ -429,12 +346,12 @@
       "passed": true
     }
   ],
-  "generatedAt": "2026-08-21T08:15:39.811Z",
-  "pageUrl": "http://127.0.0.1:5174/",
+  "generatedAt": "2026-08-21T10:52:27.387Z",
+  "pageUrl": "http://127.0.0.1:5173/",
   "passed": true,
   "slides": [
     {
-      "footer": "허동현 · Backend Portfolio 202601 / 9",
+      "footer": "허동현 · Server Developer Portfolio 202601 / 9",
       "id": "cover",
       "images": [],
       "kpis": [],
@@ -443,7 +360,7 @@
       "statusLabels": []
     },
     {
-      "footer": "허동현 · Backend Portfolio 202602 / 9",
+      "footer": "허동현 · Server Developer Portfolio 202602 / 9",
       "id": "project-map",
       "images": [],
       "kpis": [],
@@ -451,23 +368,23 @@
       "number": 2,
       "statusLabels": [
         "운영 서비스",
-        "공개 fixture 데모",
-        "공개 프론트 데모",
+        "공개 데모 · 샘플 데이터",
+        "공개 데모 · 입력 미저장",
         "로컬 · 하드웨어 프로토타입",
         "백엔드 프로젝트 · 저장소 공개"
       ]
     },
     {
-      "footer": "허동현 · Backend Portfolio 202603 / 9",
+      "footer": "허동현 · Server Developer Portfolio 202603 / 9",
       "id": "aandi-architecture",
       "images": [
         {
           "alt": "A&I.com 시스템 아키텍처",
-          "src": "http://127.0.0.1:5174/src/assets/aandi-architecture.png"
+          "src": "http://127.0.0.1:5173/src/assets/aandi-architecture.png"
         },
         {
           "alt": "A&I.com 과제 목록 시연 영상 프레임",
-          "src": "http://127.0.0.1:5174/src/assets/hr/evidence-v2/aandi-assignment-list-content.png"
+          "src": "http://127.0.0.1:5173/src/assets/hr/evidence-v2/aandi-assignment-list-content.png"
         }
       ],
       "kpis": [],
@@ -487,16 +404,16 @@
       ]
     },
     {
-      "footer": "허동현 · Backend Portfolio 202604 / 9",
+      "footer": "허동현 · Server Developer Portfolio 202604 / 9",
       "id": "aandi-query",
       "images": [
         {
           "alt": "A&I 기존 구조에서 60회로 예상한 child repository 조회를 회귀 테스트에서 2회로 검증한 JSON 기록",
-          "src": "http://127.0.0.1:5174/src/assets/hr/evidence-v2/aandi-repository-call-record-clean.png"
+          "src": "http://127.0.0.1:5173/src/assets/hr/evidence-v2/aandi-repository-call-record-clean.png"
         },
         {
           "alt": "A&I 과제 목록 P95 응답 시간 9.297ms에서 7.565ms로 측정한 저장소 기록",
-          "src": "http://127.0.0.1:5174/src/assets/hr/evidence-v2/aandi-p95-record.png"
+          "src": "http://127.0.0.1:5173/src/assets/hr/evidence-v2/aandi-p95-record.png"
         }
       ],
       "kpis": [
@@ -521,12 +438,12 @@
       "statusLabels": []
     },
     {
-      "footer": "허동현 · Backend Portfolio 202605 / 9",
+      "footer": "허동현 · Server Developer Portfolio 202605 / 9",
       "id": "gojjibom",
       "images": [
         {
           "alt": "고찌봄 알림에서 복약 화면으로 이어지는 실제 흐름",
-          "src": "http://127.0.0.1:5174/src/assets/hr/gojjibom-one-touch.png"
+          "src": "http://127.0.0.1:5173/src/assets/hr/gojjibom-one-touch.png"
         }
       ],
       "kpis": [
@@ -553,16 +470,16 @@
       ],
       "number": 5,
       "statusLabels": [
-        "공개 fixture 데모 · 샘플 데이터"
+        "공개 데모 · 샘플 데이터"
       ]
     },
     {
-      "footer": "허동현 · Backend Portfolio 202606 / 9",
+      "footer": "허동현 · Server Developer Portfolio 202606 / 9",
       "id": "didimlog",
       "images": [
         {
           "alt": "디딤로그 BOJ 계정 인증 실제 화면",
-          "src": "http://127.0.0.1:5174/src/assets/hr/didimlog-boj.png"
+          "src": "http://127.0.0.1:5173/src/assets/hr/didimlog-boj.png"
         }
       ],
       "kpis": [
@@ -579,6 +496,10 @@
         {
           "href": "https://github.com/didim-log/didim-log-BE",
           "text": "백엔드 저장소 ↗"
+        },
+        {
+          "href": "https://github.com/didim-log/didim-log-BE/blob/main/DOCS/refactoring/be-refactor/PHASE_6N_CRAWLER_DETAILS_BOUNDED_PARALLEL.md",
+          "text": "측정 기록 ↗"
         }
       ],
       "number": 6,
@@ -587,16 +508,16 @@
       ]
     },
     {
-      "footer": "허동현 · Backend Portfolio 202607 / 9",
+      "footer": "허동현 · Server Developer Portfolio 202607 / 9",
       "id": "investopia",
       "images": [
         {
           "alt": "Investopia Raspberry Pi 회로와 LCD 실제 모습",
-          "src": "http://127.0.0.1:5174/src/assets/hr/investopia-hardware.png"
+          "src": "http://127.0.0.1:5173/src/assets/hr/investopia-hardware.png"
         }
       ],
       "kpis": [
-        "웹 · Pi 공통 거래 흐름"
+        "가상 매수·매도와 평균 매입가"
       ],
       "links": [
         {
@@ -610,16 +531,16 @@
       ]
     },
     {
-      "footer": "허동현 · Backend Portfolio 202608 / 9",
+      "footer": "허동현 · Server Developer Portfolio 202608 / 9",
       "id": "soloplay",
       "images": [
         {
           "alt": "SoloPlay 맞춤 장소와 해시태그 추천 화면 시안",
-          "src": "http://127.0.0.1:5174/src/assets/hr/evidence-v2/home-recommendations.png"
+          "src": "http://127.0.0.1:5173/src/assets/hr/evidence-v2/home-recommendations.png"
         }
       ],
       "kpis": [
-        "관련 테스트 19개 · 실패 0"
+        "관련 테스트 시나리오 19개"
       ],
       "links": [
         {
@@ -629,6 +550,14 @@
         {
           "href": "https://www.figma.com/design/rWBAUinnBcfdhEXF2blgWC/%EC%86%94%ED%94%8C-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8?node-id=66-2",
           "text": "화면 시안 ↗"
+        },
+        {
+          "href": "https://github.com/SangWook16074/Solo-Play-Web-Server/blob/develop/src/test/kotlin/com/example/solo_play_web_server/place/service/PlaceServiceSpec.kt",
+          "text": "PlaceService 13 ↗"
+        },
+        {
+          "href": "https://github.com/SangWook16074/Solo-Play-Web-Server/blob/develop/src/test/kotlin/com/example/solo_play_web_server/place/service/PlaceEnrichmentServiceSpec.kt",
+          "text": "Enrichment 6 ↗"
         }
       ],
       "number": 8,
@@ -637,7 +566,7 @@
       ]
     },
     {
-      "footer": "허동현 · Backend Portfolio 202609 / 9",
+      "footer": "허동현 · Server Developer Portfolio 202609 / 9",
       "id": "evidence",
       "images": [],
       "kpis": [],
@@ -647,12 +576,20 @@
           "text": "서비스 ↗"
         },
         {
+          "href": "https://github.com/Team-AnI/A-AND-I-WEB-SERVER",
+          "text": "Web 저장소 ↗"
+        },
+        {
           "href": "https://github.com/Team-AnI/A-AND-I-WEB-SERVER/blob/main/docs/performance/results/2026-07-09-assignment-list-before-after.md",
           "text": "성능 기록 ↗"
         },
         {
           "href": "https://gojjibom.web.app/",
           "text": "데모 ↗"
+        },
+        {
+          "href": "https://github.com/TIKI-TAKA-hackathon/Tiki-Taka-BE",
+          "text": "백엔드 저장소 ↗"
         },
         {
           "href": "https://news.unn.net/news/articleView.html?idxno=594458",
@@ -668,7 +605,11 @@
         },
         {
           "href": "https://github.com/didim-log/didim-log-BE",
-          "text": "Backend ↗"
+          "text": "백엔드 저장소 ↗"
+        },
+        {
+          "href": "https://github.com/didim-log/didim-log-BE/blob/main/DOCS/refactoring/be-refactor/PHASE_6N_CRAWLER_DETAILS_BOUNDED_PARALLEL.md",
+          "text": "측정 기록 ↗"
         },
         {
           "href": "https://github.com/stdiodh/Investopia",
@@ -685,21 +626,25 @@
         {
           "href": "https://github.com/stdiodh",
           "text": "GitHub ↗"
+        },
+        {
+          "href": "mailto:playlistdh@gmail.com",
+          "text": "playlistdh@gmail.com ↗"
         }
       ],
       "number": 9,
       "statusLabels": [
         "운영 서비스",
-        "공개 fixture 데모",
-        "공개 프론트 데모",
-        "로컬 프로토타입",
-        "백엔드 프로젝트"
+        "공개 데모 · 샘플 데이터",
+        "공개 데모 · 입력 미저장",
+        "로컬 · 하드웨어 프로토타입",
+        "백엔드 프로젝트 · 저장소 공개"
       ]
     }
   ],
   "summary": {
     "failed": 0,
-    "passed": 13,
-    "total": 13
+    "passed": 16,
+    "total": 16
   }
 }

@@ -610,7 +610,7 @@ h2 {
 
 .star-row {
   display: grid;
-  min-height: 104px;
+  min-height: 96px;
   grid-template-columns: 86px 1fr;
   align-items: center;
   gap: 18px;
@@ -877,10 +877,23 @@ h2 {
 
 .benchmark-card small {
   display: block;
-  margin-top: 10px;
   color: #64748b;
   font-size: 12px;
   line-height: 1.45;
+}
+
+.benchmark-source {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.benchmark-source .text-link {
+  flex: 0 0 auto;
+  padding-top: 3px;
+  padding-bottom: 3px;
 }
 
 /* 07 — Investopia */
@@ -1111,6 +1124,16 @@ h2 {
   margin-top: -18px;
   color: #64748b;
   font-size: 12px;
+}
+
+.solo-test-result p {
+  display: flex;
+  gap: 16px;
+}
+
+.solo-test-result .text-link {
+  padding: 2px 0;
+  font-size: 11px;
 }
 
 /* 09 — evidence */

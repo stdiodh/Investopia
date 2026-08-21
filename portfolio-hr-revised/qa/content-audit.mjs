@@ -217,27 +217,25 @@ addCheck("no-calculation-explanation", calculationMatches.length === 0, {
 });
 
 const deployments = [
-  { aliases: /a\s*(?:&|and|-)\s*i|aandi/i, name: "A&I.com", status: /운영\s*(?:중|서비스)|실서비스|live/i },
-  { aliases: /gojjibom|고찌봄/i, name: "고찌봄", status: /공개\s*데모|샘플\s*데이터|demo/i },
-  { aliases: /didim|디딤로그/i, name: "디딤로그", status: /공개\s*(?:프론트\s*)?데모|입력\s*미저장|demo/i },
-  { aliases: /investopia/i, name: "Investopia", status: /로컬\s*프로토타입|저장소\s*공개|local|repo/i },
-  { aliases: /soloplay|solo\s*play/i, name: "SoloPlay", status: /백엔드\s*프로젝트|저장소\s*공개|repo/i },
+  { id: "aandi-architecture", name: "A&I.com", status: /운영\s*서비스/i },
+  { id: "gojjibom", name: "고찌봄", status: /공개\s*데모\s*·\s*샘플\s*데이터/i },
+  { id: "didimlog", name: "디딤로그", status: /공개\s*프론트\s*데모\s*·\s*입력\s*미저장/i },
+  { id: "investopia", name: "Investopia", status: /로컬\s*·\s*하드웨어\s*프로토타입/i },
+  { id: "soloplay", name: "SoloPlay", status: /백엔드\s*프로젝트\s*·\s*저장소\s*공개/i },
 ];
 const deploymentResults = deployments.map((project) => {
-  const projectSlides = slides.filter(
-    (slide) => project.aliases.test(slide.id) || project.aliases.test(slide.text),
-  );
-  const explicitLabels = projectSlides.flatMap((slide) =>
-    slide.statusLabels.map((label) => ({ id: slide.id, label })),
-  );
+  const projectSlide = slides.find((slide) => slide.id === project.id);
+  const explicitLabels = (projectSlide?.statusLabels ?? []).map((label) => ({
+    id: project.id,
+    label,
+  }));
   const explicitMatch = explicitLabels.find(({ label }) => project.status.test(label));
-  const fallbackMatch = projectSlides.find((slide) => project.status.test(slide.text));
   return {
     explicitLabels,
-    found: Boolean(explicitMatch || fallbackMatch),
+    found: Boolean(explicitMatch),
     name: project.name,
-    source: explicitMatch ? "status-label" : fallbackMatch ? "slide-text" : null,
-    slideId: explicitMatch?.id ?? fallbackMatch?.id ?? null,
+    source: explicitMatch ? "status-label" : null,
+    slideId: explicitMatch?.id ?? null,
   };
 });
 addCheck(
@@ -248,15 +246,17 @@ addCheck(
 
 const aandiArchitecture = slides.find((slide) => slide.id === "aandi-architecture");
 addCheck(
-  "aandi-operating-proof",
+  "aandi-ui-evidence",
   Boolean(
     aandiArchitecture?.images.some((image) => /과제 목록 시연 영상 프레임/.test(image.alt)) &&
     /과제 목록 시연 영상 프레임/.test(aandiArchitecture?.text ?? "") &&
-    /2026\.06/.test(aandiArchitecture?.text ?? ""),
+    /2026\.06/.test(aandiArchitecture?.text ?? "") &&
+    /SERVICE UI FRAME/.test(aandiArchitecture?.text ?? "") &&
+    !/OPERATING PROOF/.test(aandiArchitecture?.text ?? ""),
   ),
   {
     images: aandiArchitecture?.images ?? [],
-    rule: "3페이지 화면의 출처가 2026년 6월 시연 영상 프레임임을 표시",
+    rule: "3페이지 화면은 서비스 UI 프레임으로만 설명하고 운영 성능 근거로 과장하지 않음",
   },
 );
 
@@ -272,6 +272,8 @@ addCheck(
     aandiQuery?.images.some((image) => /60회로 예상.*회귀 테스트에서 2회로 검증/.test(image.alt)) &&
     aandiQuery?.images.some((image) => /9\.297ms에서 7\.565ms/.test(image.alt)) &&
     /R · 확인 결과/.test(aandiQuery?.text ?? "") &&
+    /A · 판단/.test(aandiQuery?.text ?? "") &&
+    /A · 실행/.test(aandiQuery?.text ?? "") &&
     /기존 구조 예상 60회 → 회귀 테스트 검증 2회/.test(aandiQuery?.text ?? "") &&
     /MongoDB command 수가 아닌 service-level 기준/.test(aandiQuery?.text ?? ""),
   ),
@@ -283,6 +285,20 @@ addCheck(
 );
 
 const gojjibom = slides.find((slide) => slide.id === "gojjibom");
+const projectMap = slides.find((slide) => slide.id === "project-map");
+addCheck(
+  "gojjibom-role-sync",
+  Boolean(
+    projectMap?.text.includes("PM · Dev Lead · 2026.06–07") &&
+    gojjibom?.text.includes("고찌봄 · PM · Dev Lead · 2026.06–07"),
+  ),
+  {
+    detail: gojjibom?.text.match(/고찌봄 · PM · Dev Lead · 2026\.06–07/)?.[0] ?? null,
+    map: projectMap?.text.match(/PM · Dev Lead · 2026\.06–07/)?.[0] ?? null,
+    rule: "프로젝트 맵과 상세 페이지의 역할·기간 표기를 이력서와 일치",
+  },
+);
+const gojjibomAwardCount = gojjibom?.text.match(/최고점\s*·\s*혁신상/g)?.length ?? 0;
 const gojjibomRequiredLinks = [
   "https://news.unn.net/news/articleView.html?idxno=594458",
   "https://www.jdnc.or.kr/notice/news.htm?act=view&seq=1019",
@@ -292,26 +308,79 @@ addCheck(
   Boolean(
     gojjibomRequiredLinks.every((href) => gojjibom?.links.some((link) => link.href === href)) &&
     /최고점 · 혁신상/.test(gojjibom?.text ?? "") &&
+    gojjibomAwardCount === 1 &&
     !/(?:대회\s*1위|팀\s*MVP)/i.test(gojjibom?.text ?? ""),
   ),
   {
     links: gojjibom?.links ?? [],
-    rule: "5페이지에 보도·주관기관 근거를 연결하고 검증되지 않은 표현을 쓰지 않음",
+    rule: "5페이지의 수상 결과는 주관기관 카드에서 한 번만 표시하고 외부 근거를 연결",
+  },
+);
+
+const didimlog = slides.find((slide) => slide.id === "didimlog");
+const didimlogPerformance =
+  "https://github.com/didim-log/didim-log-BE/blob/main/DOCS/refactoring/be-refactor/PHASE_6N_CRAWLER_DETAILS_BOUNDED_PARALLEL.md";
+addCheck(
+  "didimlog-period-and-benchmark",
+  Boolean(
+    /2026\.02–현재/.test(didimlog?.text ?? "") &&
+    /55\.632초/.test(didimlog?.text ?? "") &&
+    /12\.226초/.test(didimlog?.text ?? "") &&
+    /77\.96% 단축/.test(didimlog?.text ?? "") &&
+    /LOCAL SAMPLE BENCHMARK/.test(didimlog?.text ?? "") &&
+    /3,400건 고정 샘플 · 순차\/K=4 · 3회 중앙값/.test(didimlog?.text ?? "") &&
+    didimlog?.links.some((link) => link.href === didimlogPerformance),
+  ),
+  {
+    links: didimlog?.links ?? [],
+    rule: "디딤로그 최신 기간과 로컬 고정 샘플 측정 조건·원문 링크를 함께 표시",
   },
 );
 
 const soloplay = slides.find((slide) => slide.id === "soloplay");
+const soloplayRequiredLinks = [
+  "https://github.com/SangWook16074/Solo-Play-Web-Server/blob/develop/src/test/kotlin/com/example/solo_play_web_server/place/service/PlaceServiceSpec.kt",
+  "https://github.com/SangWook16074/Solo-Play-Web-Server/blob/develop/src/test/kotlin/com/example/solo_play_web_server/place/service/PlaceEnrichmentServiceSpec.kt",
+];
 addCheck(
   "soloplay-visual-and-test-proof",
   Boolean(
     soloplay?.images.some((image) => /화면 시안/.test(image.alt)) &&
     /서비스 UI 시안/.test(soloplay?.text ?? "") &&
-    /관련 테스트 19개 · 실패 0/.test(soloplay?.text ?? "") &&
+    /관련 테스트 시나리오 19개/.test(soloplay?.text ?? "") &&
+    !/실패\s*0/.test(soloplay?.text ?? "") &&
+    soloplayRequiredLinks.every((href) => soloplay?.links.some((link) => link.href === href)) &&
     /기존 저장본 유지/.test(soloplay?.text ?? ""),
   ),
   {
     images: soloplay?.images ?? [],
-    rule: "8페이지에 UI 시안임을 밝히고 코드·테스트로 보강 흐름을 검증",
+    links: soloplay?.links ?? [],
+    rule: "8페이지에 UI 시안임을 밝히고 19개 시나리오의 공개 테스트 소스를 연결",
+  },
+);
+
+const evidenceRequiredLinks = [
+  "https://aandiclub.com/",
+  "https://github.com/Team-AnI/A-AND-I-WEB-SERVER",
+  "https://github.com/TIKI-TAKA-hackathon/Tiki-Taka-BE",
+  "https://github.com/didim-log/didim-log-BE",
+  didimlogPerformance,
+  "https://github.com/stdiodh/Investopia",
+  "https://github.com/SangWook16074/Solo-Play-Web-Server",
+  "mailto:playlistdh@gmail.com",
+];
+addCheck(
+  "evidence-directory-links",
+  Boolean(
+    evidenceRequiredLinks.every((href) => evidence?.links.some((link) => link.href === href)) &&
+    /공개 데모 · 샘플 데이터/.test(evidence?.text ?? "") &&
+    /공개 데모 · 입력 미저장/.test(evidence?.text ?? "") &&
+    /로컬 · 하드웨어 프로토타입/.test(evidence?.text ?? "") &&
+    /백엔드 프로젝트 · 저장소 공개/.test(evidence?.text ?? ""),
+  ),
+  {
+    links: evidence?.links ?? [],
+    rule: "9페이지에 프로젝트별 실제 상태와 서비스·저장소·검증 링크를 일관되게 제공",
   },
 );
 

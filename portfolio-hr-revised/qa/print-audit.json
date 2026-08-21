@@ -79,6 +79,13 @@
     },
     {
       "display": "flex",
+      "href": "https://github.com/didim-log/didim-log-BE/blob/main/DOCS/refactoring/be-refactor/PHASE_6N_CRAWLER_DETAILS_BOUNDED_PARALLEL.md",
+      "slideId": "didimlog",
+      "text": "측정 기록 ↗",
+      "visible": true
+    },
+    {
+      "display": "flex",
       "href": "https://github.com/stdiodh/Investopia",
       "slideId": "investopia",
       "text": "저장소 ↗",
@@ -100,9 +107,30 @@
     },
     {
       "display": "flex",
+      "href": "https://github.com/SangWook16074/Solo-Play-Web-Server/blob/develop/src/test/kotlin/com/example/solo_play_web_server/place/service/PlaceServiceSpec.kt",
+      "slideId": "soloplay",
+      "text": "PlaceService 13 ↗",
+      "visible": true
+    },
+    {
+      "display": "flex",
+      "href": "https://github.com/SangWook16074/Solo-Play-Web-Server/blob/develop/src/test/kotlin/com/example/solo_play_web_server/place/service/PlaceEnrichmentServiceSpec.kt",
+      "slideId": "soloplay",
+      "text": "Enrichment 6 ↗",
+      "visible": true
+    },
+    {
+      "display": "flex",
       "href": "https://aandiclub.com/",
       "slideId": "evidence",
       "text": "서비스 ↗",
+      "visible": true
+    },
+    {
+      "display": "flex",
+      "href": "https://github.com/Team-AnI/A-AND-I-WEB-SERVER",
+      "slideId": "evidence",
+      "text": "Web 저장소 ↗",
       "visible": true
     },
     {
@@ -117,6 +145,13 @@
       "href": "https://gojjibom.web.app/",
       "slideId": "evidence",
       "text": "데모 ↗",
+      "visible": true
+    },
+    {
+      "display": "flex",
+      "href": "https://github.com/TIKI-TAKA-hackathon/Tiki-Taka-BE",
+      "slideId": "evidence",
+      "text": "백엔드 저장소 ↗",
       "visible": true
     },
     {
@@ -144,7 +179,14 @@
       "display": "flex",
       "href": "https://github.com/didim-log/didim-log-BE",
       "slideId": "evidence",
-      "text": "Backend ↗",
+      "text": "백엔드 저장소 ↗",
+      "visible": true
+    },
+    {
+      "display": "flex",
+      "href": "https://github.com/didim-log/didim-log-BE/blob/main/DOCS/refactoring/be-refactor/PHASE_6N_CRAWLER_DETAILS_BOUNDED_PARALLEL.md",
+      "slideId": "evidence",
+      "text": "측정 기록 ↗",
       "visible": true
     },
     {
@@ -173,6 +215,13 @@
       "href": "https://github.com/stdiodh",
       "slideId": "evidence",
       "text": "GitHub ↗",
+      "visible": true
+    },
+    {
+      "display": "flex",
+      "href": "mailto:playlistdh@gmail.com",
+      "slideId": "evidence",
+      "text": "playlistdh@gmail.com ↗",
       "visible": true
     }
   ],

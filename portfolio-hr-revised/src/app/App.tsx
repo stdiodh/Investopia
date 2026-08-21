@@ -24,6 +24,8 @@ const LINKS = {
   aandiWeb: "https://github.com/Team-AnI/A-AND-I-WEB-SERVER",
   didimlog: "https://github.com/didim-log/didim-log-BE",
   didimlogDemo: "https://didim-log-fe.web.app/",
+  didimlogPerformance: "https://github.com/didim-log/didim-log-BE/blob/main/DOCS/refactoring/be-refactor/PHASE_6N_CRAWLER_DETAILS_BOUNDED_PARALLEL.md",
+  email: "mailto:playlistdh@gmail.com",
   github: "https://github.com/stdiodh",
   gojjibom: "https://gojjibom.web.app/",
   gojjibomBackend: "https://github.com/TIKI-TAKA-hackathon/Tiki-Taka-BE",
@@ -31,6 +33,8 @@ const LINKS = {
   gojjibomResult: "https://www.jdnc.or.kr/notice/news.htm?act=view&seq=1019",
   investopia: "https://github.com/stdiodh/Investopia",
   soloplayDesign: "https://www.figma.com/design/rWBAUinnBcfdhEXF2blgWC/%EC%86%94%ED%94%8C-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8?node-id=66-2",
+  soloplayEnrichmentTest: "https://github.com/SangWook16074/Solo-Play-Web-Server/blob/develop/src/test/kotlin/com/example/solo_play_web_server/place/service/PlaceEnrichmentServiceSpec.kt",
+  soloplayPlaceServiceTest: "https://github.com/SangWook16074/Solo-Play-Web-Server/blob/develop/src/test/kotlin/com/example/solo_play_web_server/place/service/PlaceServiceSpec.kt",
   soloplay: "https://github.com/SangWook16074/Solo-Play-Web-Server",
 } as const;
 
@@ -45,7 +49,7 @@ function Slide({ children, id, number }: SlideProps) {
     <section className="slide" id={id}>
       <div className="slide-body">{children}</div>
       <footer className="slide-footer">
-        <span>허동현 · Backend Portfolio 2026</span>
+        <span>허동현 · Server Developer Portfolio 2026</span>
         <span>{number} / 9</span>
       </footer>
     </section>
@@ -143,7 +147,7 @@ function CoverSlide() {
 const projects = [
   {
     name: "A&I.com",
-    period: "BE Lead · 2025.01–현재",
+    period: "Backend Lead · 2025.01–현재",
     result: "변경과 배포가 함께 묶인 기능을 서비스 경계로 분리",
     status: <Status tone="green">운영 서비스</Status>,
   },
@@ -151,23 +155,23 @@ const projects = [
     name: "고찌봄",
     period: "PM · Dev Lead · 2026.06–07",
     result: "알림부터 복약 확인까지 이어지는 MVP 범위 결정",
-    status: <Status>공개 fixture 데모</Status>,
+    status: <Status>공개 데모 · 샘플 데이터</Status>,
   },
   {
     name: "디딤로그",
-    period: "Maintainer · 2026.02–04",
+    period: "Maintainer · 2026.02–현재",
     result: "BOJ 본인 확인과 중단 뒤 다시 잇는 문제 수집 흐름",
-    status: <Status>공개 프론트 데모</Status>,
+    status: <Status>공개 데모 · 입력 미저장</Status>,
   },
   {
     name: "Investopia",
-    period: "PL · BE Lead · 2025.04–06",
+    period: "PL · Backend Lead · 2025.04–06",
     result: "웹과 Raspberry Pi가 같은 거래 API를 사용",
     status: <Status tone="gray">로컬 · 하드웨어 프로토타입</Status>,
   },
   {
     name: "SoloPlay",
-    period: "BE Lead · 2024.10–2025.02",
+    period: "Backend Lead · 2024.10–2025.02",
     result: "AI 호출이 실패해도 원본 장소를 남기는 저장 순서",
     status: <Status tone="gray">백엔드 프로젝트 · 저장소 공개</Status>,
   },
@@ -243,7 +247,7 @@ function AandiArchitectureSlide() {
               <figcaption>과제 목록 시연 영상 프레임 · 2026.06</figcaption>
             </figure>
             <div className="architecture-fact">
-              <span>OPERATING PROOF</span>
+              <span>SERVICE UI FRAME</span>
               <strong>5개 독립 서버 저장소</strong>
               <p>서비스별 변경 · 배포 범위 분리</p>
             </div>
@@ -269,7 +273,7 @@ function AandiQuerySlide() {
       <SectionLabel number="04">A&amp;I.COM · ONE CASE · 조회 구조 개선</SectionLabel>
       <div className="case-header">
         <div>
-          <h2>과제마다 반복하던 조회를 한 번에 가져오도록 바꿨습니다.</h2>
+          <h2>과제별 반복 조회를 배치 조회로 묶었습니다.</h2>
           <p className="lead">기능을 더하지 않고, 같은 응답을 만드는 조회 순서만 고쳤습니다.</p>
         </div>
         <Link href={LINKS.aandiWeb}>근거 저장소</Link>
@@ -278,7 +282,8 @@ function AandiQuerySlide() {
         <div className="star-card">
           <StarRow label="S · 상황">과제 목록을 만들 때 과제마다 필요한 데이터를 다시 조회했습니다.</StarRow>
           <StarRow label="T · 목표">API 응답 형식은 그대로 두고 반복 조회만 줄여야 했습니다.</StarRow>
-          <StarRow label="A · 실행">필요한 데이터를 batch로 먼저 읽고 과제별로 묶도록 조회 순서를 재구성했습니다.</StarRow>
+          <StarRow label="A · 판단">응답 형식은 유지하고 서비스 계층 호출만 모아 읽는 배치 조회를 선택했습니다.</StarRow>
+          <StarRow label="A · 실행">필요한 데이터를 먼저 읽고 과제별로 묶도록 조회 순서를 재구성했습니다.</StarRow>
         </div>
         <div className="query-evidence">
           <p className="query-result-label">R · 확인 결과</p>
@@ -305,11 +310,11 @@ function AandiQuerySlide() {
 function GojjibomSlide() {
   return (
     <Slide id="gojjibom" number="05">
-      <SectionLabel number="05">고찌봄 · PM &amp; DEV LEAD · 2026.06–07</SectionLabel>
+      <SectionLabel number="05">고찌봄 · PM · Dev Lead · 2026.06–07</SectionLabel>
       <div className="project-layout media-layout">
         <div className="project-copy">
           <div>
-            <Status>공개 fixture 데모 · 샘플 데이터</Status>
+            <Status>공개 데모 · 샘플 데이터</Status>
             <h2>짧은 기간이라 기능을 늘리지 않고 확인 흐름 하나만 남겼습니다.</h2>
             <p className="lead">어르신의 복약 여부를 보호자가 바로 확인하는 서비스입니다.</p>
           </div>
@@ -319,7 +324,7 @@ function GojjibomSlide() {
             <div><span>02</span><strong>범위</strong><p>알림과 확인 화면만 우선 구현</p></div>
             <div><span>03</span><strong>연결</strong><p>알림을 누르면 해당 화면을 바로 열기</p></div>
           </div>
-          <p className="project-result"><span>결과</span><strong>4일 MVP 완성</strong><em>최고점 · 혁신상</em></p>
+          <p className="project-result"><span>결과</span><strong>4일 MVP 완성</strong></p>
           <div className="link-row">
             <Link href={LINKS.gojjibom}>공개 데모</Link>
             <Link href={LINKS.gojjibomBackend}>백엔드 저장소</Link>
@@ -351,7 +356,7 @@ function GojjibomSlide() {
 function DidimlogSlide() {
   return (
     <Slide id="didimlog" number="06">
-      <SectionLabel number="06">디딤로그 · MAINTAINER · 2026.02–04</SectionLabel>
+      <SectionLabel number="06">디딤로그 · MAINTAINER · 2026.02–현재</SectionLabel>
       <div className="project-layout didim-layout">
         <div className="project-copy compact-copy">
           <div>
@@ -382,14 +387,17 @@ function DidimlogSlide() {
             <figcaption>BOJ 프로필 코드를 이용한 계정 인증 · 실제 시연의 정적 프레임</figcaption>
           </figure>
           <div className="benchmark-card">
-            <p className="note-label">FIXTURE BENCHMARK</p>
+            <p className="note-label">LOCAL SAMPLE BENCHMARK</p>
             <div className="benchmark-values">
               <span>55.632초</span>
               <FlowArrow />
               <strong>12.226초</strong>
             </div>
             <p className="benchmark-result">77.96% 단축</p>
-            <small>3,400건 fixture · 3회 측정 중앙값 · 운영 기본 동시성 K=1</small>
+            <div className="benchmark-source">
+              <small>3,400건 고정 샘플 · 순차/K=4 · 3회 중앙값</small>
+              <Link href={LINKS.didimlogPerformance}>측정 기록</Link>
+            </div>
           </div>
         </div>
       </div>
@@ -437,7 +445,7 @@ function InvestopiaSlide() {
               "Raspberry Pi 버튼과 LCD를 같은 거래·자산 API에 연결했습니다.",
             ]}
           />
-          <p className="project-result compact-result"><span>확인</span><strong>웹 · Pi 공통 거래 흐름</strong><em>주가 수집 주기 30초</em></p>
+          <p className="project-result compact-result"><span>확인</span><strong>가상 매수·매도와 평균 매입가</strong></p>
           <div className="link-row"><Link href={LINKS.investopia}>저장소</Link></div>
         </div>
         <div className="investopia-evidence">
@@ -477,7 +485,7 @@ function SoloPlaySlide() {
           </figure>
           <div className="solo-proof" aria-label="SoloPlay 코드와 테스트로 확인한 데이터 흐름">
             <p className="note-label">CODE-BACKED FLOW</p>
-            <h3>장소는 먼저 저장하고, AI는 나중에 보강했습니다.</h3>
+            <h3>저장과 AI 보강의 성공 조건을 분리했습니다.</h3>
             <div className="solo-state-flow">
               <div>
                 <span>01</span>
@@ -498,8 +506,11 @@ function SoloPlaySlide() {
             </div>
             <div className="solo-test-result">
               <span>TEST</span>
-              <strong>관련 테스트 19개 · 실패 0</strong>
-              <p>PlaceService 13 · Enrichment 6</p>
+              <strong>관련 테스트 시나리오 19개</strong>
+              <p>
+                <Link href={LINKS.soloplayPlaceServiceTest}>PlaceService 13</Link>
+                <Link href={LINKS.soloplayEnrichmentTest}>Enrichment 6</Link>
+              </p>
             </div>
           </div>
         </div>
@@ -509,11 +520,11 @@ function SoloPlaySlide() {
 }
 
 const evidenceLinks = [
-  { name: "A&I.com", status: <Status tone="green">운영 서비스</Status>, links: [["서비스", LINKS.aandi], ["성능 기록", LINKS.aandiPerformance]] },
-  { name: "고찌봄", status: <Status>공개 fixture 데모</Status>, links: [["데모", LINKS.gojjibom], ["기사", LINKS.gojjibomNews], ["결과", LINKS.gojjibomResult]] },
-  { name: "디딤로그", status: <Status>공개 프론트 데모</Status>, links: [["데모", LINKS.didimlogDemo], ["Backend", LINKS.didimlog]] },
-  { name: "Investopia", status: <Status tone="gray">로컬 프로토타입</Status>, links: [["저장소", LINKS.investopia]] },
-  { name: "SoloPlay", status: <Status tone="gray">백엔드 프로젝트</Status>, links: [["저장소", LINKS.soloplay], ["화면 시안", LINKS.soloplayDesign]] },
+  { name: "A&I.com", status: <Status tone="green">운영 서비스</Status>, links: [["서비스", LINKS.aandi], ["Web 저장소", LINKS.aandiWeb], ["성능 기록", LINKS.aandiPerformance]] },
+  { name: "고찌봄", status: <Status>공개 데모 · 샘플 데이터</Status>, links: [["데모", LINKS.gojjibom], ["백엔드 저장소", LINKS.gojjibomBackend], ["기사", LINKS.gojjibomNews], ["결과", LINKS.gojjibomResult]] },
+  { name: "디딤로그", status: <Status>공개 데모 · 입력 미저장</Status>, links: [["데모", LINKS.didimlogDemo], ["백엔드 저장소", LINKS.didimlog], ["측정 기록", LINKS.didimlogPerformance]] },
+  { name: "Investopia", status: <Status tone="gray">로컬 · 하드웨어 프로토타입</Status>, links: [["저장소", LINKS.investopia]] },
+  { name: "SoloPlay", status: <Status tone="gray">백엔드 프로젝트 · 저장소 공개</Status>, links: [["저장소", LINKS.soloplay], ["화면 시안", LINKS.soloplayDesign]] },
 ] as const;
 
 function EvidenceSlide() {
@@ -545,6 +556,7 @@ function EvidenceSlide() {
         </div>
         <div className="link-row">
           <Link href={LINKS.github}>GitHub</Link>
+          <Link href={LINKS.email}>playlistdh@gmail.com</Link>
         </div>
       </div>
     </Slide>

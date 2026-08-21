@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-21T08:15:39.630Z",
-  "pageUrl": "http://127.0.0.1:5174/",
+  "generatedAt": "2026-08-21T10:52:27.132Z",
+  "pageUrl": "http://127.0.0.1:5173/",
   "viewport": {
     "height": 900,
     "width": 1600
@@ -104,7 +104,7 @@
           "className": "",
           "fontSizePx": 12,
           "tag": "P",
-          "text": "BE Lead · 2025.01–현재"
+          "text": "Backend Lead · 2025.01–현재"
         }
       ],
       "number": 2,
@@ -437,13 +437,13 @@
           "className": "",
           "fontSizePx": 12,
           "tag": "SPAN",
-          "text": "고찌봄 · PM & DEV LEAD · 2026.06–07"
+          "text": "고찌봄 · PM · Dev Lead · 2026.06–07"
         },
         {
           "className": "status status-blue",
           "fontSizePx": 12,
           "tag": "SPAN",
-          "text": "공개 fixture 데모 · 샘플 데이터"
+          "text": "공개 데모 · 샘플 데이터"
         },
         {
           "className": "",
@@ -516,6 +516,18 @@
             83.72,
             29
           ]
+        },
+        {
+          "display": "flex",
+          "href": "https://github.com/didim-log/didim-log-BE/blob/main/DOCS/refactoring/be-refactor/PHASE_6N_CRAWLER_DETAILS_BOUNDED_PARALLEL.md",
+          "rel": "noreferrer",
+          "target": "_blank",
+          "text": "측정 기록 ↗",
+          "visible": true,
+          "size": [
+            62.97,
+            22
+          ]
         }
       ],
       "minBodyFontPx": 12,
@@ -530,7 +542,7 @@
           "className": "",
           "fontSizePx": 12,
           "tag": "SPAN",
-          "text": "디딤로그 · MAINTAINER · 2026.02–04"
+          "text": "디딤로그 · MAINTAINER · 2026.02–현재"
         },
         {
           "className": "status status-blue",
@@ -690,10 +702,46 @@
             62.97,
             29
           ]
+        },
+        {
+          "display": "flex",
+          "href": "https://github.com/SangWook16074/Solo-Play-Web-Server/blob/develop/src/test/kotlin/com/example/solo_play_web_server/place/service/PlaceServiceSpec.kt",
+          "rel": "noreferrer",
+          "target": "_blank",
+          "text": "PlaceService 13 ↗",
+          "visible": true,
+          "size": [
+            113.23,
+            20
+          ]
+        },
+        {
+          "display": "flex",
+          "href": "https://github.com/SangWook16074/Solo-Play-Web-Server/blob/develop/src/test/kotlin/com/example/solo_play_web_server/place/service/PlaceEnrichmentServiceSpec.kt",
+          "rel": "noreferrer",
+          "target": "_blank",
+          "text": "Enrichment 6 ↗",
+          "visible": true,
+          "size": [
+            93.44,
+            20
+          ]
         }
       ],
-      "minBodyFontPx": 12,
+      "minBodyFontPx": 11,
       "smallestText": [
+        {
+          "className": "text-link",
+          "fontSizePx": 11,
+          "tag": "A",
+          "text": "PlaceService 13 ↗"
+        },
+        {
+          "className": "text-link",
+          "fontSizePx": 11,
+          "tag": "A",
+          "text": "Enrichment 6 ↗"
+        },
         {
           "className": "",
           "fontSizePx": 12,
@@ -711,18 +759,6 @@
           "fontSizePx": 12,
           "tag": "SPAN",
           "text": "백엔드 프로젝트 · 저장소 공개"
-        },
-        {
-          "className": "",
-          "fontSizePx": 12,
-          "tag": "SPAN",
-          "text": "문제"
-        },
-        {
-          "className": "",
-          "fontSizePx": 12,
-          "tag": "SPAN",
-          "text": "내 판단"
         }
       ],
       "number": 8,
@@ -755,6 +791,18 @@
         },
         {
           "display": "flex",
+          "href": "https://github.com/Team-AnI/A-AND-I-WEB-SERVER",
+          "rel": "noreferrer",
+          "target": "_blank",
+          "text": "Web 저장소 ↗",
+          "visible": true,
+          "size": [
+            74.19,
+            29
+          ]
+        },
+        {
+          "display": "flex",
           "href": "https://github.com/Team-AnI/A-AND-I-WEB-SERVER/blob/main/docs/performance/results/2026-07-09-assignment-list-before-after.md",
           "rel": "noreferrer",
           "target": "_blank",
@@ -774,6 +822,18 @@
           "visible": true,
           "size": [
             35,
+            29
+          ]
+        },
+        {
+          "display": "flex",
+          "href": "https://github.com/TIKI-TAKA-hackathon/Tiki-Taka-BE",
+          "rel": "noreferrer",
+          "target": "_blank",
+          "text": "백엔드 저장소 ↗",
+          "visible": true,
+          "size": [
+            83.72,
             29
           ]
         },
@@ -818,10 +878,22 @@
           "href": "https://github.com/didim-log/didim-log-BE",
           "rel": "noreferrer",
           "target": "_blank",
-          "text": "Backend ↗",
+          "text": "백엔드 저장소 ↗",
           "visible": true,
           "size": [
-            64.64,
+            83.72,
+            29
+          ]
+        },
+        {
+          "display": "flex",
+          "href": "https://github.com/didim-log/didim-log-BE/blob/main/DOCS/refactoring/be-refactor/PHASE_6N_CRAWLER_DETAILS_BOUNDED_PARALLEL.md",
+          "rel": "noreferrer",
+          "target": "_blank",
+          "text": "측정 기록 ↗",
+          "visible": true,
+          "size": [
+            62.97,
             29
           ]
         },
@@ -870,6 +942,18 @@
           "visible": true,
           "size": [
             57.44,
+            29
+          ]
+        },
+        {
+          "display": "flex",
+          "href": "mailto:playlistdh@gmail.com",
+          "rel": "noreferrer",
+          "target": "_blank",
+          "text": "playlistdh@gmail.com ↗",
+          "visible": true,
+          "size": [
+            158.23,
             29
           ]
         }
@@ -995,6 +1079,13 @@
       },
       {
         "display": "flex",
+        "href": "https://github.com/didim-log/didim-log-BE/blob/main/DOCS/refactoring/be-refactor/PHASE_6N_CRAWLER_DETAILS_BOUNDED_PARALLEL.md",
+        "slideId": "didimlog",
+        "text": "측정 기록 ↗",
+        "visible": true
+      },
+      {
+        "display": "flex",
         "href": "https://github.com/stdiodh/Investopia",
         "slideId": "investopia",
         "text": "저장소 ↗",
@@ -1016,9 +1107,30 @@
       },
       {
         "display": "flex",
+        "href": "https://github.com/SangWook16074/Solo-Play-Web-Server/blob/develop/src/test/kotlin/com/example/solo_play_web_server/place/service/PlaceServiceSpec.kt",
+        "slideId": "soloplay",
+        "text": "PlaceService 13 ↗",
+        "visible": true
+      },
+      {
+        "display": "flex",
+        "href": "https://github.com/SangWook16074/Solo-Play-Web-Server/blob/develop/src/test/kotlin/com/example/solo_play_web_server/place/service/PlaceEnrichmentServiceSpec.kt",
+        "slideId": "soloplay",
+        "text": "Enrichment 6 ↗",
+        "visible": true
+      },
+      {
+        "display": "flex",
         "href": "https://aandiclub.com/",
         "slideId": "evidence",
         "text": "서비스 ↗",
+        "visible": true
+      },
+      {
+        "display": "flex",
+        "href": "https://github.com/Team-AnI/A-AND-I-WEB-SERVER",
+        "slideId": "evidence",
+        "text": "Web 저장소 ↗",
         "visible": true
       },
       {
@@ -1033,6 +1145,13 @@
         "href": "https://gojjibom.web.app/",
         "slideId": "evidence",
         "text": "데모 ↗",
+        "visible": true
+      },
+      {
+        "display": "flex",
+        "href": "https://github.com/TIKI-TAKA-hackathon/Tiki-Taka-BE",
+        "slideId": "evidence",
+        "text": "백엔드 저장소 ↗",
         "visible": true
       },
       {
@@ -1060,7 +1179,14 @@
         "display": "flex",
         "href": "https://github.com/didim-log/didim-log-BE",
         "slideId": "evidence",
-        "text": "Backend ↗",
+        "text": "백엔드 저장소 ↗",
+        "visible": true
+      },
+      {
+        "display": "flex",
+        "href": "https://github.com/didim-log/didim-log-BE/blob/main/DOCS/refactoring/be-refactor/PHASE_6N_CRAWLER_DETAILS_BOUNDED_PARALLEL.md",
+        "slideId": "evidence",
+        "text": "측정 기록 ↗",
         "visible": true
       },
       {
@@ -1089,6 +1215,13 @@
         "href": "https://github.com/stdiodh",
         "slideId": "evidence",
         "text": "GitHub ↗",
+        "visible": true
+      },
+      {
+        "display": "flex",
+        "href": "mailto:playlistdh@gmail.com",
+        "slideId": "evidence",
+        "text": "playlistdh@gmail.com ↗",
         "visible": true
       }
     ],
