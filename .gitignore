@@ -11,3 +11,7 @@ coverage.xml
 coverage.json
 htmlcov/
 .mypy_cache/
+portfolio/node_modules/
+portfolio/dist/
+portfolio/.vite/
+portfolio/qa/screenshots/

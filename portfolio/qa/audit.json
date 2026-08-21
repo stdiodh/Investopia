@@ -1,0 +1,204 @@
+[
+  {
+    "bounds": {
+      "height": 900,
+      "width": 1600,
+      "x": 0,
+      "y": 32
+    },
+    "id": "cover",
+    "images": [],
+    "links": [],
+    "minFontNonFooter": 12,
+    "number": 1,
+    "overflow": []
+  },
+  {
+    "bounds": {
+      "height": 900,
+      "width": 1600,
+      "x": 0,
+      "y": 964
+    },
+    "id": "profile",
+    "images": [],
+    "links": [],
+    "minFontNonFooter": 12,
+    "number": 2,
+    "overflow": []
+  },
+  {
+    "bounds": {
+      "height": 900,
+      "width": 1600,
+      "x": 0,
+      "y": 1896
+    },
+    "id": "aandi-architecture",
+    "images": [
+      {
+        "alt": "A&I.com 5개 서비스 아키텍처",
+        "natural": [
+          1672,
+          941
+        ],
+        "rendered": [
+          868,
+          488.5
+        ],
+        "scale": 0.519
+      }
+    ],
+    "links": [
+      "https://aandiclub.com/",
+      "https://github.com/Team-AnI/A-AND-I-GATEWAY-SERVER"
+    ],
+    "minFontNonFooter": 12,
+    "number": 3,
+    "overflow": []
+  },
+  {
+    "bounds": {
+      "height": 900,
+      "width": 1600,
+      "x": 0,
+      "y": 2828
+    },
+    "id": "aandi-operations",
+    "images": [],
+    "links": [],
+    "minFontNonFooter": 12,
+    "number": 4,
+    "overflow": []
+  },
+  {
+    "bounds": {
+      "height": 900,
+      "width": 1600,
+      "x": 0,
+      "y": 3760
+    },
+    "id": "gojjibom",
+    "images": [
+      {
+        "alt": "고찌봄 알림에서 복약 화면으로 이어지는 원터치 UX",
+        "natural": [
+          1600,
+          900
+        ],
+        "rendered": [
+          838,
+          471.38
+        ],
+        "scale": 0.524
+      }
+    ],
+    "links": [
+      "https://gojjibom.web.app/",
+      "https://github.com/TIKI-TAKA-hackathon/Tiki-Taka-BE",
+      "https://raw.githubusercontent.com/TIKI-TAKA-hackathon/Tiki-Taka-FE/main/docs/assets/flows/demo-notification-flow.gif"
+    ],
+    "minFontNonFooter": 12,
+    "number": 5,
+    "overflow": []
+  },
+  {
+    "bounds": {
+      "height": 900,
+      "width": 1600,
+      "x": 0,
+      "y": 4692
+    },
+    "id": "didimlog",
+    "images": [
+      {
+        "alt": "디딤로그 BOJ 계정 인증 시연 정적 프레임",
+        "natural": [
+          1200,
+          750
+        ],
+        "rendered": [
+          300,
+          188
+        ],
+        "scale": 0.251
+      }
+    ],
+    "links": [
+      "https://github.com/didim-log/didim-log-BE",
+      "https://raw.githubusercontent.com/didim-log/didim-log-BE/main/DOCS/assets/portfolio/02-crawler-pipeline_demo.gif",
+      "https://raw.githubusercontent.com/didim-log/didim-log-BE/main/DOCS/assets/portfolio/01-boj-signup_demo.gif"
+    ],
+    "minFontNonFooter": 12,
+    "number": 6,
+    "overflow": []
+  },
+  {
+    "bounds": {
+      "height": 900,
+      "width": 1600,
+      "x": 0,
+      "y": 5624
+    },
+    "id": "investopia",
+    "images": [],
+    "links": [
+      "https://github.com/stdiodh/Investopia",
+      "https://github.com/user-attachments/assets/c809936a-cac8-461f-a754-cf25659a9bb2"
+    ],
+    "minFontNonFooter": 12,
+    "number": 7,
+    "overflow": []
+  },
+  {
+    "bounds": {
+      "height": 900,
+      "width": 1600,
+      "x": 0,
+      "y": 6556
+    },
+    "id": "soloplay",
+    "images": [],
+    "links": [
+      "https://github.com/SangWook16074/Solo-Play-Web-Server"
+    ],
+    "minFontNonFooter": 12,
+    "number": 8,
+    "overflow": []
+  },
+  {
+    "bounds": {
+      "height": 900,
+      "width": 1600,
+      "x": 0,
+      "y": 7488
+    },
+    "id": "growth",
+    "images": [],
+    "links": [
+      "https://github.com/stdiodh",
+      "https://velog.io/@stdiodh/posts"
+    ],
+    "minFontNonFooter": 12,
+    "number": 9,
+    "overflow": []
+  },
+  {
+    "bounds": {
+      "height": 900,
+      "width": 1600,
+      "x": 0,
+      "y": 8420
+    },
+    "id": "closing",
+    "images": [],
+    "links": [
+      "https://github.com/stdiodh",
+      "https://velog.io/@stdiodh/posts",
+      "https://aandiclub.com/"
+    ],
+    "minFontNonFooter": 12,
+    "number": 10,
+    "overflow": []
+  }
+]
