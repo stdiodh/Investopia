@@ -180,7 +180,7 @@ function ProjectMapSlide() {
       <div className="map-header">
         <div>
           <h2>프로젝트마다 한 가지 판단만 먼저 보이게 했습니다.</h2>
-          <p className="lead">상세한 기술 이력은 이력서에 두고, 여기에는 문제와 선택의 결과를 남겼습니다.</p>
+          <p className="lead">프로젝트별 역할, 핵심 판단, 확인 결과를 한눈에 정리했습니다.</p>
         </div>
         <p className="map-guide">문제 → 내 판단 → 확인 결과 → 직접 볼 수 있는 근거</p>
       </div>
@@ -519,13 +519,12 @@ const evidenceLinks = [
 function EvidenceSlide() {
   return (
     <Slide id="evidence" number="09">
-      <SectionLabel number="09">EVIDENCE &amp; CONTACT</SectionLabel>
+      <SectionLabel number="09">PROJECT LINKS &amp; CONTACT</SectionLabel>
       <div className="evidence-header">
         <div>
-          <h2>직접 확인할 수 있는 경로만 모았습니다.</h2>
-          <p className="lead">배포되지 않은 프로젝트는 운영 서비스처럼 보이게 쓰지 않았습니다.</p>
+          <h2>프로젝트 결과와 관련 자료</h2>
+          <p className="lead">서비스 · 저장소 · 보도 자료를 프로젝트별로 정리했습니다.</p>
         </div>
-        <p className="portfolio-note">이 포트폴리오는 이력서에 담기 어려운 판단, 실제 화면, 근거 링크를 보충합니다.</p>
       </div>
       <ol className="evidence-list">
         {evidenceLinks.map((project, index) => (

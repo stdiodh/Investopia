@@ -127,6 +127,31 @@ addCheck("slide-count", slides.length === 9, {
   slideIds: slides.map((slide) => slide.id),
 });
 
+const evidence = slides.find((slide) => slide.id === "evidence");
+const defensiveCopy = [
+  "상세한 기술 이력은 이력서에 두고, 여기에는 문제와 선택의 결과를 남겼습니다.",
+  "직접 확인할 수 있는 경로만 모았습니다.",
+  "배포되지 않은 프로젝트는 운영 서비스처럼 보이게 쓰지 않았습니다.",
+  "이 포트폴리오는 이력서에 담기 어려운 판단, 실제 화면, 근거 링크를 보충합니다.",
+];
+const defensiveCopyMatches = slides.flatMap((slide) =>
+  defensiveCopy
+    .filter((copy) => slide.text.includes(copy))
+    .map((copy) => ({ copy, id: slide.id })),
+);
+addCheck(
+  "neutral-portfolio-copy",
+  Boolean(
+    evidence?.text.includes("프로젝트 결과와 관련 자료") &&
+    evidence?.text.includes("서비스 · 저장소 · 보도 자료를 프로젝트별로 정리했습니다.") &&
+    defensiveCopyMatches.length === 0,
+  ),
+  {
+    forbiddenMatches: defensiveCopyMatches,
+    rule: "포트폴리오의 범위를 해명하지 않고 프로젝트 자료를 중립적으로 안내",
+  },
+);
+
 const footerFailures = slides
   .filter((slide) => {
     return !new RegExp(`0?${slide.number}\\s*\\/\\s*9(?:\\s|$)`).test(slide.footer);

@@ -21,6 +21,14 @@
     },
     {
       "details": {
+        "forbiddenMatches": [],
+        "rule": "포트폴리오의 범위를 해명하지 않고 프로젝트 자료를 중립적으로 안내"
+      },
+      "id": "neutral-portfolio-copy",
+      "passed": true
+    },
+    {
+      "details": {
         "failures": [],
         "expected": "각 슬라이드의 01 / 9 … 09 / 9"
       },
@@ -421,7 +429,7 @@
       "passed": true
     }
   ],
-  "generatedAt": "2026-08-21T07:47:00.434Z",
+  "generatedAt": "2026-08-21T08:15:39.811Z",
   "pageUrl": "http://127.0.0.1:5174/",
   "passed": true,
   "slides": [
@@ -691,7 +699,7 @@
   ],
   "summary": {
     "failed": 0,
-    "passed": 12,
-    "total": 12
+    "passed": 13,
+    "total": 13
   }
 }

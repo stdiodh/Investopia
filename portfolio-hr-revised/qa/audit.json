@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-21T07:47:00.194Z",
+  "generatedAt": "2026-08-21T08:15:39.630Z",
   "pageUrl": "http://127.0.0.1:5174/",
   "viewport": {
     "height": 900,
@@ -886,13 +886,7 @@
           "className": "",
           "fontSizePx": 12,
           "tag": "SPAN",
-          "text": "EVIDENCE & CONTACT"
-        },
-        {
-          "className": "portfolio-note",
-          "fontSizePx": 12,
-          "tag": "P",
-          "text": "이 포트폴리오는 이력서에 담기 어려운 판단, 실제 화면, 근거 링크를 보충합니다."
+          "text": "PROJECT LINKS & CONTACT"
         },
         {
           "className": "map-index",
@@ -905,6 +899,12 @@
           "fontSizePx": 12,
           "tag": "SPAN",
           "text": "운영 서비스"
+        },
+        {
+          "className": "text-link",
+          "fontSizePx": 12,
+          "tag": "A",
+          "text": "서비스 ↗"
         }
       ],
       "number": 9,

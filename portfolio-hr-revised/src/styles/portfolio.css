@@ -393,8 +393,7 @@ h2 {
   margin-top: 10px;
 }
 
-.map-guide,
-.portfolio-note {
+.map-guide {
   max-width: 420px;
   padding: 13px 16px;
   border-top: 1px solid var(--line);
@@ -1117,7 +1116,9 @@ h2 {
 /* 09 — evidence */
 
 .evidence-header {
-  align-items: center;
+  display: block;
+  max-width: 900px;
+  margin-bottom: 20px;
 }
 
 .evidence-list {
