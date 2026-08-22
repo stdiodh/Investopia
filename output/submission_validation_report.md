@@ -1,17 +1,17 @@
 # 이력서·포트폴리오 최종 제출 검증
 
-검증일: 2026-08-21
+검증일: 2026-08-22
 
 ## 최종 산출물
 
 - 이력서 PDF: `output/pdf/toss_resume_submission_final.pdf`
   - 3페이지 A4
   - SHA-256: `5dcb57e3609fae7c1f2523c17475ff692ad4a3291aee85c8dd23a6a4824af3e8`
-- 포트폴리오 PDF: `output/pdf/portfolio_submission_final.pdf`
+- 포트폴리오 PDF: `output/pdf/portfolio_submission_final_v2.pdf`
   - 9페이지, 1200 × 675.12pt
-  - SHA-256: `256554be312a9ffce6b6d24a6b7d90984647c5b3b95a224f4d2cb9e07aea35cf`
+  - SHA-256: `38c0dd4b844e4585aac15055d9053b6881b3190da30bd44169a3e29abebf6c47`
 - 이력서 Figma 복제본: https://www.figma.com/design/HgErN8Vnin2SQKjUuT4dD9?node-id=317-343
-- 포트폴리오 Figma 복제본: https://www.figma.com/design/XDYFF0ZT7hoXu2q2DoQ52C?node-id=29-750
+- 이전 포트폴리오 Figma 복제본: https://www.figma.com/design/XDYFF0ZT7hoXu2q2DoQ52C?node-id=29-750
 
 기존 Figma 페이지와 기존 PDF는 덮어쓰지 않았다.
 
@@ -43,8 +43,9 @@
 
 ## 포트폴리오 수정·검증
 
-- A&I 화면을 운영 성능 증거처럼 보이게 하던 `OPERATING PROOF`를 `SERVICE UI FRAME`으로 수정했다.
-- A&I 사례에 `A · 판단`과 `A · 실행`을 분리하고, `batch`를 `배치 조회`로 통일했다.
+- 제목·본문·캡션에서 반복하던 설명과 문서 구성 안내를 삭제했다.
+- 장식용 영문 라벨을 한글로 바꾸고 A&I 사례의 STAR 표기를 문제·조건·선택·적용으로 줄였다.
+- `했습니다` 종결은 24회에서 7회로 줄였고 사실·수치·기간·역할은 유지했다.
 - 고찌봄 수상 결과는 주관기관 카드 한 곳에만 남겼다.
 - 고찌봄 역할을 이력서·프로젝트 맵·상세 페이지 모두 `PM · Dev Lead`로 통일했다.
 - 디딤로그 기간과 측정 조건을 수정하고 공개 측정 원문을 연결했다.
@@ -58,7 +59,7 @@
 - `npm run typecheck` 통과
 - `npm run lint` 통과
 - `npm run build` 통과
-- `npm run qa` 16/16 통과
+- `npm run qa` 17/17 통과
   - 9/9장 1600 × 900
   - slide 밖 요소 0
   - 잘린 요소 0
@@ -73,5 +74,7 @@
 
 - `/Users/dh/Documents/toss_resume.pdf`
   - SHA-256: `1ed0eb1b1d4a6a1f134604708dba12fae3ea4c82b2d66d1433559e330d6dd49e`
+- `output/pdf/portfolio_submission_final.pdf`
+  - SHA-256: `256554be312a9ffce6b6d24a6b7d90984647c5b3b95a224f4d2cb9e07aea35cf`
 - `output/pdf/portfolio_evidence_revised.pdf`
   - SHA-256: `1c38d9b892598b81701e99510f027450497b6f5a23d26c69c1102ddf4ed423d3`

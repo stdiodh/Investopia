@@ -141,16 +141,40 @@ const defensiveCopyMatches = slides.flatMap((slide) =>
 );
 addCheck(
   "neutral-portfolio-copy",
-  Boolean(
-    evidence?.text.includes("프로젝트 결과와 관련 자료") &&
-    evidence?.text.includes("서비스 · 저장소 · 보도 자료를 프로젝트별로 정리했습니다.") &&
-    defensiveCopyMatches.length === 0,
-  ),
+  Boolean(evidence && defensiveCopyMatches.length === 0),
   {
     forbiddenMatches: defensiveCopyMatches,
     rule: "포트폴리오의 범위를 해명하지 않고 프로젝트 자료를 중립적으로 안내",
   },
 );
+
+const templateCopy = [
+  "문제를 발견한 배경, 내가 내린 판단, 확인한 결과를 프로젝트별로 담았습니다.",
+  "프로젝트마다 한 가지 판단만 먼저 보이게 했습니다.",
+  "프로젝트별 역할, 핵심 판단, 확인 결과를 한눈에 정리했습니다.",
+  "문제 → 내 판단 → 확인 결과 → 직접 볼 수 있는 근거",
+  "서비스 · 저장소 · 보도 자료를 프로젝트별로 정리했습니다.",
+];
+const decorativeLabels = [
+  "PROJECT MAP",
+  "ONE CASE",
+  "SERVICE UI FRAME",
+  "LOCAL SAMPLE BENCHMARK",
+  "CODE-BACKED FLOW",
+  "TEST",
+];
+const templateCopyMatches = slides.flatMap((slide) => [
+  ...templateCopy
+    .filter((copy) => slide.text.includes(copy))
+    .map((copy) => ({ copy, id: slide.id, type: "meta-copy" })),
+  ...decorativeLabels
+    .filter((label) => slide.text.includes(label))
+    .map((copy) => ({ copy, id: slide.id, type: "decorative-label" })),
+]);
+addCheck("anti-template-copy", templateCopyMatches.length === 0, {
+  matches: templateCopyMatches,
+  rule: "구성 설명의 반복과 장식용 영문 라벨을 사용하지 않음",
+});
 
 const footerFailures = slides
   .filter((slide) => {
@@ -251,7 +275,7 @@ addCheck(
     aandiArchitecture?.images.some((image) => /과제 목록 시연 영상 프레임/.test(image.alt)) &&
     /과제 목록 시연 영상 프레임/.test(aandiArchitecture?.text ?? "") &&
     /2026\.06/.test(aandiArchitecture?.text ?? "") &&
-    /SERVICE UI FRAME/.test(aandiArchitecture?.text ?? "") &&
+    /서비스 화면/.test(aandiArchitecture?.text ?? "") &&
     !/OPERATING PROOF/.test(aandiArchitecture?.text ?? ""),
   ),
   {
@@ -271,11 +295,9 @@ addCheck(
     aandiRequiredLinks.every((href) => aandiQuery?.links.some((link) => link.href === href)) &&
     aandiQuery?.images.some((image) => /60회로 예상.*회귀 테스트에서 2회로 검증/.test(image.alt)) &&
     aandiQuery?.images.some((image) => /9\.297ms에서 7\.565ms/.test(image.alt)) &&
-    /R · 확인 결과/.test(aandiQuery?.text ?? "") &&
-    /A · 판단/.test(aandiQuery?.text ?? "") &&
-    /A · 실행/.test(aandiQuery?.text ?? "") &&
+    /확인 결과/.test(aandiQuery?.text ?? "") &&
     /기존 구조 예상 60회 → 회귀 테스트 검증 2회/.test(aandiQuery?.text ?? "") &&
-    /MongoDB command 수가 아닌 service-level 기준/.test(aandiQuery?.text ?? ""),
+    /(?:service-level|서비스\s*(?:계층\s*)?호출)\s*기준/i.test(aandiQuery?.text ?? ""),
   ),
   {
     images: aandiQuery?.images ?? [],
@@ -327,7 +349,6 @@ addCheck(
     /55\.632초/.test(didimlog?.text ?? "") &&
     /12\.226초/.test(didimlog?.text ?? "") &&
     /77\.96% 단축/.test(didimlog?.text ?? "") &&
-    /LOCAL SAMPLE BENCHMARK/.test(didimlog?.text ?? "") &&
     /3,400건 고정 샘플 · 순차\/K=4 · 3회 중앙값/.test(didimlog?.text ?? "") &&
     didimlog?.links.some((link) => link.href === didimlogPerformance),
   ),
@@ -346,11 +367,11 @@ addCheck(
   "soloplay-visual-and-test-proof",
   Boolean(
     soloplay?.images.some((image) => /화면 시안/.test(image.alt)) &&
-    /서비스 UI 시안/.test(soloplay?.text ?? "") &&
-    /관련 테스트 시나리오 19개/.test(soloplay?.text ?? "") &&
+    /SoloPlay UI 시안/.test(soloplay?.text ?? "") &&
+    /테스트(?:\s*시나리오)?\s*19개/.test(soloplay?.text ?? "") &&
     !/실패\s*0/.test(soloplay?.text ?? "") &&
     soloplayRequiredLinks.every((href) => soloplay?.links.some((link) => link.href === href)) &&
-    /기존 저장본 유지/.test(soloplay?.text ?? ""),
+    /저장본\s*유지|원본(?:\s*장소)?\s*저장/.test(soloplay?.text ?? ""),
   ),
   {
     images: soloplay?.images ?? [],

@@ -1,11 +1,11 @@
 # 최종 제출 포트폴리오
 
-이력서와 겹치는 설명을 줄이고, 면접관이 한 장에서 문제·판단·결과·근거를 읽을 수 있도록 정리한 9페이지 포트폴리오입니다.
-A&I.com 운영 화면과 측정 기록, 고찌봄 외부 보도·주관기관 결과, SoloPlay 화면 시안과 코드·테스트 근거를 보강했습니다.
-수치는 전후 결과와 짧은 측정 조건만 표기하며 계산식은 넣지 않았습니다. 기존 PDF와 기존 Figma 페이지는 수정하지 않았습니다.
+5개 프로젝트의 역할, 구현 내용, 측정 결과, 근거 링크를 9페이지로 정리했습니다.
+A&I.com 운영 화면과 측정 기록, 고찌봄 보도·수상 자료, SoloPlay 화면 시안과 테스트 소스를 포함합니다.
 
-- 최종 제출 PDF: `../output/pdf/portfolio_submission_final.pdf`
-- 최종 제출 Figma 페이지: https://www.figma.com/design/XDYFF0ZT7hoXu2q2DoQ52C?node-id=29-750
+- 최종 제출 PDF: `../output/pdf/portfolio_submission_final_v2.pdf`
+- 이전 제출 PDF: `../output/pdf/portfolio_submission_final.pdf`
+- 이전 제출 Figma 페이지: https://www.figma.com/design/XDYFF0ZT7hoXu2q2DoQ52C?node-id=29-750
 - 이전 근거 보강 PDF: `../output/pdf/portfolio_evidence_revised.pdf`
 - 이전 근거 보강 Figma 페이지: https://www.figma.com/design/XDYFF0ZT7hoXu2q2DoQ52C?node-id=11-2
 - 보존한 기존 PDF: `../output/pdf/portfolio_hr_revised.pdf`

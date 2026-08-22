@@ -29,6 +29,14 @@
     },
     {
       "details": {
+        "matches": [],
+        "rule": "구성 설명의 반복과 장식용 영문 라벨을 사용하지 않음"
+      },
+      "id": "anti-template-copy",
+      "passed": true
+    },
+    {
+      "details": {
         "failures": [],
         "expected": "각 슬라이드의 01 / 9 … 09 / 9"
       },
@@ -346,7 +354,7 @@
       "passed": true
     }
   ],
-  "generatedAt": "2026-08-21T10:52:27.387Z",
+  "generatedAt": "2026-08-22T04:20:47.019Z",
   "pageUrl": "http://127.0.0.1:5173/",
   "passed": true,
   "slides": [
@@ -644,7 +652,7 @@
   ],
   "summary": {
     "failed": 0,
-    "passed": 16,
-    "total": 16
+    "passed": 17,
+    "total": 17
   }
 }

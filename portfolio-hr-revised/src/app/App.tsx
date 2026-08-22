@@ -115,15 +115,12 @@ function CoverSlide() {
     <Slide id="cover" number="01">
       <div className="cover-layout">
         <div className="cover-copy">
-          <p className="eyebrow">SERVER DEVELOPER PORTFOLIO · 허동현</p>
+          <p className="eyebrow">서버 개발자 포트폴리오 · 허동현</p>
           <h1>
             어떤 문제를 봤고,
             <br />왜 그렇게 고쳤는지
             <br />5개 프로젝트로 정리했습니다.
           </h1>
-          <p className="lead cover-lead">
-            문제를 발견한 배경, 내가 내린 판단, 확인한 결과를 프로젝트별로 담았습니다.
-          </p>
         </div>
         <div className="cover-index" aria-label="포트폴리오 프로젝트">
           <span>01 A&amp;I.com</span>
@@ -135,7 +132,7 @@ function CoverSlide() {
         <div className="cover-count">
           <strong>5</strong>
           <div>
-            <span>PROJECTS</span>
+            <span>프로젝트</span>
             <p>운영 · 공개 데모 · 로컬 프로토타입 · 저장소</p>
           </div>
         </div>
@@ -166,7 +163,7 @@ const projects = [
   {
     name: "Investopia",
     period: "PL · Backend Lead · 2025.04–06",
-    result: "웹과 Raspberry Pi가 같은 거래 API를 사용",
+    result: "웹과 Raspberry Pi에서 같은 잔액·보유 수량 검증",
     status: <Status tone="gray">로컬 · 하드웨어 프로토타입</Status>,
   },
   {
@@ -180,13 +177,11 @@ const projects = [
 function ProjectMapSlide() {
   return (
     <Slide id="project-map" number="02">
-      <SectionLabel number="02">PROJECT MAP · 무엇을 보면 되는지</SectionLabel>
+      <SectionLabel number="02">프로젝트</SectionLabel>
       <div className="map-header">
         <div>
-          <h2>프로젝트마다 한 가지 판단만 먼저 보이게 했습니다.</h2>
-          <p className="lead">프로젝트별 역할, 핵심 판단, 확인 결과를 한눈에 정리했습니다.</p>
+          <h2>5개 프로젝트에서 맡은 역할과 핵심 선택</h2>
         </div>
-        <p className="map-guide">문제 → 내 판단 → 확인 결과 → 직접 볼 수 있는 근거</p>
       </div>
       <ol className="project-map" aria-label="프로젝트 구성">
         {projects.map((project, index) => (
@@ -213,22 +208,14 @@ function AandiArchitectureSlide() {
         <div className="project-copy compact-copy">
           <div>
             <Status tone="green">운영 서비스</Status>
-            <h2>변경 범위를 나누기 위해 서비스를 먼저 나눴습니다.</h2>
-            <p className="lead">
-              교육 커뮤니티를 운영하며 Auth, Web, Gateway, Tech Blog, Online Judge를 독립된 서버로
-              관리했습니다.
-            </p>
+            <h2>기능과 배포 주기에 따라 서비스 경계를 나눴습니다.</h2>
           </div>
           <Problem>기능이 한 서버에 모여 있어 작은 변경도 전체 배포에 영향을 줬습니다.</Problem>
-          <div className="judgment-block">
-            <span>내 판단</span>
-            <strong>도메인과 배포 주기가 다른 기능부터 서비스 경계로 삼았습니다.</strong>
-          </div>
           <ActionList
             items={[
-              "서버별 저장소와 Gateway 경로를 나눴습니다.",
-              "SNS/SQS로 서비스 사이 이벤트 전달을 분리했습니다.",
-              "GitHub Actions, ECR, EC2로 서비스별 배포 흐름을 만들었습니다.",
+              "도메인과 배포 주기가 다른 기능을 기준으로 서버 저장소와 Gateway 경로 분리",
+              "SNS/SQS로 서비스 사이 이벤트 전달",
+              "GitHub Actions, ECR, EC2 기반 서비스별 배포",
             ]}
           />
           <div className="link-row">
@@ -239,7 +226,7 @@ function AandiArchitectureSlide() {
         <div className="architecture-evidence">
           <figure className="primary-figure architecture-figure">
             <img src={aandiArchitecture} alt="A&I.com 시스템 아키텍처" />
-            <figcaption>직접 작성한 운영 아키텍처 · 서비스 분리와 배포 흐름</figcaption>
+            <figcaption>A&amp;I.com 운영 아키텍처</figcaption>
           </figure>
           <div className="architecture-proof">
             <figure className="architecture-live">
@@ -247,9 +234,9 @@ function AandiArchitectureSlide() {
               <figcaption>과제 목록 시연 영상 프레임 · 2026.06</figcaption>
             </figure>
             <div className="architecture-fact">
-              <span>SERVICE UI FRAME</span>
+              <span>서비스 화면</span>
               <strong>5개 독립 서버 저장소</strong>
-              <p>서비스별 변경 · 배포 범위 분리</p>
+              <p>Auth · Web · Gateway · Tech Blog · Online Judge</p>
             </div>
           </div>
         </div>
@@ -270,23 +257,22 @@ function StarRow({ label, children }: { label: string; children: ReactNode }) {
 function AandiQuerySlide() {
   return (
     <Slide id="aandi-query" number="04">
-      <SectionLabel number="04">A&amp;I.COM · ONE CASE · 조회 구조 개선</SectionLabel>
+      <SectionLabel number="04">A&amp;I.COM · 조회 구조 개선</SectionLabel>
       <div className="case-header">
         <div>
           <h2>과제별 반복 조회를 배치 조회로 묶었습니다.</h2>
-          <p className="lead">기능을 더하지 않고, 같은 응답을 만드는 조회 순서만 고쳤습니다.</p>
         </div>
         <Link href={LINKS.aandiWeb}>근거 저장소</Link>
       </div>
       <div className="query-layout">
         <div className="star-card">
-          <StarRow label="S · 상황">과제 목록을 만들 때 과제마다 필요한 데이터를 다시 조회했습니다.</StarRow>
-          <StarRow label="T · 목표">API 응답 형식은 그대로 두고 반복 조회만 줄여야 했습니다.</StarRow>
-          <StarRow label="A · 판단">응답 형식은 유지하고 서비스 계층 호출만 모아 읽는 배치 조회를 선택했습니다.</StarRow>
-          <StarRow label="A · 실행">필요한 데이터를 먼저 읽고 과제별로 묶도록 조회 순서를 재구성했습니다.</StarRow>
+          <StarRow label="문제">과제 목록을 만들 때마다 과제별 데이터를 다시 조회</StarRow>
+          <StarRow label="조건">API 응답 형식 유지</StarRow>
+          <StarRow label="선택">서비스 계층의 반복 조회를 배치 조회로 전환</StarRow>
+          <StarRow label="적용">필요한 데이터를 먼저 읽은 뒤 과제별로 결합</StarRow>
         </div>
         <div className="query-evidence">
-          <p className="query-result-label">R · 확인 결과</p>
+          <p className="query-result-label">확인 결과</p>
           <figure className="query-record query-call-record">
             <img src={aandiRepositoryRecord} alt="A&I 기존 구조에서 60회로 예상한 child repository 조회를 회귀 테스트에서 2회로 검증한 JSON 기록" />
             <figcaption>
@@ -315,10 +301,10 @@ function GojjibomSlide() {
         <div className="project-copy">
           <div>
             <Status>공개 데모 · 샘플 데이터</Status>
-            <h2>짧은 기간이라 기능을 늘리지 않고 확인 흐름 하나만 남겼습니다.</h2>
-            <p className="lead">어르신의 복약 여부를 보호자가 바로 확인하는 서비스입니다.</p>
+            <h2>복약 확인 흐름 하나에 집중했습니다.</h2>
+            <p className="lead">어르신의 복약 여부를 보호자가 바로 확인하는 서비스</p>
           </div>
-          <Problem>짧은 개발 기간 안에 어르신과 보호자가 함께 쓸 수 있는 결과가 필요했습니다.</Problem>
+          <Problem>어르신이 앱을 탐색하지 않아도 알림에서 복약 확인 화면으로 바로 들어가야 했습니다.</Problem>
           <div className="decision-steps" aria-label="4일 MVP 판단">
             <div><span>01</span><strong>대상</strong><p>복약 확인으로 문제를 좁힘</p></div>
             <div><span>02</span><strong>범위</strong><p>알림과 확인 화면만 우선 구현</p></div>
@@ -333,7 +319,7 @@ function GojjibomSlide() {
         <div className="gojjibom-evidence">
           <figure className="primary-figure media-figure">
             <img src={MEDIA.gojjibom} alt="고찌봄 알림에서 복약 화면으로 이어지는 실제 흐름" />
-            <figcaption>알림에서 복약 화면으로 바로 이동하는 흐름 · 공개 데모는 샘플 데이터 사용</figcaption>
+            <figcaption>알림에서 복약 화면으로 이어지는 공개 데모 화면</figcaption>
           </figure>
           <div className="external-proof" aria-label="고찌봄 외부 검증 자료">
             <div>
@@ -361,19 +347,15 @@ function DidimlogSlide() {
         <div className="project-copy compact-copy">
           <div>
             <Status>공개 프론트 데모 · 입력 미저장</Status>
-            <h2>가입이 막히지 않고, 수집이 끊겨도 다시 이어가게 했습니다.</h2>
-            <p className="lead">BOJ 기록을 불러와 다음 문제를 추천하고 회고를 남기는 학습 서비스입니다.</p>
+            <h2>BOJ 본인 확인과 중단 지점 재수집을 구현했습니다.</h2>
+            <p className="lead">BOJ 기록으로 다음 문제를 추천하고 회고를 남기는 학습 서비스</p>
           </div>
-          <Problem>BOJ 아이디의 실제 사용자 확인과 많은 문제의 안정적인 수집이 함께 필요했습니다.</Problem>
-          <div className="judgment-block">
-            <span>내 판단</span>
-            <strong>본인 확인은 짧게, 수집은 제한하고, 실패한 지점은 남겨야 했습니다.</strong>
-          </div>
+          <Problem>임의 BOJ 아이디 가입을 막고, 수집이 끊겨도 처음부터 다시 처리하지 않아야 했습니다.</Problem>
           <ActionList
             items={[
-              "BOJ 프로필의 5분 인증 코드로 아이디 소유권을 확인했습니다.",
-              "문제 요청의 동시성을 제한하고 수집 상태를 Redis에 기록했습니다.",
-              "실패하거나 처리하지 못한 문제만 다시 수집하게 했습니다.",
+              "BOJ 프로필의 5분 인증 코드로 아이디 소유권 확인",
+              "문제 요청의 동시성을 제한하고 수집 상태를 Redis에 기록",
+              "실패하거나 처리하지 못한 문제만 재수집",
             ]}
           />
           <div className="link-row">
@@ -384,10 +366,10 @@ function DidimlogSlide() {
         <div className="didim-evidence">
           <figure className="primary-figure didim-figure">
             <img src={MEDIA.didimlog} alt="디딤로그 BOJ 계정 인증 실제 화면" />
-            <figcaption>BOJ 프로필 코드를 이용한 계정 인증 · 실제 시연의 정적 프레임</figcaption>
+            <figcaption>BOJ 프로필 코드를 이용한 계정 인증 화면</figcaption>
           </figure>
           <div className="benchmark-card">
-            <p className="note-label">LOCAL SAMPLE BENCHMARK</p>
+            <p className="note-label">로컬 고정 샘플</p>
             <div className="benchmark-values">
               <span>55.632초</span>
               <FlowArrow />
@@ -430,19 +412,15 @@ function InvestopiaSlide() {
         <div className="project-copy compact-copy">
           <div>
             <Status tone="gray">로컬 · 하드웨어 프로토타입</Status>
-            <h2>화면이 달라도 거래 기준은 하나로 맞췄습니다.</h2>
-            <p className="lead">처음 주식을 접하는 사용자를 위한 가상 매수·매도 서비스입니다.</p>
+            <h2>웹과 Raspberry Pi 주문 로직을 한곳에 모았습니다.</h2>
+            <p className="lead">처음 주식을 접하는 사용자를 위한 가상 매수·매도</p>
           </div>
-          <Problem>웹과 Raspberry Pi의 주문 결과가 서로 다른 기준으로 처리되면 안 됐습니다.</Problem>
-          <div className="judgment-block">
-            <span>내 판단</span>
-            <strong>입력 장치는 나누되 잔액, 수량, 평균 매입가 검증은 같은 거래 API에 모았습니다.</strong>
-          </div>
+          <Problem>웹과 Raspberry Pi가 각각 거래 로직을 가지면 잔액과 보유 수량 검증이 달라질 수 있었습니다.</Problem>
           <ActionList
             items={[
-              "매수·매도 전 잔액과 보유 수량을 검증했습니다.",
-              "네이버 금융 주가를 30초마다 수집해 차트와 거래에 함께 사용했습니다.",
-              "Raspberry Pi 버튼과 LCD를 같은 거래·자산 API에 연결했습니다.",
+              "매수·매도 전 잔액과 보유 수량 검증",
+              "네이버 금융 주가를 30초마다 수집해 차트와 거래에 사용",
+              "Raspberry Pi 버튼 주문과 LCD 자산 조회를 서버에 연결",
             ]}
           />
           <p className="project-result compact-result"><span>확인</span><strong>가상 매수·매도와 평균 매입가</strong></p>
@@ -450,7 +428,6 @@ function InvestopiaSlide() {
         </div>
         <div className="investopia-evidence">
           <InvestopiaVisual />
-          <p className="visual-caption">두 인터페이스가 같은 거래 API와 자산 데이터를 사용합니다.</p>
         </div>
       </div>
     </Slide>
@@ -465,14 +442,10 @@ function SoloPlaySlide() {
         <div className="project-copy solo-copy">
           <div>
             <Status tone="gray">백엔드 프로젝트 · 저장소 공개</Status>
-            <h2>AI 응답을 기다리다 장소 저장까지 놓치지 않게 했습니다.</h2>
-            <p className="lead">혼자 시간을 보낼 장소를 찾고 기록하는 서비스입니다.</p>
+            <h2>Kakao 원본과 Gemini 보강을 분리했습니다.</h2>
+            <p className="lead">혼자 시간을 보낼 장소를 찾고 기록하는 서비스</p>
           </div>
           <Problem>Gemini 호출이나 응답 파싱이 실패해도 Kakao에서 찾은 장소는 남아야 했습니다.</Problem>
-          <div className="judgment-block">
-            <span>내 판단</span>
-            <strong>필수 데이터 저장과 선택적인 AI 보강의 성공 조건을 분리했습니다.</strong>
-          </div>
           <div className="link-row">
             <Link href={LINKS.soloplay}>백엔드 저장소</Link>
             <Link href={LINKS.soloplayDesign}>화면 시안</Link>
@@ -481,11 +454,11 @@ function SoloPlaySlide() {
         <div className="solo-evidence">
           <figure className="solo-screen">
             <img src={soloPlayHome} alt="SoloPlay 맞춤 장소와 해시태그 추천 화면 시안" />
-            <figcaption>서비스 UI 시안 · 사용자가 확인하는 장소 추천과 태그</figcaption>
+            <figcaption>SoloPlay UI 시안 · 장소 추천과 해시태그</figcaption>
           </figure>
           <div className="solo-proof" aria-label="SoloPlay 코드와 테스트로 확인한 데이터 흐름">
-            <p className="note-label">CODE-BACKED FLOW</p>
-            <h3>저장과 AI 보강의 성공 조건을 분리했습니다.</h3>
+            <p className="note-label">구현 흐름</p>
+            <h3>Kakao 원본 저장 → Gemini 보강</h3>
             <div className="solo-state-flow">
               <div>
                 <span>01</span>
@@ -505,7 +478,7 @@ function SoloPlaySlide() {
               <p>Gemini 호출 · 응답 파싱 실패 기준</p>
             </div>
             <div className="solo-test-result">
-              <span>TEST</span>
+              <span>테스트</span>
               <strong>관련 테스트 시나리오 19개</strong>
               <p>
                 <Link href={LINKS.soloplayPlaceServiceTest}>PlaceService 13</Link>
@@ -530,11 +503,10 @@ const evidenceLinks = [
 function EvidenceSlide() {
   return (
     <Slide id="evidence" number="09">
-      <SectionLabel number="09">PROJECT LINKS &amp; CONTACT</SectionLabel>
+      <SectionLabel number="09">프로젝트 링크 · 연락처</SectionLabel>
       <div className="evidence-header">
         <div>
-          <h2>프로젝트 결과와 관련 자료</h2>
-          <p className="lead">서비스 · 저장소 · 보도 자료를 프로젝트별로 정리했습니다.</p>
+          <h2>프로젝트 링크</h2>
         </div>
       </div>
       <ol className="evidence-list">
@@ -552,7 +524,6 @@ function EvidenceSlide() {
       <div className="contact-strip">
         <div>
           <span>허동현 · Server Developer</span>
-          <strong>읽어주셔서 감사합니다.</strong>
         </div>
         <div className="link-row">
           <Link href={LINKS.github}>GitHub</Link>

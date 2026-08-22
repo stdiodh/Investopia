@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-21T10:52:27.132Z",
+  "generatedAt": "2026-08-22T04:20:46.775Z",
   "pageUrl": "http://127.0.0.1:5173/",
   "viewport": {
     "height": 900,
@@ -31,7 +31,7 @@
           "className": "eyebrow",
           "fontSizePx": 12,
           "tag": "P",
-          "text": "SERVER DEVELOPER PORTFOLIO · 허동현"
+          "text": "서버 개발자 포트폴리오 · 허동현"
         },
         {
           "className": "",
@@ -86,13 +86,7 @@
           "className": "",
           "fontSizePx": 12,
           "tag": "SPAN",
-          "text": "PROJECT MAP · 무엇을 보면 되는지"
-        },
-        {
-          "className": "map-guide",
-          "fontSizePx": 12,
-          "tag": "P",
-          "text": "문제 → 내 판단 → 확인 결과 → 직접 볼 수 있는 근거"
+          "text": "프로젝트"
         },
         {
           "className": "map-index",
@@ -105,6 +99,12 @@
           "fontSizePx": 12,
           "tag": "P",
           "text": "Backend Lead · 2025.01–현재"
+        },
+        {
+          "className": "status status-green",
+          "fontSizePx": 12,
+          "tag": "SPAN",
+          "text": "운영 서비스"
         }
       ],
       "number": 2,
@@ -215,7 +215,7 @@
           "className": "",
           "fontSizePx": 12,
           "tag": "SPAN",
-          "text": "내 판단"
+          "text": "01"
         }
       ],
       "number": 3,
@@ -320,7 +320,7 @@
           "className": "",
           "fontSizePx": 12,
           "tag": "SPAN",
-          "text": "A&I.COM · ONE CASE · 조회 구조 개선"
+          "text": "A&I.COM · 조회 구조 개선"
         },
         {
           "className": "text-link",
@@ -338,7 +338,7 @@
           "className": "",
           "fontSizePx": 12,
           "tag": "SPAN",
-          "text": "S · 상황"
+          "text": "문제"
         }
       ],
       "number": 4,
@@ -560,7 +560,7 @@
           "className": "",
           "fontSizePx": 12,
           "tag": "SPAN",
-          "text": "내 판단"
+          "text": "01"
         }
       ],
       "number": 6,
@@ -641,7 +641,7 @@
           "className": "",
           "fontSizePx": 12,
           "tag": "SPAN",
-          "text": "내 판단"
+          "text": "01"
         }
       ],
       "number": 7,
@@ -970,7 +970,7 @@
           "className": "",
           "fontSizePx": 12,
           "tag": "SPAN",
-          "text": "PROJECT LINKS & CONTACT"
+          "text": "프로젝트 링크 · 연락처"
         },
         {
           "className": "map-index",
