@@ -27,7 +27,7 @@ jobs:
         run: >-
           python -m pytest -q
           --cov=app
-          --cov=static
+          --cov=workers
           --cov-branch
           --cov-report=term-missing
           --cov-report=xml:coverage.xml

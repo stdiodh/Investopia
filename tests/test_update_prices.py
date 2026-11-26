@@ -3,7 +3,7 @@ from datetime import datetime
 import pytest
 import requests
 
-from static import update_prices
+from workers import update_prices
 
 
 VALID_HTML = """

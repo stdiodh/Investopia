@@ -745,3 +745,8 @@ def test_asset_post_rejects_invalid_amount_or_action_without_commit(
 
     assert response.status_code == 400
     assert connection.commit_count == 0
+
+
+@pytest.mark.parametrize("path", ["/static/hardware.py", "/static/update_prices.py"])
+def test_worker_source_is_not_served_as_static_file(client, path):
+    assert client.get(path).status_code == 404

@@ -60,5 +60,5 @@
   <path d="M1270 737 H1300 Q1320 737 1320 717 V628 Q1320 608 1340 608 H1400" fill="none" stroke="#2563EB" stroke-width="4"/>
   <text x="956" y="602" text-anchor="middle" font-family="Inter, Pretendard, 'Noto Sans KR', system-ui, sans-serif" font-size="15" font-weight="700" fill="#2563EB">웹 폼과 REST 요청이 _buy / _sell 거래 로직으로 수렴</text>
 
-  <text x="80" y="862" font-family="'JetBrains Mono', 'SFMono-Regular', Consolas, monospace" font-size="13" fill="#64748B">sources · static/update_prices.py · app.py · static/hardware.py</text>
+  <text x="80" y="862" font-family="'JetBrains Mono', 'SFMono-Regular', Consolas, monospace" font-size="13" fill="#64748B">sources · workers/update_prices.py · app.py · workers/hardware.py</text>
 </svg>
