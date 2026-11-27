@@ -2,36 +2,20 @@
 
 from datetime import datetime
 import math
-import os
 from pathlib import Path
 import time
 
 from bs4 import BeautifulSoup
-import pymysql
 import requests
 
+from investopia import db
 
-PROJECT_ROOT = Path(__file__).resolve().parent.parent
+
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
 SYMBOLS_FILE = PROJECT_ROOT / "config" / "symbols.txt"
 NAVER_FINANCE_URL = "https://finance.naver.com/item/main.nhn?code={symbol}"
 HTTP_TIMEOUT = 10
 UPDATE_INTERVAL_SECONDS = 30
-
-
-def get_db_config():
-    """실제 DB 연결 직전에 환경 설정을 읽는다."""
-    return {
-        "host": os.environ["DB_HOST"],
-        "port": int(os.getenv("DB_PORT", "3306")),
-        "user": os.environ["DB_USER"],
-        "password": os.environ["DB_PASSWORD"],
-        "db": os.environ["DB_NAME"],
-        "charset": "utf8",
-    }
-
-
-def get_connection():
-    return pymysql.connect(**get_db_config())
 
 
 def load_symbols(path=SYMBOLS_FILE):
@@ -89,7 +73,7 @@ def get_price_from_naver(symbol, http_get=None, output=print):
 def get_previous_price(symbol, connection_factory=None):
     """저장된 직전 가격을 읽고, 저장된 값이 없으면 ``None``을 반환한다."""
     if connection_factory is None:
-        connection_factory = get_connection
+        connection_factory = db.connect
 
     connection = None
     try:
@@ -122,7 +106,7 @@ def insert_or_update(
 ):
     """한 종목을 upsert하고 성공 여부를 반환한다."""
     if connection_factory is None:
-        connection_factory = get_connection
+        connection_factory = db.connect
     if now_factory is None:
         now_factory = datetime.now
 

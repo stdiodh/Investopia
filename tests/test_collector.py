@@ -3,7 +3,7 @@ from datetime import datetime
 import pytest
 import requests
 
-from workers import update_prices
+from investopia.collector import naver as update_prices
 
 
 VALID_HTML = """

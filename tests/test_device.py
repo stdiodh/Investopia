@@ -5,7 +5,8 @@ from types import SimpleNamespace
 import pytest
 import requests
 
-from workers import hardware
+from investopia.device import controller as hardware
+from investopia.device import lcd
 
 
 class FakeGPIO:
@@ -145,6 +146,7 @@ def test_import_does_not_require_rpi_gpio(monkeypatch):
 
     monkeypatch.setattr(builtins, "__import__", reject_rpi)
 
+    importlib.reload(lcd)
     importlib.reload(hardware)
 
 
