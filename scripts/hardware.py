@@ -4,7 +4,7 @@ import sys
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from static.hardware import run
+from workers.hardware import run
 
 
 if __name__ == "__main__":

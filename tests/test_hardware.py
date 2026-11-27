@@ -5,7 +5,7 @@ from types import SimpleNamespace
 import pytest
 import requests
 
-from static import hardware
+from workers import hardware
 
 
 class FakeGPIO:
