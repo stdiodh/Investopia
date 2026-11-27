@@ -1,4 +1,4 @@
-# Investopia System Architecture
+# Investopia 아키텍처
 
 ![시스템 아키텍처](./architecture.png)
 
@@ -17,12 +17,11 @@
 | --- | --- |
 | 분석일 | 2026-11-26 |
 | 저장소 | [stdiodh/Investopia](https://github.com/stdiodh/Investopia) |
-| 확인한 커밋 | `main` [`5c8ca52`](https://github.com/stdiodh/Investopia/commit/5c8ca52063d31039948de919d47042d058211da0) |
+| 확인한 브랜치 | 분석일 시점 `main` |
 | 대상 환경 | 코드 기준 논리 구조 (배포 설정 없음) |
+| 경로 변경 | 2026-11-27 패키지 정리로 모듈 경로가 바뀌었습니다. 아래 근거 링크는 분석 시점 커밋 기준이고, 현재 경로는 [패키지 구조 정리](../docs/refactoring/2026-11-package-structure.md)에 있습니다. |
 
 ## 근거표
-
-`B` = `https://github.com/stdiodh/Investopia/blob/5c8ca52063d31039948de919d47042d058211da0`
 
 | 도면의 구성요소·연결·경계 | 의미 | 근거 | 환경 | 확인 상태 |
 | --- | --- | --- | --- | --- |
@@ -36,12 +35,12 @@
 
 ## 로고 출처
 
-| 기술·제품 | 사용 파일 | 공식 출처 페이지 | 실제 다운로드 URL·패키지 내 경로 | 확인일 | 원본 SHA-256 |
-| --- | --- | --- | --- | --- | --- |
-| Flask | `assets/logos/flask.svg` | https://palletsprojects.com/ | https://palletsprojects.com/static/content/projects/flask-logo.svg | 2026-11-26 | `8c6575b215bf0588eab1b41202ba626381bd2626da283547e17cf4c1c176251e` |
-| Python | `assets/logos/python.svg` | https://www.python.org/community/logos/ | https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg | 2026-11-26 | `baec8662a1461c2cacc326b54d2727cb2f1ce07ba02d00f5b826d035104f649f` |
-| MariaDB | `assets/logos/mariadb.svg` | https://mariadb.com/about-us/logos/ | https://mariadb.com/download/53702 (link 'Black vertical logo SVG (download)', served as mariaDBLogo_vertical_dark_transparent.svg) | 2026-11-26 | `b76b00a0af6056d521ed83c338d635895fa1be052dcf849d74d4fe2b2799d58b` |
-| GitHub (also for GHCR) | `assets/logos/github.svg` | https://brand.github.com/foundations/logo | https://brand.github.com/GitHub_Logos.zip: GitHub Logos/SVG/GitHub_Invertocat_Black.svg | 2026-11-26 | `693d7abe6f899646cc2e96856723b45e95f71885a54910b2749f6decdf7e1ee1` |
+| 기술·제품 | 사용 파일 | 공식 출처 | 확인일 |
+| --- | --- | --- | --- |
+| Flask | `assets/logos/flask.svg` | [palletsprojects.com](https://palletsprojects.com/) | 2026-11-26 |
+| Python | `assets/logos/python.svg` | [python.org/community/logos](https://www.python.org/community/logos/) | 2026-11-26 |
+| MariaDB | `assets/logos/mariadb.svg` | [mariadb.com/about-us/logos](https://mariadb.com/about-us/logos/) | 2026-11-26 |
+| GitHub | `assets/logos/github.svg` | [brand.github.com/foundations/logo](https://brand.github.com/foundations/logo) | 2026-11-26 |
 
 ## 확인 필요 사항
 

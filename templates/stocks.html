@@ -137,7 +137,7 @@
         {{ stock.change_rate }}%
       </td>
       <td>
-        <form method="post" action="{{ url_for('stocks') }}">
+        <form method="post" action="{{ url_for('web.stocks') }}">
           <input type="hidden" name="symbol" value="{{ stock.symbol }}">
           <input type="hidden" name="price" value="{{ stock.last_price }}">
           <input type="number" name="quantity" min="1" value="1" required style="width: 60px;">

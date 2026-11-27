@@ -4,6 +4,7 @@ import pytest
 
 
 import app as app_module
+from investopia import db as db_module
 
 
 @dataclass
@@ -65,7 +66,7 @@ def use_db(monkeypatch):
     def install(*steps):
         connection = FakeConnection(steps)
         connections.append(connection)
-        monkeypatch.setattr(app_module, "get_connection", lambda: connection)
+        monkeypatch.setattr(db_module, "connect_dict", lambda: connection)
         return connection
 
     yield install
@@ -203,8 +204,8 @@ def sell_steps(*, held=3, stock=None, quantity=1, asset_exists=True):
 
 def test_api_buy_requires_symbol_without_opening_database(client, monkeypatch):
     monkeypatch.setattr(
-        app_module,
-        "get_connection",
+        db_module,
+        "connect_dict",
         lambda: pytest.fail("database must not be opened"),
     )
 
@@ -222,8 +223,8 @@ def test_api_buy_rejects_non_positive_or_non_integer_quantity(
     client, monkeypatch, quantity
 ):
     monkeypatch.setattr(
-        app_module,
-        "get_connection",
+        db_module,
+        "connect_dict",
         lambda: pytest.fail("database must not be opened"),
     )
 
@@ -334,8 +335,8 @@ def test_api_buy_existing_position_updates_weighted_average(client, use_db):
 
 def test_api_sell_requires_symbol_without_opening_database(client, monkeypatch):
     monkeypatch.setattr(
-        app_module,
-        "get_connection",
+        db_module,
+        "connect_dict",
         lambda: pytest.fail("database must not be opened"),
     )
 
@@ -350,8 +351,8 @@ def test_api_sell_rejects_non_positive_or_non_integer_quantity(
     client, monkeypatch, quantity
 ):
     monkeypatch.setattr(
-        app_module,
-        "get_connection",
+        db_module,
+        "connect_dict",
         lambda: pytest.fail("database must not be opened"),
     )
 
@@ -486,8 +487,8 @@ def test_api_sell_without_asset_row_does_not_mutate_or_commit(client, use_db):
 @pytest.mark.parametrize("endpoint", ["/api/buy", "/api/sell"])
 def test_trade_api_rejects_non_object_json(client, monkeypatch, endpoint):
     monkeypatch.setattr(
-        app_module,
-        "get_connection",
+        db_module,
+        "connect_dict",
         lambda: pytest.fail("database must not be opened"),
     )
 
@@ -663,8 +664,8 @@ def test_stocks_post_rejects_invalid_request_without_opening_database(
     client, monkeypatch, form
 ):
     monkeypatch.setattr(
-        app_module,
-        "get_connection",
+        db_module,
+        "connect_dict",
         lambda: pytest.fail("database must not be opened"),
     )
 
