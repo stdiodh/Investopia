@@ -11,11 +11,3 @@ coverage.xml
 coverage.json
 htmlcov/
 .mypy_cache/
-portfolio/node_modules/
-portfolio/dist/
-portfolio/.vite/
-portfolio/qa/screenshots/
-portfolio-hr-revised/node_modules/
-portfolio-hr-revised/dist/
-portfolio-hr-revised/.vite/
-portfolio-hr-revised/qa/screenshots/
