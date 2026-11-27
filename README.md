@@ -8,14 +8,9 @@
 | --- | --- |
 | 개발 기간 | 2025.04.28–2025.06.17 |
 | 팀 | 인덕대학교 3학년 B반 1조, 5명 |
-| 내 역할 | 팀장·기획 및 설계 총괄·백엔드 개발 |
-
-### 허동현 — 팀장·백엔드
-
-- Flask 웹 서버와 MariaDB 연동
-- 매수·매도 REST API, 현금·보유 수량 검증, 포트폴리오 로직 구현
-- Raspberry Pi가 동일한 거래 API와 자산 데이터를 사용하도록 연동
-- 프로젝트 설계와 보고서 작성 총괄
+| 내 역할 | 허동현 — 팀장·기획 및 설계 총괄·백엔드 개발 |
+| 담당 | Flask 웹 서버와 MariaDB 연동, 매수·매도 REST API와 현금·보유 수량 검증·포트폴리오 로직, Raspberry Pi가 동일한 거래 API와 자산 데이터를 사용하도록 연동, 설계와 보고서 작성 총괄 |
+| 결과 | 현금·보유 수량 검증과 가중평균 매입가 계산을 포함한 모의 거래 로직 완성, 웹 UI와 Raspberry Pi 입력을 하나의 Flask API·MariaDB 데이터 흐름으로 통합 |
 
 <details>
 <summary>전체 팀 역할</summary>
@@ -30,8 +25,6 @@
 </details>
 
 ## 프로젝트 개요
-
-> 네이버 금융에서 수집한 주가를 바탕으로 웹과 Raspberry Pi에서 가상 매수·매도를 연습하는 프로토타입입니다.
 
 ![Investopia 데이터 수집과 주문 처리 흐름](./docs/assets/portfolio/investopia-system-flow.svg)
 
@@ -94,7 +87,7 @@
 
 ## 실행 방법
 
-저장소의 `.env.example`을 복사해 로컬 환경 변수를 설정합니다. 실제 비밀값이 들어간 `.env`는 Git에 포함하지 않습니다.
+`.env.example`을 복사해 환경 변수를 설정합니다. 비밀값이 들어간 `.env`는 커밋하지 않습니다.
 
 ```bash
 cp .env.example .env
@@ -123,7 +116,7 @@ python scripts/hardware.py
 
 ## 아키텍처와 기술 스택
 
-상단 흐름도처럼 수집기는 주가를 MariaDB에 갱신하고, Flask는 같은 데이터를 웹 화면과 Raspberry Pi에 제공합니다. 웹 폼과 Raspberry Pi의 REST 요청은 동일한 매수·매도 함수와 포트폴리오 검증을 거칩니다.
+수집기는 주가를 MariaDB에 갱신하고, Flask는 같은 데이터를 웹 화면과 Raspberry Pi에 제공합니다. 웹 폼과 Raspberry Pi의 REST 요청은 동일한 매수·매도 함수와 포트폴리오 검증을 거칩니다.
 
 ## 시연 영상 및 예시
 
@@ -156,6 +149,3 @@ python scripts/hardware.py
 <p align="center">
   <img src="https://github.com/user-attachments/assets/2d2a10a3-0fcf-4f0d-baab-28f6d7397d92" width="500"/>
 </p>
-
-- 현금·보유 수량 검증과 가중평균 매입가 계산을 포함한 모의 거래 로직 완성
-- 웹 UI와 Raspberry Pi 입력을 하나의 Flask API·MariaDB 데이터 흐름으로 통합
