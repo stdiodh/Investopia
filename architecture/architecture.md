@@ -19,6 +19,7 @@
 | 저장소 | [stdiodh/Investopia](https://github.com/stdiodh/Investopia) |
 | 확인한 커밋 | `main` [`5c8ca52`](https://github.com/stdiodh/Investopia/commit/5c8ca52063d31039948de919d47042d058211da0) |
 | 대상 환경 | 코드 기준 논리 구조 (배포 설정 없음) |
+| 경로 변경 | 2026-11-27 패키지 정리로 모듈 경로가 바뀌었습니다. 아래 근거 링크는 분석 시점 커밋 기준이고, 현재 경로는 [패키지 구조 정리](../docs/refactoring/2026-11-package-structure.md)에 있습니다. |
 
 ## 근거표
 
