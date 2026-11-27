@@ -2,7 +2,7 @@
 
 > 네이버 금융 주가 수집과 Raspberry Pi 주문 입력을 결합한 모의 주식 투자 시스템
 
-## 🧑‍💻 프로젝트 정보 및 기여
+## 프로젝트 정보 및 기여
 
 | 구분 | 내용 |
 | --- | --- |
@@ -29,15 +29,15 @@
 
 </details>
 
-## 🔍 프로젝트 개요
+## 프로젝트 개요
 
 > 네이버 금융에서 수집한 주가를 바탕으로 웹과 Raspberry Pi에서 가상 매수·매도를 연습하는 프로토타입입니다.
 
 ![Investopia 데이터 수집과 주문 처리 흐름](./docs/assets/portfolio/investopia-system-flow.svg)
 
-## 💡 프로젝트 구성
+## 프로젝트 구성
 
-### 🔗 웹 서버
+### 웹 서버
 
 - Flask 서버 렌더링 웹과 Raspberry Pi가 함께 사용하는 REST API 제공
 - `POST /api/buy`, `POST /api/sell`로 종목 매수·매도 처리
@@ -48,13 +48,13 @@
   <img src="https://github.com/user-attachments/assets/09603ea7-c36c-4c59-9668-2783f6433365" width="500"/>
 </p>
 
-### 🕸 네이버 금융 HTML 수집
+### 네이버 금융 HTML 수집
 
 - Requests와 BeautifulSoup으로 네이버 금융 종목 페이지의 HTML에서 종목명과 현재가 수집
 - 각 수집 루프 사이에 30초 대기하며 직전 저장 가격 대비 변동률 계산
 - 현재가, 변동률, 갱신 시각을 MariaDB `stock` 테이블에 upsert
 
-### 🧾 데이터베이스
+### 데이터베이스
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/113d3617-13af-4f66-b7d7-539fe00309d7" width="550"/>
@@ -64,7 +64,7 @@
 - `portfolio`: 종목별 보유 수량과 평균 매입가 관리
 - `stock`: 수집한 종목명, 현재가, 변동률 관리
 
-### 🔧 하드웨어 연동 (Raspberry Pi)
+### 하드웨어 연동 (Raspberry Pi)
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/2d0ee675-085f-474d-9399-f523197b2f7c" width="500"/>
@@ -75,7 +75,7 @@
 - **LED 피드백**: 조회한 종목들의 변동률 합에 따라 상승/하락 LED 표시
 - **서버 연동**: 하드웨어 팀이 구축한 Raspberry Pi 회로에서 Flask REST API를 호출하도록 연동
 
-### 🌐 웹 프론트엔드
+### 웹 프론트엔드
 
 - **index.html** – 현금·종목 평가금액·총자산과 보유 종목별 평가금액 비중 파이차트 시각화
   <p align="center">
@@ -92,7 +92,7 @@
     <img src="https://github.com/user-attachments/assets/8f381ae0-7755-4a8c-9dc9-d72a94c7f27a" width="500"/>
   </p>
 
-## 🚀 실행 방법
+## 실행 방법
 
 저장소의 `.env.example`을 복사해 로컬 환경 변수를 설정합니다. 실제 비밀값이 들어간 `.env`는 Git에 포함하지 않습니다.
 
@@ -121,11 +121,11 @@ pip install -r requirements-rpi.txt
 python scripts/hardware.py
 ```
 
-## ⚙ 아키텍처와 기술 스택
+## 아키텍처와 기술 스택
 
 상단 흐름도처럼 수집기는 주가를 MariaDB에 갱신하고, Flask는 같은 데이터를 웹 화면과 Raspberry Pi에 제공합니다. 웹 폼과 Raspberry Pi의 REST 요청은 동일한 매수·매도 함수와 포트폴리오 검증을 거칩니다.
 
-## 🧪 시연 영상 및 예시
+## 시연 영상 및 예시
 
 `scripts/update_prices.py` 수집 결과가 웹과 LCD에 반영되고, 두 입력 경로의 주문이 같은 포트폴리오 데이터에 반영되는 흐름을 확인했습니다.
 
@@ -139,7 +139,7 @@ python scripts/hardware.py
 
 </details>
 
-## ⚠️ 구현의 한계
+## 구현의 한계
 
 1. **LCD 한글 출력 불가**: 종목 이름 대신 종목 코드 표시
 <p align="center">
@@ -151,7 +151,7 @@ python scripts/hardware.py
   <img src="https://github.com/user-attachments/assets/db302a07-064c-414c-900e-f42a0063a517" width="400"/>
 </p>
 
-## 📈 구현 결과
+## 구현 결과
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/2d2a10a3-0fcf-4f0d-baab-28f6d7397d92" width="500"/>
